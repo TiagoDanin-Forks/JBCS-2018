@@ -22,7 +22,7 @@ def monthly_pull_requests(pull_requests):
 
 # Outputs the monthly distribution of pull requests in a project. (Source: pull_requests.json)
 # If you don't have a pull_requests.json file for your project, use collector.py!
-def pull_requests(data, output_file):
+def pull_requests(data, folder):
     employees_opened = []
     employees_closed = []
     employees_merged = []
@@ -55,7 +55,7 @@ def pull_requests(data, output_file):
     volunteers_closed = monthly_pull_requests(volunteers_closed)
     volunteers_merged = monthly_pull_requests(volunteers_merged)
 
-    with open(output_file, 'w') as output:
+    with open(folder, 'w') as output:
         fieldnames = ['month', 'pull_type', 'pull_amount', 'user_type']
         writer = csv.DictWriter(output, fieldnames=fieldnames)
         writer.writeheader()
@@ -72,6 +72,29 @@ def pull_requests(data, output_file):
         for date in volunteers_merged:
             writer.writerow({'month': date, 'pull_type': 'merged', 'pull_amount': volunteers_merged[date], 'user_type':'Volunteers'})
 
+def outsiders_contributions(data, folder):
+    outsiders = {}
+
+    for pull_request in data:
+        if pull_request['state'] == 'closed' and pull_request['merged_at'] != None:
+            if pull_request['user']['site_admin'] != True:
+                username = pull_request['user']['login']
+
+                if username in outsiders:
+                    outsiders[username] = outsiders[username] + 1
+                else:
+                    outsiders[username] = 1
+
+    with open(folder, 'w') as output:
+        fieldnames = ['username', 'url', 'count']
+        writer = csv.DictWriter(output, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for outsider in sorted(outsiders, key=outsiders.get, reverse=True):
+            url = 'https://github.com/' + outsider
+            writer.writerow({'username': outsider, 'url': url, 'count': outsiders[outsider]})
+
+
 
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'
@@ -86,4 +109,5 @@ if __name__ == '__main__':
 
         with open(folder + '/pull_requests.json', 'r') as data_file:
             data = json.load(data_file)
-            pull_requests(data, folder + '/pull_requests_per_month.csv')
+            # pull_requests(data, folder + '/pull_requests_per_month.csv')
+            outsiders_contributions(data, project['name'] + '_outsiders.csv')

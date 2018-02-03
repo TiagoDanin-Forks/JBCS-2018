@@ -2,6 +2,7 @@ try:
     import Crawler.crawler as GitCrawler
     import Crawler.repository as GitRepository
     import multiprocessing
+    from datetime import datetime
     from functools import partial
     import json
     import csv
@@ -48,7 +49,7 @@ class Repository():
                 data = json.load(pulls)
 
                 with open(pulls_summary_file, 'a') as output:
-                    fieldnames = ['pull_request', 'number_of_commits', 'number_of_comments','number_of_reviews','user_type', 'user_login', 'merged_at', 'number_of_additions', 'number_of_deletions','number_of_files_changed']
+                    fieldnames = ['pull_request', 'number_of_commits', 'number_of_comments','number_of_reviews','user_type', 'user_login', 'merged_at', 'number_of_additions', 'number_of_deletions','number_of_files_changed','number_of_days']
                     writer = csv.DictWriter(output, fieldnames=fieldnames)
                     writer.writeheader()
 
@@ -62,6 +63,10 @@ class Repository():
                             number_of_deletions = 0
                             number_of_files_changed = 0
 
+                            created_at = datetime.strptime(pull_request['created_at'], '%Y-%m-%dT%H:%M:%SZ')
+                            merged_at = datetime.strptime(pull_request['merged_at'], '%Y-%m-%dT%H:%M:%SZ')
+                            delta = merged_at - created_at
+
                             for commit in number_of_commits:
                                 url = commit['url']
                                 commit_information = self.collector.commit_information(url)
@@ -72,11 +77,48 @@ class Repository():
                                 if 'files' in commit_information:
                                     number_of_files_changed = number_of_files_changed + len(commit_information['files'])
 
-
                             if pull_request['user']['site_admin'] == True:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Employees', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed})
+                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Employees', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
                             else:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Volunteers', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed})
+                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Volunteers', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
+
+    def merged_pull_requests_reviews(self):
+        pulls_file = self.folder + '/pull_requests.json'
+        reviews_file = self.folder + '/reviews.csv'
+        fieldnames = ['pull_request', 'creator', 'creator_type', 'reviewer', 'reviewer_type', 'is_equal']
+
+        if os.path.isfile(pulls_file):
+            with open(reviews_file, 'a') as output:
+                writer = csv.DictWriter(output, fieldnames=fieldnames)
+                writer.writeheader()
+
+                with open(pulls_file, 'r') as pulls:
+                    data = json.load(pulls)
+
+                    for pull_request in data:
+                        if pull_request['merged_at'] != None:
+                            p = self.collector.pull_request(pull_request['number'])
+                            creator = p['user']['login']
+
+                            if p['user']['site_admin'] == True:
+                                creator_type = 'Employees'
+                            else:
+                                creator_type = 'Volunteers'
+
+                            reviewer = p['merged_by']['login']
+
+                            if p['merged_by']['site_admin'] == True:
+                                reviewer_type = 'Employees'
+                            else:
+                                reviewer_type = 'Volunteers'
+
+                            if creator == reviewer:
+                                is_equal = 'Yes'
+                            else:
+                                is_equal = 'No'
+
+                            writer.writerow({'pull_request': pull_request['number'], 'creator': creator, 'creator_type': creator_type, 'reviewer': reviewer, 'reviewer_type': reviewer_type, 'is_equal': is_equal})
+
 
 def repositories_in_parallel(project):
     collector = GitRepository.Repository(project['organization'], project['name'], crawler)
@@ -86,6 +128,7 @@ def repositories_in_parallel(project):
     R.about()
     R.pull_requests()
     R.merged_pull_requests_summary()
+    R.merged_pull_requests_reviews()
 
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'

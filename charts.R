@@ -47,21 +47,28 @@ dev.copy2eps(file="Images/git-lfs/git-lfs_closed_pulls_series.eps", width = 6, h
 # Chart type: Boxplot
 # W: 650 H: 360
 
-pulls_summary <- read.csv("Dataset/git-lfs/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA))
+pulls_summary <- read.csv("Dataset/git-lfs/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA, NA))
 
 employees <- subset(pulls_summary, user_type == "Employees")
 volunteers <- subset(pulls_summary, user_type == "Volunteers")
 
-boxplot(volunteers$number_of_commits, employees$number_of_commits, xlab="# Occurrences", ylim = c(0, 20), las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
+boxplot(volunteers$number_of_days, employees$number_of_days, xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
+legend("topright", legend=c("Employees", "Volunteers"), fill=c("#aae0c0", "#b8d1ed"), inset= .0, cex=0.6, ncol=1)
+dev.copy2eps(file="Images/git-lfs/git-lfs_days_amount.eps", width = 6.5, height = 3.6)
+
+
+boxplot(volunteers$number_of_commits, employees$number_of_commits, xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
 legend("topright", legend=c("Employees", "Volunteers"), fill=c("#aae0c0", "#b8d1ed"), inset= .0, cex=0.6, ncol=1)
 dev.copy2eps(file="Images/git-lfs/git-lfs_commits_amount.eps", width = 6.5, height = 3.6) 
-boxplot(volunteers$number_of_comments, employees$number_of_comments, xlab="# Occurrences", ylim = c(0, 15), las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
+
+boxplot(volunteers$number_of_comments, employees$number_of_comments, xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
 legend("topright", legend=c("Employees", "Volunteers"), fill=c("#aae0c0", "#b8d1ed"), inset= .0, cex=0.6, ncol=1)
 dev.copy2eps(file="Images/git-lfs/git-lfs_comments_amount.eps", width = 6.5, height = 3.6)
 
+
 mar.default <- c(5,4,4,2) + 0.1
 par(mar = mar.default + c(0, 4, 0, 0)) 
-boxplot(volunteers$number_of_additions, employees$number_of_additions, volunteers$number_of_deletions, employees$number_of_deletions, volunteers$number_of_files_changed, employees$number_of_files_changed, ylim = c(0, 900), xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), at = c(1,2,4,5,7,8), col=(c("#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0")))
+boxplot(volunteers$number_of_additions, employees$number_of_additions, volunteers$number_of_deletions, employees$number_of_deletions, volunteers$number_of_files_changed, employees$number_of_files_changed, xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), at = c(1,2,4,5,7,8), col=(c("#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0")))
 mtext("Files Changed", side=2, at=1.5, las=1, outer=FALSE, adj=1.1)
 mtext("Deletions", side=2, at=4.5, las=1, outer=FALSE, adj=1.2)
 mtext("Additions", side=2, at=7.5, las=1, outer=FALSE, adj=1.2)
@@ -72,7 +79,7 @@ dev.off()
 library(plyr)
 employees_sum <- count(employees, "user_login")
 volunteers_sum <- count(volunteers, "user_login")
-boxplot(volunteers_sum$freq, employees_sum$freq, ylim = c(0, 110), xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
+boxplot(volunteers_sum$freq, employees_sum$freq, xlab="# Occurrences", las = 1, outline = TRUE, cex.lab=1.2, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), col=(c("#b8d1ed", "#aae0c0")))
 legend("topright", legend=c("Employees", "Volunteers"), fill=c("#aae0c0", "#b8d1ed"), inset= .0, cex=0.6, ncol=1)
 dev.copy2eps(file="Images/git-lfs/git-lfs_pulls_amount.eps", width = 6.5, height = 3.6)
 
