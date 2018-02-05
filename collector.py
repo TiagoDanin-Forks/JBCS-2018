@@ -78,9 +78,37 @@ class Repository():
                                     number_of_files_changed = number_of_files_changed + len(commit_information['files'])
 
                             if pull_request['user']['site_admin'] == True:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Employees', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
+                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Internals', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
                             else:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Volunteers', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
+                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Externals', 'user_login': pull_request['user']['login'], 'merged_at':pull_request['merged_at'], 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': delta.days})
+        else:
+            if os.path.isfile(pulls_summary_file):
+                input_file = csv.DictReader(open(pulls_summary_file, 'r'))
+                output_file = csv.DictWriter(open(self.folder + '/merged_pull_requests_summary_updated.csv', 'a'), fieldnames=input_file.fieldnames)
+                output_file.writeheader()
+
+                for pull_request in input_file:
+
+                    if pull_request['user_type'] == 'Employees':
+                        pull_request['user_type'] = 'Internals'
+                    if pull_request['user_type'] == 'Volunteers':
+                        pull_request['user_type'] = 'Externals'
+
+                    # We moved this developers to the internals because we found qualitative evidences that they worked at GitHub
+                    if 'atom' in self.folder:
+                        if pull_request['user_login'] == 'benogle' or pull_request['user_login'] == 'thedaniel' or pull_request['user_login'] == 'jlord':
+                            pull_request['user_type'] = 'Internals'
+                    if 'hubot' in self.folder:
+                        if pull_request['user_login'] == 'bhuga' or pull_request['user_login'] == 'aroben':
+                            pull_request['user_type'] = 'Internals'
+                    if 'linguist' in self.folder:
+                        if pull_request['user_login'] == 'arfon' or pull_request['user_login'] == 'aroben' or pull_request['user_login'] == 'tnm' or pull_request['user_login'] == 'brandonblack' or pull_request['user_login'] == 'rick':
+                            pull_request['user_type'] = 'Internals'            
+                    if 'electron' in self.folder:
+                        if pull_request['user_login'] == 'miniak' or pull_request['user_login'] == 'codebytere':
+                            pull_request['user_type'] = 'Internals'
+                    output_file.writerow(pull_request)
+
 
     def merged_pull_requests_reviews(self):
         pulls_file = self.folder + '/pull_requests.json'
@@ -98,19 +126,48 @@ class Repository():
                     for pull_request in data:
                         if pull_request['merged_at'] != None:
                             p = self.collector.pull_request(pull_request['number'])
+
                             creator = p['user']['login']
 
+                            # We moved this developers to the internals because we found qualitative evidences that they worked at GitHub
+                            if 'atom' in self.folder:
+                                if p['user']['login'] == 'benogle' or p['user']['login'] == 'thedaniel' or p['user']['login'] == 'jlord':
+                                    p['user']['site_admin'] = True
+                            if 'hubot' in self.folder:
+                                if p['user']['login'] == 'bhuga' or p['user']['login'] == 'aroben':
+                                    p['user']['site_admin'] = True
+                            if 'linguist' in self.folder:
+                                if p['user']['login'] == 'arfon' or p['user']['login'] == 'aroben' or p['user']['login'] == 'tnm' or p['user']['login'] == 'brandonblack' or p['user']['login'] == 'rick':
+                                    p['user']['site_admin'] = True            
+                            if 'electron' in self.folder:
+                                if p['user']['login'] == 'miniak' or p['user']['login'] == 'codebytere':
+                                    p['user']['site_admin'] = True
+
                             if p['user']['site_admin'] == True:
-                                creator_type = 'Employees'
+                                creator_type = 'Internals'
                             else:
-                                creator_type = 'Volunteers'
+                                creator_type = 'Externals'
 
                             reviewer = p['merged_by']['login']
 
+                            # We moved this developers to the internals because we found qualitative evidences that they worked at GitHub
+                            if 'atom' in self.folder:
+                                if p['merged_by']['login'] == 'benogle' or p['merged_by']['login'] == 'thedaniel' or p['merged_by']['login'] == 'jlord':
+                                    p['merged_by']['site_admin'] = True
+                            if 'hubot' in self.folder:
+                                if p['merged_by']['login'] == 'bhuga' or p['merged_by']['login'] == 'aroben':
+                                    p['merged_by']['site_admin'] = True
+                            if 'linguist' in self.folder:
+                                if p['merged_by']['login'] == 'arfon' or p['merged_by']['login'] == 'aroben' or p['merged_by']['login'] == 'tnm' or p['merged_by']['login'] == 'brandonblack' or p['merged_by']['login'] == 'rick':
+                                    p['merged_by']['site_admin'] = True            
+                            if 'electron' in self.folder:
+                                if p['merged_by']['login'] == 'miniak' or p['merged_by']['login'] == 'codebytere':
+                                    p['merged_by']['site_admin'] = True    
+
                             if p['merged_by']['site_admin'] == True:
-                                reviewer_type = 'Employees'
+                                reviewer_type = 'Internals'
                             else:
-                                reviewer_type = 'Volunteers'
+                                reviewer_type = 'Externals'
 
                             if creator == reviewer:
                                 is_equal = 'Yes'
@@ -125,9 +182,9 @@ def repositories_in_parallel(project):
     folder = dataset_folder + project['name']
 
     R = Repository(collector, folder)
-    R.about()
-    R.pull_requests()
-    R.merged_pull_requests_summary()
+    # R.about()
+    # R.pull_requests()
+    # R.merged_pull_requests_summary()
     R.merged_pull_requests_reviews()
 
 if __name__ == '__main__':
