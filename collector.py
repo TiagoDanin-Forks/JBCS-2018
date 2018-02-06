@@ -38,6 +38,32 @@ class Repository():
             with open(pulls_file, 'w') as file:
                 json.dump(pull_requests, file, indent = 4)
 
+    # Collects all the project's contributors. (Source: GitHub API)
+    def contributors(self):
+        contributors_file = self.folder + '/contributors.json'
+
+        if not os.path.isfile(contributors_file):
+            contributors = self.collector.contributors(anonymous='true')
+
+            with open(contributors_file, 'w') as file:
+                json.dump(contributors, file, indent = 4)
+        else:
+            data = json.load(open(contributors_file,'r'))
+            num_externals = 0
+            num_internals = 0
+
+            for contributor in data:
+                if 'site_admin' in contributor.keys():
+                    if contributor['site_admin'] == True:
+                        num_internals = num_internals + 1
+                    if contributor['site_admin'] == False:
+                        num_externals = num_externals + 1
+
+            print self.folder
+            print 'Total: ' + str(len(data))
+            print 'Internals: ' + str(num_internals)
+            print 'Externals: ' + str(num_externals)
+
     # Creates a summary of pull request's information. (Source: pull_requests.json)
     # Contains: user position (volunteer/employee), user login, pull request merged date, num. of commits, comments and reviews.
     def merged_pull_requests_summary(self):
@@ -84,29 +110,12 @@ class Repository():
         else:
             if os.path.isfile(pulls_summary_file):
                 input_file = csv.DictReader(open(pulls_summary_file, 'r'))
-                output_file = csv.DictWriter(open(self.folder + '/merged_pull_requests_summary_updated.csv', 'a'), fieldnames=input_file.fieldnames)
+                output_file = csv.DictWriter(open(self.folder + '/merged_pull_requests_summary_updated.csv', 'a'), fieldnames=input_file.fieldnames + ['message'])
                 output_file.writeheader()
 
                 for pull_request in input_file:
-
-                    if pull_request['user_type'] == 'Employees':
-                        pull_request['user_type'] = 'Internals'
-                    if pull_request['user_type'] == 'Volunteers':
-                        pull_request['user_type'] = 'Externals'
-
-                    # We moved this developers to the internals because we found qualitative evidences that they worked at GitHub
-                    if 'atom' in self.folder:
-                        if pull_request['user_login'] == 'benogle' or pull_request['user_login'] == 'thedaniel' or pull_request['user_login'] == 'jlord':
-                            pull_request['user_type'] = 'Internals'
-                    if 'hubot' in self.folder:
-                        if pull_request['user_login'] == 'bhuga' or pull_request['user_login'] == 'aroben':
-                            pull_request['user_type'] = 'Internals'
-                    if 'linguist' in self.folder:
-                        if pull_request['user_login'] == 'arfon' or pull_request['user_login'] == 'aroben' or pull_request['user_login'] == 'tnm' or pull_request['user_login'] == 'brandonblack' or pull_request['user_login'] == 'rick':
-                            pull_request['user_type'] = 'Internals'            
-                    if 'electron' in self.folder:
-                        if pull_request['user_login'] == 'miniak' or pull_request['user_login'] == 'codebytere':
-                            pull_request['user_type'] = 'Internals'
+                    pull_data = self.collector.pull_request(pull_request['number'])
+                    pull_request['message'] = 
                     output_file.writerow(pull_request)
 
 
@@ -185,7 +194,8 @@ def repositories_in_parallel(project):
     # R.about()
     # R.pull_requests()
     # R.merged_pull_requests_summary()
-    R.merged_pull_requests_reviews()
+    # R.merged_pull_requests_reviews()
+    R.contributors()
 
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'
@@ -203,6 +213,6 @@ if __name__ == '__main__':
     crawler = GitCrawler.Crawler(api_client_id, api_client_secret)
 
     # Multiprocessing technique
-    parallel = multiprocessing.Pool(processes=4) # Define number of processes
+    parallel = multiprocessing.Pool(processes=1) # Define number of processes
     parallel.map(partial(repositories_in_parallel), projects)
 

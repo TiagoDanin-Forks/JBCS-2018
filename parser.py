@@ -108,6 +108,35 @@ def externals_contributions(data, folder):
             url = 'https://github.com/' + external
             writer.writerow({'username': external, 'url': url, 'count': externals[external]})
 
+def casual_contributors(data, folder):
+    externals_casual = {}
+    internals_casual = {}
+
+    for pull_request in data:
+        if pull_request['state'] == 'closed' and pull_request['merged_at'] != None:
+            if pull_request['user']['site_admin'] == True:
+                if pull_request['user']['login'] in internals_casual:
+                    internals_casual[pull_request['user']['login']] = internals_casual[pull_request['user']['login']] + 1
+                else:
+                    internals_casual[pull_request['user']['login']] = 1 
+            if pull_request['user']['site_admin'] == False:
+                if pull_request['user']['login'] in externals_casual:
+                    externals_casual[pull_request['user']['login']] = externals_casual[pull_request['user']['login']] + 1
+                else:
+                    externals_casual[pull_request['user']['login']] = 1
+
+    with open(folder, 'w') as output:
+        fieldnames = ['username', 'url', 'user_type']
+        writer = csv.DictWriter(output, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for external in externals_casual:
+            if externals_casual[external] == 1:
+                writer.writerow({'username': external, 'url': 'https://github.com/' + str(external), 'user_type': 'Externals'})
+
+        for internal in internals_casual:
+            if internals_casual[internal] == 1:
+                writer.writerow({'username': internal, 'url': 'https://github.com/' + str(internal), 'user_type': 'Internals'})                
 
 
 if __name__ == '__main__':
@@ -124,4 +153,5 @@ if __name__ == '__main__':
         with open(folder + '/pull_requests.json', 'r') as data_file:
             data = json.load(data_file)
             # pull_requests(data, folder + '/pull_requests_per_month.csv')
-            externals_contributions(data, folder + '/externals.csv')
+            # externals_contributions(data, folder + '/externals.csv')
+            casual_contributors(data, folder + '/casuals.csv')
