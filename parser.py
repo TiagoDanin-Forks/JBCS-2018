@@ -7,7 +7,7 @@ try:
 except ImportError as error:
     raise ImportError(error)
 
-def monthly_pull_requests(pull_requests):
+def sort_by_month(pull_requests):
 
     frequency = collections.OrderedDict()
     for pull_request in pull_requests:
@@ -22,7 +22,7 @@ def monthly_pull_requests(pull_requests):
 
 # Outputs the monthly distribution of pull requests in a project. (Source: pull_requests.json)
 # If you don't have a pull_requests.json file for your project, use collector.py!
-def pull_requests(data, folder):
+def pull_requests_per_month(data, folder):
     employees_opened = []
     employees_closed = []
     employees_merged = []
@@ -62,12 +62,12 @@ def pull_requests(data, folder):
                 else:
                     volunteers_merged.append(pull_request)
 
-    employees_opened = monthly_pull_requests(employees_opened)
-    employees_closed = monthly_pull_requests(employees_closed)
-    employees_merged = monthly_pull_requests(employees_merged)
-    volunteers_opened = monthly_pull_requests(volunteers_opened)
-    volunteers_closed = monthly_pull_requests(volunteers_closed)
-    volunteers_merged = monthly_pull_requests(volunteers_merged)
+    employees_opened = sort_by_month(employees_opened)
+    employees_closed = sort_by_month(employees_closed)
+    employees_merged = sort_by_month(employees_merged)
+    volunteers_opened = sort_by_month(volunteers_opened)
+    volunteers_closed = sort_by_month(volunteers_closed)
+    volunteers_merged = sort_by_month(volunteers_merged)
 
     with open(folder, 'w') as output:
         fieldnames = ['month', 'pull_type', 'pull_amount', 'user_type']
@@ -86,7 +86,7 @@ def pull_requests(data, folder):
         for date in volunteers_merged:
             writer.writerow({'month': date, 'pull_type': 'merged', 'pull_amount': volunteers_merged[date], 'user_type':'Externals'})
 
-def externals_contributions(data, folder):
+def external_contributors(data, folder):
     externals = {}
 
     for pull_request in data:
@@ -109,33 +109,33 @@ def externals_contributions(data, folder):
             writer.writerow({'username': external, 'url': url, 'count': externals[external]})
 
 def casual_contributors(data, folder):
-    externals_casual = {}
-    internals_casual = {}
+    externals = {}
+    internals = {}
 
     for pull_request in data:
         if pull_request['state'] == 'closed' and pull_request['merged_at'] != None:
             if pull_request['user']['site_admin'] == True:
-                if pull_request['user']['login'] in internals_casual:
-                    internals_casual[pull_request['user']['login']] = internals_casual[pull_request['user']['login']] + 1
+                if pull_request['user']['login'] in internals:
+                    internals[pull_request['user']['login']] = internals[pull_request['user']['login']] + 1
                 else:
-                    internals_casual[pull_request['user']['login']] = 1 
+                    internals[pull_request['user']['login']] = 1 
             if pull_request['user']['site_admin'] == False:
-                if pull_request['user']['login'] in externals_casual:
-                    externals_casual[pull_request['user']['login']] = externals_casual[pull_request['user']['login']] + 1
+                if pull_request['user']['login'] in externals:
+                    externals[pull_request['user']['login']] = externals[pull_request['user']['login']] + 1
                 else:
-                    externals_casual[pull_request['user']['login']] = 1
+                    externals[pull_request['user']['login']] = 1
 
     with open(folder, 'w') as output:
         fieldnames = ['username', 'url', 'user_type']
         writer = csv.DictWriter(output, fieldnames=fieldnames)
         writer.writeheader()
 
-        for external in externals_casual:
-            if externals_casual[external] == 1:
+        for external in externals:
+            if externals[external] == 1:
                 writer.writerow({'username': external, 'url': 'https://github.com/' + str(external), 'user_type': 'Externals'})
 
-        for internal in internals_casual:
-            if internals_casual[internal] == 1:
+        for internal in internals:
+            if internals[internal] == 1:
                 writer.writerow({'username': internal, 'url': 'https://github.com/' + str(internal), 'user_type': 'Internals'})                
 
 
@@ -152,6 +152,6 @@ if __name__ == '__main__':
 
         with open(folder + '/pull_requests.json', 'r') as data_file:
             data = json.load(data_file)
-            # pull_requests(data, folder + '/pull_requests_per_month.csv')
-            # externals_contributions(data, folder + '/externals.csv')
+            pull_requests_per_month(data, folder + '/pull_requests_per_month.csv')
+            external_contributors(data, folder + '/externals.csv')
             casual_contributors(data, folder + '/casuals.csv')

@@ -1,0 +1,24 @@
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/16340client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4
+Error type: HTTP Error 404: Not Found
+
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/5013client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4
+Error type: HTTP Error 404: Not Found
+
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/1510client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4
+Error type: HTTP Error 502: Bad Gateway
+
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/28client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4
+Error type: HTTP Error 502: Bad Gateway
+
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/16535/commits?client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4&page=1
+Error type: HTTP Error 404: Not Found
+
+Found a error in request: 
+https://api.github.com/repos/atom/atom/pulls/16535/comments?client_id=4161a8257efaea420c94&client_secret=d814ec48927a6bd62c55c058cd028a949e5362d4&page=1
+Error type: HTTP Error 404: Not Found
+
