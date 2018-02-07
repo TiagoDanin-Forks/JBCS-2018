@@ -285,11 +285,11 @@ def repositories_in_parallel(project):
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'
     projects = [
-    #{'organization':'electron','name':'electron'},
+    {'organization':'electron','name':'electron'},
     {'organization':'github','name':'linguist'},
     {'organization':'git-lfs','name':'git-lfs'},
     {'organization':'hubotio','name':'hubot'},
-    #{'organization':'atom','name':'atom'}
+    {'organization':'atom','name':'atom'}
     ]
 
     if not os.path.exists(dataset_folder):
