@@ -166,35 +166,41 @@ class Repository():
 
                     for pull_request in data:
                         if pull_request['state'] == 'closed' and pull_request['merged_at'] == None:
-                            number_of_commits = self.collector.commits_in_pull_request(pull_request['number'])
-                            number_of_comments = self.collector.comments_in_pull_request(pull_request['number'])
-                            number_of_reviews = self.collector.reviews_in_pull_request(pull_request['number'])
-                            pull_request_data = self.collector.pull_request(pull_request['number'])
+                            try:
+                                number_of_commits = self.collector.commits_in_pull_request(pull_request['number'])
+                                number_of_comments = self.collector.comments_in_pull_request(pull_request['number'])
+                                number_of_reviews = self.collector.reviews_in_pull_request(pull_request['number'])
+                                pull_request_data = self.collector.pull_request(pull_request['number'])
 
-                            number_of_files_changed = None
-                            number_of_additions = None
-                            number_of_deletions = None
-                            message = ''
+                                number_of_files_changed = None
+                                number_of_additions = None
+                                number_of_deletions = None
+                                message = ''
 
-                            if pull_request_data:
-                                if 'changed_files' in pull_request_data:
-                                    number_of_files_changed = pull_request_data['changed_files']
-                                if 'additions' in pull_request_data:
-                                    number_of_additions = pull_request_data['additions']
-                                if 'deletions' in pull_request_data:
-                                    number_of_deletions = pull_request_data['deletions']
-                                if 'body' in pull_request_data:
-                                    if pull_request_data['body'] != None:
-                                        message = pull_request_data['body'].encode('utf-8')
+                                if pull_request_data:
+                                    if 'changed_files' in pull_request_data:
+                                        number_of_files_changed = pull_request_data['changed_files']
+                                    if 'additions' in pull_request_data:
+                                        number_of_additions = pull_request_data['additions']
+                                    if 'deletions' in pull_request_data:
+                                        number_of_deletions = pull_request_data['deletions']
+                                    if 'body' in pull_request_data:
+                                        if pull_request_data['body'] != None:
+                                            message = pull_request_data['body'].encode('utf-8')
 
-                            created_at = datetime.strptime(pull_request['created_at'], '%Y-%m-%dT%H:%M:%SZ')
-                            closed_at = datetime.strptime(pull_request['created_at'], '%Y-%m-%dT%H:%M:%SZ')
-                            number_of_days = (closed_at - created_at).days
+                                created_at = datetime.strptime(pull_request['created_at'], '%Y-%m-%dT%H:%M:%SZ')
+                                closed_at = datetime.strptime(pull_request['created_at'], '%Y-%m-%dT%H:%M:%SZ')
+                                number_of_days = (closed_at - created_at).days
 
-                            if pull_request['user']['site_admin'] == True:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Internals', 'user_login': pull_request['user']['login'], 'closed_at': closed_at, 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': number_of_days, 'message': message})
-                            else:
-                                writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Externals', 'user_login': pull_request['user']['login'], 'closed_at': closed_at, 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': number_of_days, 'message': message})
+                                if pull_request['user']['site_admin'] == True:
+                                    writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Internals', 'user_login': pull_request['user']['login'], 'closed_at': closed_at, 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': number_of_days, 'message': message})
+                                else:
+                                    writer.writerow({'pull_request': pull_request['number'], 'number_of_commits': len(number_of_commits), 'number_of_comments': len(number_of_comments), 'number_of_reviews': len(number_of_reviews), 'user_type': 'Externals', 'user_login': pull_request['user']['login'], 'closed_at': closed_at, 'number_of_additions': number_of_additions, 'number_of_deletions': number_of_deletions, 'number_of_files_changed': number_of_files_changed, 'number_of_days': number_of_days, 'message': message})
+                            except Exception as ex:
+                                with open('errors.log', 'a') as errors:
+                                    errors.write(ex)
+                                    errors.write('\n Repository:' + self.folder + '\n')
+
 
     # Reviews from merged pull requests. (Source: API and pull_requests.json)
     def merged_pull_requests_reviews(self):
@@ -272,17 +278,19 @@ def repositories_in_parallel(project):
     # R.pull_requests()
     # R.contributors()
     # R.merged_pull_requests_summary()
-    # R.closed_pull_requests_summary()
+    R.closed_pull_requests_summary()
     # R.merged_pull_requests_reviews()
-    R.update_manual_values()
+    # R.update_manual_values()
 
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'
-    projects = [{'organization':'electron','name':'electron'},
+    projects = [
+    #{'organization':'electron','name':'electron'},
     {'organization':'github','name':'linguist'},
     {'organization':'git-lfs','name':'git-lfs'},
     {'organization':'hubotio','name':'hubot'},
-    {'organization':'atom','name':'atom'}]
+    #{'organization':'atom','name':'atom'}
+    ]
 
     if not os.path.exists(dataset_folder):
         os.makedirs(dataset_folder)
@@ -292,6 +300,6 @@ if __name__ == '__main__':
     crawler = GitCrawler.Crawler(api_client_id, api_client_secret)
 
     # Multiprocessing technique
-    parallel = multiprocessing.Pool(processes=1) # Define number of processes
+    parallel = multiprocessing.Pool(processes=4) # Define number of processes
     parallel.map(partial(repositories_in_parallel), projects)
 
