@@ -78,7 +78,7 @@ legend("topright", legend=c("Internals", "Externals"), fill=c("#aae0c0", "#b8d1e
 dev.copy2eps(file="Images/linguist/linguist_pulls_amount.eps", width = 6.5, height = 3.6)
 dev.off()
 
-externals <- externals[which(externals$number_of_additions != 0 | externals$number_of_deletions != 0 | externals$number_of_files_changed != 0),]
+externals <- externals[which(externals$number_of_additions == 0 | externals$number_of_deletions == 0 | externals$number_of_files_changed == 0),]
 internals <- internals[which(internals$number_of_additions != 0 | internals$number_of_deletions != 0 | internals$number_of_files_changed != 0),]
 
 mar.default <- c(5,4,4,2) + 0.1

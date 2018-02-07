@@ -65,6 +65,45 @@ class Repository():
             with open(contributors_file, 'w') as file:
                 json.dump(contributors, file, indent = 4)
 
+    def update_manual_values(self):
+        pulls_summary_file = self.folder + '/merged_pull_requests_summary.csv'
+        pulls_summary_file_updated = self.folder + '/merged_pull_requests_summary_updated.csv'
+
+        if 'atom' in self.folder:
+            manual_file = self.folder + '/atom.csv'
+            print 'atom'
+        if 'hubot' in self.folder:
+            manual_file = self.folder + '/hubot.csv'
+            print 'hubot'
+        if 'electron' in self.folder:
+            manual_file = self.folder + '/electron.csv'
+            print 'electron'
+        if 'git-lfs' in self.folder:
+            manual_file = self.folder + '/git-lfs.csv'
+            print 'git-lfs'
+        if 'linguist' in self.folder:
+            manual_file = self.folder + '/linguist.csv'
+            print 'linguist'
+
+        reader_pull = csv.DictReader(open(pulls_summary_file, 'r'))
+        reader_manual = csv.DictReader(open(manual_file, 'r'))
+        writer = csv.DictWriter(open(pulls_summary_file_updated, 'w'), fieldnames=reader_pull.fieldnames)
+        writer.writeheader()
+
+        updates = {}
+        for row_m in reader_manual:
+            updates[int(row_m['pull_request'])] = row_m
+
+        for row_p in reader_pull:
+            if int(row_p['pull_request']) in updates.keys():
+                row_m = updates[int(row_p['pull_request'])]
+                row_p['number_of_additions'] = row_m['number_of_additions']
+                row_p['number_of_deletions'] = row_m['number_of_deletions']
+                row_p['number_of_files_changed'] = row_m['number_of_files_changed']
+
+            writer.writerow(row_p)
+
+
     # Summary with informations of merged pull requests. (Source: API and pull_requests.json)
     def merged_pull_requests_summary(self):
         pulls_file = self.folder + '/pull_requests.json'
@@ -233,8 +272,9 @@ def repositories_in_parallel(project):
     # R.pull_requests()
     # R.contributors()
     # R.merged_pull_requests_summary()
-    R.closed_pull_requests_summary()
+    # R.closed_pull_requests_summary()
     # R.merged_pull_requests_reviews()
+    R.update_manual_values()
 
 if __name__ == '__main__':
     dataset_folder = 'Dataset/'
@@ -252,6 +292,6 @@ if __name__ == '__main__':
     crawler = GitCrawler.Crawler(api_client_id, api_client_secret)
 
     # Multiprocessing technique
-    parallel = multiprocessing.Pool(processes=4) # Define number of processes
+    parallel = multiprocessing.Pool(processes=1) # Define number of processes
     parallel.map(partial(repositories_in_parallel), projects)
 

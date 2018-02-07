@@ -2,7 +2,7 @@ require("effsize")
 
 setwd("/home/fronchetti/Documentos/JBCS-2018") # Working directory
 
-pulls_per_month <- read.csv("Dataset/linguist/pull_requests_per_month.csv", colClasses=c("Date",NA, NA, NA))
+pulls_per_month <- read.csv("Dataset/git-lfs/pull_requests_per_month.csv", colClasses=c("Date",NA, NA, NA))
 
 # Opened Pulls (Per Month)
 data <- subset(pulls_per_month, pull_type == "opened")
@@ -26,10 +26,8 @@ wilcox.test(internals$pull_amount, externals$pull_amount)
 cliff.delta(internals$pull_amount, externals$pull_amount)
 
 pulls_summary <- read.csv("Dataset/linguist/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA, NA, NA))
-internals <- subset(pulls_summary, user_type == "Internals")
-externals <- subset(pulls_summary, user_type == "Externals")
-externals <- externals[which(externals$number_of_additions != 0 | externals$number_of_deletions != 0 | externals$number_of_files_changed != 0),]
-internals <- internals[which(internals$number_of_additions != 0 | internals$number_of_deletions != 0 | internals$number_of_files_changed != 0),]
+pulls_summary <- pulls_summary[which(pulls_summary$number_of_additions == 0 & pulls_summary$number_of_deletions == 0 & pulls_summary$number_of_files_changed == 0),]
+write.csv(pulls_summary, file = "linguist.csv", row.names = FALSE)
 
 # Number of additions
 wilcox.test(internals$number_of_additions, externals$number_of_additions)

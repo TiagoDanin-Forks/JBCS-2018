@@ -3727,7 +3727,7 @@ $ ssh -p 12345 -- -oProxyCommand=gnome-calculator git-lfs-authenticate ...
 LFS does support `plink` and `tortoiseplink`, which don't have anything like `--`. So instead, LFS will remove any leading `-`'s from the `user@host` components of the `ssh://` url."
 2240,1,0,0,Internals,ttaylorr,2017-05-19T16:19:14Z,6,0,1,0,This backports #2232.
 2238,1,0,0,Internals,technoweenie,2017-05-19T14:15:50Z,246,48,5,0,This backports #2233.
-2237,6,4,0,Externals,seth2810,2017-05-19T19:33:43Z,0,0,0,0,https://github.com/git-lfs/git-lfs/issues/2236
+2237,6,4,0,Externals,seth2810,2017-05-19T19:33:43Z,37,2,3,0,https://github.com/git-lfs/git-lfs/issues/2236
 2235,7,1,5,Internals,ttaylorr,2017-05-19T17:08:36Z,96,3,2,0,"This pull request addresses https://github.com/git-lfs/git-lfs/issues/2185, and supports cross-scheme redirects in the `*lfsapi.Client` type.
 
 The issue is that, even though Go's `*net/http.Client` supports redirects (in response to a 3xx status code) directly, we explicitly disable that as<sup>[[1](https://github.com/git-lfs/git-lfs/blob/v2.1.0/lfsapi/client.go#L251-L253)]</sup>:
@@ -4726,7 +4726,7 @@ This pull request introduces a `prependEmptySchemeIfAbsent` to turn non-complian
 /cc @git-lfs/core #2029 "
 2089,1,0,0,Internals,ttaylorr,2017-03-27T16:30:54Z,4,0,1,0,This backports #2088.
 2088,1,3,0,Externals,p12tic,2017-03-27T15:48:10Z,4,0,1,1,This PR fixes debian package build errors when building on an ARM machine. Tested on armhf architecture. 
-2087,1,1,0,Externals,ZaninAndrea,2017-03-27T15:47:29Z,0,0,0,1,
+2087,1,1,0,Externals,ZaninAndrea,2017-03-27T15:47:29Z,1,1,1,1,
 2085,1,0,0,Internals,ttaylorr,2017-03-25T04:38:38Z,179,6,7,0,This backports #2082.
 2084,1,0,0,Internals,ttaylorr,2017-03-25T04:14:05Z,21,10,6,0,This backports #2083.
 2083,4,0,0,Internals,ttaylorr,2017-03-24T22:07:41Z,21,10,6,0,"This pull request authenticates verify requests from `tq.verifyUpload()` if the transfer is not already authenticated.
@@ -6595,7 +6595,7 @@ My hunch is that the transfer queue is all ready setup for this, but our _use_ o
 
 Merge target is `locking-master` to denote that this isn't a finished API yet but to enable reviewing in bite-size chunks.
 "
-1721,1,0,0,Externals,myint,2016-11-28T16:19:46Z,0,0,0,1,
+1721,1,0,0,Externals,myint,2016-11-28T16:19:46Z,1,1,1,1,
 1713,1,0,0,Internals,benbalter,2016-11-23T17:56:03Z,1,1,1,0,"This is a quick fix to get license detection working while it's fixed upstream.
 
 The underlying copyright regex [assumes there's a copyright date](https://github.com/benbalter/licensee/blob/master/lib/licensee/matchers/copyright_matcher.rb#L8), the year field being present in the original license template.
@@ -6706,7 +6706,7 @@ BenchmarkFilterIncludeDoubleAsterisk-8   	     300	   4350653 ns/op
 1694,12,5,25,Externals,sinbad,2016-11-28T15:42:53Z,367,0,2,6,"This PR adds an in-memory, optimistically locked key-value store. It's basically a replacement for Boltdb for caching active locks locally as requested in the lock PR.
 
 Submitted separately because it's generic and hopefully easy to review. Rewrite of lock PR is still ongoing but will use this."
-1689,5,16,12,Externals,sschuberth,2016-12-09T14:42:08Z,0,0,0,20,"I'm currently looking into reducing the number of places where the version is defined, so that less places need to be touched when bumping the version for a new release, like e.g. in 4e5ba415c41c42ceb9b91b89f0a3655740f3c276.
+1689,5,16,12,Externals,sschuberth,2016-12-09T14:42:08Z,49,10,7,20,"I'm currently looking into reducing the number of places where the version is defined, so that less places need to be touched when bumping the version for a new release, like e.g. in 4e5ba415c41c42ceb9b91b89f0a3655740f3c276.
 
 But I have a few questions in this regard. To start with, where are the values for the variables in [this line](https://github.com/git-lfs/git-lfs/blob/master/rpm/SPECS/git-lfs.spec#L9) of the RPM spec defined? Do these come from [a few lines above](https://github.com/git-lfs/git-lfs/blob/master/rpm/SPECS/git-lfs.spec#L1-L2)? I'm asking because these definitions differ in the case from the variable use."
 1688,17,4,13,Internals,technoweenie,2016-11-21T17:32:03Z,360,203,6,2,"Added unit tests that would have caught the bug that required https://github.com/git-lfs/git-lfs/pull/1680.
@@ -7182,11 +7182,11 @@ To ensure further safety, I added two new `oidHandler`s to force a finite number
 
 /cc @technoweenie 
 "
-1579,1,0,0,Externals,sschuberth,2016-10-14T14:15:40Z,0,0,0,0,"Also consistently use the term ""legacy"" instead of ""original"".
+1579,1,0,0,Externals,sschuberth,2016-10-14T14:15:40Z,2,2,1,0,"Also consistently use the term ""legacy"" instead of ""original"".
 "
-1577,1,0,0,Externals,sschuberth,2016-10-13T20:33:32Z,0,0,0,0,"This re-opens https://github.com/github/git-lfs/pull/1576.
+1577,1,0,0,Externals,sschuberth,2016-10-13T20:33:32Z,18,0,1,0,"This re-opens https://github.com/github/git-lfs/pull/1576.
 "
-1575,2,1,0,Externals,sschuberth,2016-10-12T22:17:16Z,0,0,0,0,"And add compatibility with the ANSI version of Inno Setup with has issues with decoding 16-bits-per-pixel BMP files.
+1575,2,1,0,Externals,sschuberth,2016-10-12T22:17:16Z,1,0,3,0,"And add compatibility with the ANSI version of Inno Setup with has issues with decoding 16-bits-per-pixel BMP files.
 "
 1574,2,2,0,Internals,ttaylorr,2016-10-12T16:07:54Z,4,1,1,0,"This pull requests moves our Travis badge down to a newline, and adds an AppVeyor badge for the build status on `master` right next to it.
 ## 
@@ -7210,9 +7210,9 @@ commit.
 
 /cc @technoweenie @sschuberth @larsxschneider @sinbad 
 "
-1567,1,6,1,Externals,sschuberth,2016-10-10T19:25:42Z,0,0,0,1,"This depends on (and contains the changes from) PR #1566. Once that other PR is merged, this PR contains only a single commit to turn on tests on AppVeyor CI, which should now all pass.
+1567,1,6,1,Externals,sschuberth,2016-10-10T19:25:42Z,12,3,2,1,"This depends on (and contains the changes from) PR #1566. Once that other PR is merged, this PR contains only a single commit to turn on tests on AppVeyor CI, which should now all pass.
 "
-1566,4,5,7,Externals,sschuberth,2016-10-10T17:37:40Z,0,0,0,1,"Some changes around using ""sha256sum"" instead of ""shasum"" on Windows, in particular on MSYS2.
+1566,4,5,7,Externals,sschuberth,2016-10-10T17:37:40Z,30,17,4,1,"Some changes around using ""sha256sum"" instead of ""shasum"" on Windows, in particular on MSYS2.
 "
 1565,2,4,0,Internals,technoweenie,2016-10-08T00:12:54Z,12,15,1,0,"This removes the windows-specific hacks, and uses `filepath.Clean()` to sanitize the paths. This broke previously because it was `filepath.Match()` expects back slashes on windows.
 "
@@ -7236,7 +7236,7 @@ This pull-request fixes that by only allow patterns with a leading slash that ma
 
 /cc @technoweenie @larsxschneider #1546.
 "
-1557,1,4,0,Externals,sschuberth,2016-10-06T19:35:20Z,0,0,0,1,"It seems some osx10.11 Travis workers already have git installed via
+1557,1,4,0,Externals,sschuberth,2016-10-06T19:35:20Z,2,2,1,1,"It seems some osx10.11 Travis workers already have git installed via
 homebrew, resulting in
 
 ```
@@ -7343,12 +7343,12 @@ The remaining two items are gone! No one ever checks for them. I fixed this beha
 /cc @rubyist since you were the original author
 /cc @technoweenie @sinbad for 👀  and 💭 s
 "
-1523,1,1,0,Externals,sschuberth,2016-09-13T19:27:12Z,0,0,0,0,"On Windows 10, this test was failing because the current user's home
+1523,1,1,0,Externals,sschuberth,2016-09-13T19:27:12Z,11,1,1,0,"On Windows 10, this test was failing because the current user's home
 directory was in DOS-style 8.3 short path notation in the expected Git
 path, whereas the actual path was using the long path notation. Fix that
 by comparing files based on Stat() instead of comparing strings.
 "
-1522,7,8,1,Externals,sschuberth,2016-10-04T20:06:17Z,0,0,0,21,"First round of fixes to the test framework to make tests basically run on Windows. With this, the remaining failing tests are:
+1522,7,8,1,Externals,sschuberth,2016-10-04T20:06:17Z,15,53,9,21,"First round of fixes to the test framework to make tests basically run on Windows. With this, the remaining failing tests are:
 
 In _test/test-custom-transfers.sh_:
 
@@ -7365,16 +7365,16 @@ test: fetch: include second matching file ...                      FAILED
 
 Running tests in AppVeyor will be enabled in a separate PR once these tests are fixed and https://github.com/appveyor/ci/issues/1022 is deployed.
 "
-1518,1,1,0,Externals,sschuberth,2016-09-12T21:02:52Z,0,0,0,1,"""git rev-parse --show-toplevel"" is defined to already return an absolute
+1518,1,1,0,Externals,sschuberth,2016-09-12T21:02:52Z,1,5,1,1,"""git rev-parse --show-toplevel"" is defined to already return an absolute
 path, so there is no need to convert it.
 "
-1507,1,5,0,Externals,sschuberth,2016-09-06T17:38:10Z,0,0,0,0,"For newly initialized local repositories that are configured to track
+1507,1,5,0,Externals,sschuberth,2016-09-06T17:38:10Z,11,6,1,0,"For newly initialized local repositories that are configured to track
 existing LFS objects by manually creating pointer files via
 git-lfs-pointer, there might be no remote configured yet. Still it should
 be possible to fetch the LFS objects. Allow this by postponing the check
 for a remote until it is really required.
 "
-1506,2,11,10,Externals,sschuberth,2016-09-06T17:41:32Z,0,0,0,0,"This build the binaries and installer for now. Not running tests yet.
+1506,2,11,10,Externals,sschuberth,2016-09-06T17:41:32Z,20,55,3,0,"This build the binaries and installer for now. Not running tests yet.
 "
 1505,5,3,4,Internals,ttaylorr,2016-09-06T21:37:29Z,39,6,3,0,"This pull-request ensures Git LFS will log an error message when it encounters a fatal error using `commands.FullError`.
 
@@ -7412,7 +7412,7 @@ To test that the error made its way to the output of the original `git lfs push`
 /cc @technoweenie @rubyist @sinbad for review
 /cc @dpursehouse #1486 for 👀 
 "
-1504,1,13,0,Externals,sschuberth,2016-09-06T19:16:06Z,0,0,0,0,"The icons were generated from the Git LFS web page's favicon file
+1504,1,13,0,Externals,sschuberth,2016-09-06T19:16:06Z,2,0,3,0,"The icons were generated from the Git LFS web page's favicon file
 available at https://git-lfs.github.com/favicon.png.
 "
 1503,1,1,0,Internals,ttaylorr,2016-09-06T19:24:06Z,5,1,1,1,"This pull-request adds some new documentation to `git-lfs-clean`'s man page to reflect that it is not a part of the user-facing plumbing commands. Instead, it points to the `git-lfs-pointer(1)` documentation in order to preview what the generated pointer data would look like for a particular object.
@@ -8471,11 +8471,11 @@ It's an option because using this means exit codes are not propagated and script
 "
 1206,1,0,0,Internals,technoweenie,2016-05-06T12:01:33Z,71,4,2,0,"The URL for the code of conduct is down, so I embedded the text as a markdown file. This isn't a change of the code that the project adheres to, so we won't be discussing changes in this PR.
 "
-1200,1,5,0,Externals,teo-tsirpanis,2016-07-21T16:48:25Z,0,0,0,78,"In a previous pull request I submitted, there was an error.
+1200,1,5,0,Externals,teo-tsirpanis,2016-07-21T16:48:25Z,5,1,1,78,"In a previous pull request I submitted, there was an error.
 The installer would write to a ""mingw64"" directory even on 32-bit versions of Windows.
 With this patch, the installer will write to the correct ""mingw32"" directory under Win32.
 "
-1198,1,1,0,Externals,teo-tsirpanis,2016-05-04T13:59:24Z,0,0,0,0,"On 32-bit versions of Windows (in my case, Windows XP), the windows installer fails because it cannot expand the ""pf64""constant.
+1198,1,1,0,Externals,teo-tsirpanis,2016-05-04T13:59:24Z,1,1,1,0,"On 32-bit versions of Windows (in my case, Windows XP), the windows installer fails because it cannot expand the ""pf64""constant.
 
 By changing this very constant to ""pf"", it gets resolved properly on all versions of Windows.
 
@@ -8618,7 +8618,7 @@ It is super-likely that the same need to be added to RPM build `rpm/build_rpms.b
 "
 1107,1,2,0,Externals,sinbad,2016-03-23T10:06:11Z,17,4,3,0,"If user doesn't specify a specific one, create one in the temp area & clean up when done if KEEPTRASH=0
 "
-1105,1,13,0,Externals,sschuberth,2016-04-07T23:53:48Z,0,0,0,16,"This allows to create a pointer file by redirecting Stdout like
+1105,1,13,0,Externals,sschuberth,2016-04-07T23:53:48Z,6,6,1,16,"This allows to create a pointer file by redirecting Stdout like
 
 ```
 $ git lfs pointer --file=path/to/file > pointer-to-file
@@ -8905,7 +8905,7 @@ FAIL
 FAIL    github.com/github/git-lfs/git   1.196s
 ```
 "
-966,3,5,1,Externals,nathanhi,2016-02-02T17:15:32Z,0,0,0,1,"This PR fixes the reported behaviour in https://github.com/github/git-lfs/issues/557, where Git reports
+966,3,5,1,Externals,nathanhi,2016-02-02T17:15:32Z,16,0,2,1,"This PR fixes the reported behaviour in https://github.com/github/git-lfs/issues/557, where Git reports
 a delta, if an attempt was made to track empty files with LFS.
 If there already have been empty files tracked with LFS, these
 need to be untracked manually, as this fix only prevents that
@@ -9305,7 +9305,7 @@ Had to remove test for using relative GIT_WORK_TREE with no GIT_DIR, git rev-par
 691,1,0,0,Externals,sinbad,2015-10-19T19:32:08Z,2,2,1,17,"It was erroneously succeeding when that was set because the test was incorrect, should have been checking the env did NOT include GIT_LFS_SKIP_SMUDGE after unsetting. However any LFS env setting would false-positive and therefore work in Travis.
 "
 690,3,7,0,Externals,WillHipschman,2015-10-19T19:09:14Z,5,3,2,17,
-689,3,1,0,Externals,kaleworsley,2015-10-01T20:44:31Z,0,0,0,0,
+689,3,1,0,Externals,kaleworsley,2015-10-01T20:44:31Z,3,3,3,0,
 686,10,0,0,Internals,technoweenie,2015-10-01T01:36:06Z,120,74,13,0,"This bumps the version number, and makes a few changes to get the docker scripts to run.
 - Skipped some tests that depend on `GIT_LFS_TEST_DIR`. 
 - Hardcoded the root path in `docs/man/mangen.go` so that Git LFS builds on the Debian docker images.
@@ -9600,7 +9600,7 @@ This PR also includes:
 - get_date bash util to create commit dates easily on BSD/Mac and GNU
 - see test-push.sh for bash example and scanner_git_test.go for go test
 "
-605,1,1,0,Externals,nbrew,2015-08-25T15:02:45Z,0,0,0,0,"Added whitespace for markdown formatting of CentOS bullet points.
+605,1,1,0,Externals,nbrew,2015-08-25T15:02:45Z,4,4,1,0,"Added whitespace for markdown formatting of CentOS bullet points.
 "
 603,8,1,0,Externals,andyneff,2015-08-26T22:20:39Z,227,204,10,3,"Added Compatibility for Running docker in Windows via boot2docker
 - Fixed CentOS createrepo incompatibility on samba shares (not patched until ~Fedora 22)
@@ -9961,7 +9961,7 @@ the special one created for the integration tests. Because the test user
 environment doesn't have a keychain this caused lots of annoying popup
 error messages saying ""A keychain could not be found to store X"".
 "
-519,1,4,0,Externals,seiyanuta,2015-07-24T15:59:44Z,0,0,0,0,"`install(1)`'s `-D` option used in install.sh is a coreutils specific feature. OS X's
+519,1,4,0,Externals,seiyanuta,2015-07-24T15:59:44Z,3,1,1,0,"`install(1)`'s `-D` option used in install.sh is a coreutils specific feature. OS X's
 implementation does not support it and some other implementation such
 as FreeBSD behaves differently.
 
@@ -10621,7 +10621,7 @@ EDIT: I was unable to get #294 to fail in the new test suite, and realized it wa
 "
 319,4,0,0,Internals,technoweenie,2015-05-21T17:55:14Z,57,6,4,0,"Adds a failing test on top of https://github.com/github/git-lfs/pull/312 using the new test suite (#306).
 "
-315,1,2,0,Externals,sinbad,2015-05-19T14:16:27Z,0,0,0,0,
+315,1,2,0,Externals,sinbad,2015-05-19T14:16:27Z,1,1,1,0,
 313,10,9,0,Externals,andyneff,2015-06-17T21:26:37Z,98,19,2,30,"The build script for CentOS could not build the man pages on CentOS 6 since ruby 2 is not available. However, there is a way to get ruby via the RVM. That has been added in so that CentOS 6 can build the man pages using this script
 
 Getting golang on CentOS 5 isn't really a ""supported"" idea, but I looked into a number of work arounds and settled on the simplest one. I saw it mentioned in the comments and gave it a try. If you would rather say NO to CentOS 5, I can remove that, but I can also say that this will build and run git-lfs on a a CentOS 5 Machine (Tested on a 5.11 VM).
@@ -10772,7 +10772,7 @@ $ git config remote.master.lfs_url whatever
 error: invalid key: remote.master.lfs_url
 ```
 "
-235,1,1,0,Internals,mhagger,2015-04-15T12:35:50Z,0,0,0,0,"Properly quote the arguments that are passed to `git lfs push --stdin` just in case they contain any shell metacharacters.
+235,1,1,0,Internals,mhagger,2015-04-15T12:35:50Z,1,1,1,0,"Properly quote the arguments that are passed to `git lfs push --stdin` just in case they contain any shell metacharacters.
 "
 232,2,2,0,Internals,technoweenie,2015-04-16T15:34:54Z,39,0,1,1,"Here are the high level ideas we're thinking of for future releases of Git LFS.  Nothing is final until it's merged into master.  
 "
@@ -10827,7 +10827,7 @@ go get github.com/github/git-lfs/cmd/git-lfs
 192,1,3,1,Externals,pborreli,2015-04-08T23:59:39Z,2,2,2,0,
 191,1,1,0,Internals,bkeepers,2015-04-08T20:59:13Z,0,1,1,0,"The build failures were actually caused by the git config issue that was fixed later in #181.
 "
-189,1,2,0,Externals,lucaswerkmeister,2015-04-08T19:35:52Z,0,0,0,0,
+189,1,2,0,Externals,lucaswerkmeister,2015-04-08T19:35:52Z,1,1,1,0,
 188,1,2,0,Externals,fj,2015-04-08T21:02:08Z,1,1,1,0,"It's not clear from the documentation that `size` is in bytes, since it's only described as ""an integer"".
 "
 187,1,1,0,Internals,leereilly,2015-04-08T18:16:30Z,2,2,1,0,"Filing this under `#extremeNitPicking`:
@@ -10836,7 +10836,7 @@ go get github.com/github/git-lfs/cmd/git-lfs
 
 /cc @github/assets 
 "
-186,4,6,0,Externals,chrissiebrodigan,2015-04-08T16:49:52Z,0,0,0,0,"Based on the pre-release findings, there's a likelihood that people will download the client and try to use it with GitHub immediately and fail. Let's reduce potential support load by being explicit. :sparkles: 
+186,4,6,0,Externals,chrissiebrodigan,2015-04-08T16:49:52Z,0,2,1,0,"Based on the pre-release findings, there's a likelihood that people will download the client and try to use it with GitHub immediately and fail. Let's reduce potential support load by being explicit. :sparkles: 
 
 /cc @tclem @bkeepers @technoweenie 
 "

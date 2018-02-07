@@ -291,7 +291,7 @@ The demo below illustrates:
 - [x] Verify that <kbd>tab</kbd> still inserts a tab (or spaces, depending on your preferences) when editing a buffer
 - [x] When a line is selected in a buffer, verify that <kbd>tab</kbd> still indents the line and that <kbd>shift</kbd>+<kbd>tab</kbd> still outdents the line.
 "
-16491,1,1,0,Externals,tobiasvl,2018-01-04T18:46:26Z,0,0,0,0,"### Requirements
+16491,1,1,0,Externals,tobiasvl,2018-01-04T18:46:26Z,1,1,1,0,"### Requirements
 
 * Filling out the template is required. Any pull request that does not include enough information to be reviewed in a timely manner may be closed at the maintainers' discretion.
 * All new code requires tests to ensure against regressions
@@ -360,7 +360,7 @@ Still can't get rid of the directory altogether because people may have bookmark
 ### Applicable Issues
 
 N/A"
-16469,1,0,0,Externals,m1guelpf,2018-01-05T14:31:09Z,0,0,0,4,"TO DO:
+16469,1,0,0,Externals,m1guelpf,2018-01-05T14:31:09Z,1,1,1,4,"TO DO:
 
 - [x] Wait to the next year (100% done, depends on timezone)
 - [x] Merge!
@@ -1741,7 +1741,7 @@ When toggling comments on whitespace-only lines, we need to preserve the indenta
 Normally we don't prompt to save editors when reloading or closing a window. But if an editor's contents have changed on disk, then we would need to save the editor to avoid data loss.
 
 I'm not positive that this is the best solution, but it seems reasonable to let you know that if you don't save, you'll lose your changes. Ultimately, we need a little more UI to surface the fact that the editor has changed on disk."
-15785,1,1,0,Externals,arnavb,2017-10-02T16:37:54Z,0,0,0,0,"Used the ternary operator to shorten the last three methods in color.js
+15785,1,1,0,Externals,arnavb,2017-10-02T16:37:54Z,3,15,1,0,"Used the ternary operator to shorten the last three methods in color.js
 
 ### Description of the Change
 
@@ -2864,7 +2864,7 @@ This needs to be hot-fixed to 1.19 before we roll the railcars.
 15145,1,0,0,Internals,jasonrudolph,2017-08-02T22:30:45Z,1,1,1,0,"Upgrade tree-view to hopefully 🤞 fix the intermittent CI failures described in https://github.com/atom/tree-view/issues/1155.
 
 xref: https://github.com/atom/tree-view/pull/1156"
-15138,3,4,0,Externals,alanyee,2017-08-02T16:57:49Z,0,0,0,1,"
+15138,3,4,0,Externals,alanyee,2017-08-02T16:57:49Z,4,4,1,1,"
 ### Description of the Change
 
 -Added Homebrew install instructions for macOS
@@ -4409,7 +4409,7 @@ solve #14173 in another way: by delaying the activation of the item
 14398,1,1,0,Internals,as-cii,2017-05-12T09:27:44Z,18,5,2,0,"This change also makes the test more useful, as it verifies that the metadata we read from the package.json's `packagesCache` is used correctly.
 
 /cc: @nathansobo @maxbrunsfeld "
-14393,3,3,0,Externals,torn4dom4n,2017-05-17T06:03:16Z,0,0,0,5,"### Description of the Change
+14393,3,3,0,Externals,torn4dom4n,2017-05-17T06:03:16Z,2,1,1,5,"### Description of the Change
 Add GitHub package in build-status.md.
 "
 14391,2,0,0,Internals,as-cii,2017-05-11T16:03:20Z,14,9,5,0,"When calling remote functions or emitting deprecation warnings respectively Electron and Grim create a fake `Error` object to retrieve the stack trace of the current call site.
@@ -4630,7 +4630,7 @@ Possibly some language-go and language-mustache regressions."
 It also adds a new `force` argument to `Pane::destroyItem()` which devs can use to forcefully destroy permanent items; for example, when their package is deactivated.
 
 cc @nathansobo"
-14217,1,1,0,Externals,edjubuh,2017-04-20T09:46:44Z,0,0,0,4,"Enable option in glob to disable directories from being returned when
+14217,1,1,0,Externals,edjubuh,2017-04-20T09:46:44Z,10,10,5,4,"Enable option in glob to disable directories from being returned when
 finding paths to transpile during compilation
 
 ### Description of the Change
@@ -5258,7 +5258,7 @@ Jasmine specs in the ./spec folder are not provided
 ![atom_settings](https://cloud.githubusercontent.com/assets/22968420/23647967/5a4bb3fa-02f7-11e7-999a-6a513a885bd8.png)
 "
 13945,1,0,0,Internals,damieng,2017-03-06T20:20:12Z,1,1,1,0,
-13944,1,1,0,Externals,proggga,2017-03-06T21:04:04Z,0,0,0,0,"### Requirements
+13944,1,1,0,Externals,proggga,2017-03-06T21:04:04Z,1,1,1,0,"### Requirements
 No requirements
 
 ### Description of the Change
@@ -5956,7 +5956,7 @@ The possible drawback is some broken tests, but I've checked that and it seems e
 ### Applicable Issues
 
 Here is the related issue #8221. It's not exactly about my problem, but it's very near."
-13713,3,10,0,Externals,dirk-thomas,2017-03-10T19:34:14Z,0,0,0,39,"This is in support of atom/find-and-replace#847.
+13713,3,10,0,Externals,dirk-thomas,2017-03-10T19:34:14Z,32,9,6,39,"This is in support of atom/find-and-replace#847.
 
 ### Requirements
 
@@ -6125,7 +6125,7 @@ Note that the default will change to keep these tabs open, as that's the conserv
 This should eliminate `Warning: Possible EventEmitter memory leak detected` spam when running tests.
 
 /cc @BinaryMuse "
-13652,2,0,0,Externals,ghost,2017-01-18T19:22:47Z,0,0,0,0,"* Add superstring in build-status.md.
+13652,2,0,0,Externals,ghost,2017-01-18T19:22:47Z,1,0,2,0,"* Add superstring in build-status.md.
 * Rename macos.md to macOS.md.
 
 Should I rename macos.md to macOS.md? If possible, I think should rename freebsd, linux and window!."
@@ -6631,7 +6631,7 @@ Flight Manual needs to be updated once this is on stable."
 * Never use --assumeyes or -y installing packages. atom 1.12.7 shows if
   this had been done by end users it would have caused them great issue.
 * Fedora 22 is End Of Life (EOL), so no instructions needed."
-13416,1,1,0,Externals,MatthiasWinkelmann,2016-12-09T18:17:15Z,0,0,0,0,
+13416,1,1,0,Externals,MatthiasWinkelmann,2016-12-09T18:17:15Z,1,1,1,0,
 13415,1,1,0,Externals,portal-chan,2016-12-09T17:49:37Z,1,1,1,0,
 13412,2,1,0,Internals,maxbrunsfeld,2016-12-09T01:08:14Z,31,20,4,0,"When changing the workspace's pane configuration, the `PaneContainer` needs to sometimes remove intermediate `PaneAxis` objects from the DOM. When it does this, it [tries to restore focus](https://github.com/atom/atom/blob/89e3891d826e1c2eceb2d948203c668a4f65e0f3/src/pane-container-element.coffee#L17) to the previously-focused node.
 
@@ -6659,7 +6659,7 @@ After:
 This pull request fixes a regression introduced in #13289 that prevented Atom from installing on openSUSE because of a missing dependency. Replacing `libXScrnSaver` with `libXss.so.1` seems to address the problem, making Atom install as expected on Fedora as well as openSUSE.
 
 @cobexer @Adobe-Android @dominuskernel: can you try building this branch and test that it works as expected on your machine? Thanks!"
-13384,1,0,0,Externals,TiagoDanin,2016-12-04T20:12:15Z,0,0,0,0,"Replace text ""osx"" to ""macOS"" in `spec/update-process-env-spec.js`"
+13384,1,0,0,Externals,TiagoDanin,2016-12-04T20:12:15Z,1,1,1,0,"Replace text ""osx"" to ""macOS"" in `spec/update-process-env-spec.js`"
 13375,1,0,0,Internals,as-cii,2016-12-10T00:45:24Z,41,29,2,7,"This pull request uses atom-select-list as a drop-in replacement for atom-space-pen-views. Feature-wise nothing should change, but this will help remove jQuery from Atom."
 13372,2,0,0,Internals,as-cii,2016-12-05T14:53:54Z,24,4,3,3,"Refs: https://github.com/atom/atom/pull/13200#issuecomment-264423190
 
@@ -6792,7 +6792,7 @@ This pull request introduces a `relatedTarget` option in the synthesized blur ev
 This probably broke after upgrading electron but, since it's a code path we rarely touch, it went unnoticed.
 
 /cc: @atom/maintainers "
-13287,1,1,0,Externals,akonwi,2016-11-21T19:17:54Z,0,0,0,0,Adds the `key` argument to the function documentation
+13287,1,1,0,Externals,akonwi,2016-11-21T19:17:54Z,1,0,1,0,Adds the `key` argument to the function documentation
 13275,1,5,0,Externals,ycai2,2016-11-20T05:20:51Z,3,3,3,0,"Move ""Fold all"" to above the ""Unfold all"" and separator. 
 Fixes #13262"
 13272,1,6,0,Externals,vjeux,2016-12-12T23:55:46Z,20,0,2,23,"There's a bug when multiple gutters are prepended at once where their order is not correctly preserved in the dom. The issue is that we do not update indexInOldGutters even though we inserted a dom node in the old gutters dom.
@@ -7093,7 +7093,7 @@ Cannot locate Atom.app, it is usually located in /Applications. Set the ATOM_PAT
 Part of the fix for https://github.com/atom/atom/issues/11035.
 Requires https://github.com/atom/atom-keymap/pull/156 to work right.
 "
-13007,5,0,2,Externals,ghost,2017-01-10T20:31:41Z,0,0,0,85,
+13007,5,0,2,Externals,ghost,2017-01-10T20:31:41Z,40,40,4,85,
 13001,2,7,0,Externals,flububb,2016-10-28T14:46:04Z,6,1,1,11,"I don't know if the fixation of the architecture on non linux platforms makes any sense (line 25). Maybe simply 'arch': process.arch is the right way to go. Can't test it on my linux machine.
 
 Fixes #12972
@@ -7108,7 +7108,7 @@ I've tested this locally on macOS 10.12 running pyenv 1.0.2-44-g1dee022, and hav
 
 /cc @atom/maintainers 
 "
-12987,1,0,0,Externals,ivernus,2017-01-10T20:39:00Z,0,0,0,88,"Add additional information for using yum rather than dnf
+12987,1,0,0,Externals,ivernus,2017-01-10T20:39:00Z,5,1,1,88,"Add additional information for using yum rather than dnf
 "
 12985,5,0,0,Internals,nathansobo,2016-10-25T01:29:12Z,7,5,3,10,"This PR upgrades `atom-keymap` to include the changes in https://github.com/atom/atom-keymap/pull/152.
 
@@ -7408,7 +7408,7 @@ Originally suggested in #10839
 "
 12883,1,0,0,Internals,maxbrunsfeld,2016-10-05T19:49:02Z,44,2,2,0,"Fixes https://github.com/atom/tabs/issues/377
 "
-12866,1,1,0,Externals,mikezawitkowski,2016-10-04T14:58:40Z,0,0,0,0,"[ci skip]
+12866,1,1,0,Externals,mikezawitkowski,2016-10-04T14:58:40Z,3,3,1,0,"[ci skip]
 "
 12825,1,0,0,Internals,maxbrunsfeld,2016-09-29T21:20:41Z,1,3,1,0,"We're seeing some Circle builds time out, and we think it may be because after sending the keystroke, enough time is elapsing during our tests that the screensaver is _still_ starting.
 
@@ -7699,7 +7699,7 @@ My gut says that the right way to address this is to never have a Pane be the ro
 
 Closes #12664
 "
-12671,5,4,1,Externals,ghost,2016-09-12T18:33:01Z,0,0,0,0,
+12671,5,4,1,Externals,ghost,2016-09-12T18:33:01Z,12,12,2,0,
 12661,1,2,0,Externals,thomasjo,2016-09-11T15:50:55Z,0,1,1,0,"The _""Window load time: ...""_ console message doesn't really provide any tangible benefit, and is generally just annoying as 💩 when running specs.
 
 Additionally, I believe on Windows this is printed in the terminal when Atom is launched via `atom.cmd`.
@@ -7764,7 +7764,7 @@ Link changed to http but adding https support might be a better idea.
 "
 12581,1,0,0,Internals,as-cii,2016-09-01T15:10:12Z,0,1,1,0,"Originally, editors with autoHeight set to false had an inline style of 100%. We attempted to retain this behavior while allowing CSS to change the height by applying this styling via a global CSS rule instead: unfortunately, however, this applies to non autoHeight editors as well because due to our deprecated autoHeight detection routine, the height of these editors must be assigned on an internal element and therefore does not override the 100% styling from the stylesheet.
 "
-12580,1,2,0,Externals,frantic1048,2016-09-02T01:28:23Z,0,0,0,0,"This patch fixes `<atom-pane-resize-handle>`(`the handle`) overflow issue introduced in #7446 .
+12580,1,2,0,Externals,frantic1048,2016-09-02T01:28:23Z,1,0,1,0,"This patch fixes `<atom-pane-resize-handle>`(`the handle`) overflow issue introduced in #7446 .
 
 I was thinking of removing `/static/panes.less#L19` 's `z-index: 3`, but it just hide the handle, its height still overflows.
 
@@ -7920,7 +7920,7 @@ Tasks:
 "
 12440,3,4,0,Externals,matthewwithanm,2016-08-19T11:10:13Z,25,9,2,2,"Under the current behavior, which item is active won't be restored unless it implements `getURI()`.  This change lifts that restriction by serializing the index of the active item instead.
 "
-12439,6,18,4,Externals,remexre,2016-08-18T21:32:36Z,0,0,0,1,"See #10086.
+12439,6,18,4,Externals,remexre,2016-08-18T21:32:36Z,33,14,3,1,"See #10086.
 "
 12434,1,0,0,Internals,maxbrunsfeld,2016-08-16T00:50:19Z,43,0,2,0,"Refs https://github.com/atom/atom/pull/12196#issuecomment-239247231
 "
@@ -8169,7 +8169,7 @@ After: (tooltip, showing suite and test name)
 
 We can proceeed thanks to @elprans fixing `asar-require`.
 "
-12237,1,1,0,Externals,zertosh,2016-08-10T00:08:49Z,0,0,0,14,"Without this fix, the included test would fail with:
+12237,1,1,0,Externals,zertosh,2016-08-10T00:08:49Z,22,0,2,14,"Without this fix, the included test would fail with:
 
 ```
 $ ./out/Atom.app/Contents/MacOS/Atom --test --resource-path=""$(pwd)"" -- spec/package-manager-spec.coffee
@@ -8376,9 +8376,9 @@ I've tested this on Linux and macOS, but not Windows.
 
 /cc: @atom/core 
 "
-12003,4,5,8,Externals,leo,2016-06-20T14:29:15Z,0,0,0,2,"OS X has been renamed to ""macOS"". More details [here](http://www.macworld.co.uk/news/mac-software/mac-os-sierra-x-10-12-fuji-features-uk-release-date-macos-touch-id-siri-apfs-wwdc-2016-3630374/).
+12003,4,5,8,Externals,leo,2016-06-20T14:29:15Z,126,126,19,2,"OS X has been renamed to ""macOS"". More details [here](http://www.macworld.co.uk/news/mac-software/mac-os-sierra-x-10-12-fuji-features-uk-release-date-macos-touch-id-siri-apfs-wwdc-2016-3630374/).
 "
-12002,1,2,0,Externals,williambout,2016-06-21T01:22:49Z,0,0,0,2,"Since Chrome 46 supports `BlinkMacSystemFont`, I think we should use it instead of  `.SFNSText-Regular` (also the private font is not working anymore on macOS Sierra).
+12002,1,2,0,Externals,williambout,2016-06-21T01:22:49Z,1,1,1,2,"Since Chrome 46 supports `BlinkMacSystemFont`, I think we should use it instead of  `.SFNSText-Regular` (also the private font is not working anymore on macOS Sierra).
 "
 11998,1,0,0,Internals,as-cii,2016-06-17T22:17:19Z,9,4,1,0,"Our build is failing on Janky with the following exception:
 
@@ -8426,7 +8426,7 @@ https://github.com/electron/electron/issues/380
 
 Will merge once green.
 "
-11942,4,5,5,Externals,ssorallen,2016-07-12T08:07:25Z,0,0,0,33,"Notifications support several options that were yet to be documented:
+11942,4,5,5,Externals,ssorallen,2016-07-12T08:07:25Z,74,10,1,33,"Notifications support several options that were yet to be documented:
 `buttons`, `description`, and `stack`. Add descriptions for each option
 and its defaults (where applicable, e.g. .buttons.className).
 
@@ -8437,7 +8437,7 @@ Therefore it's documented only in those two cases.
 The usage and expected display, like preformatted vs. Markdown, taken
 from [atom/notifications/lib/notification-element.coffee](https://github.com/atom/notifications/blob/v0.64.1/lib/notification-element.coffee).
 "
-11932,1,3,0,Externals,drewchandler,2016-06-08T12:58:41Z,0,0,0,0,
+11932,1,3,0,Externals,drewchandler,2016-06-08T12:58:41Z,2,2,1,0,
 11930,1,2,0,Internals,simurai,2016-06-09T23:17:41Z,1,0,1,1,"This is a follow up for #11866.
 
 In this case when there are too many tabs, they start to push `atom-workspace-axis.vertical` beyond the window width.
@@ -8603,7 +8603,7 @@ Should probably add a spec for this?
 "
 11814,4,4,2,Externals,ruthgrace,2016-05-23T22:07:31Z,2,0,1,0,"added flight manual to Your First Code Contribution, as recommended by @lee-dohm (personal communication via Slack). I thought the flight manual description on the [atom README.md](https://github.com/atom/atom/blob/master/README.md) was perfect, so I've just copied it here.
 "
-11812,1,0,0,Externals,neurosnap,2016-05-23T21:50:12Z,0,0,0,1,"https://github.com/atom/apm/blob/master/script/download-node.js#L113
+11812,1,0,0,Externals,neurosnap,2016-05-23T21:50:12Z,1,1,1,1,"https://github.com/atom/apm/blob/master/script/download-node.js#L113
 "
 11804,3,4,0,Internals,simurai,2016-05-24T01:05:33Z,1,1,1,2,"Ideally this would be an option in the settings, but maybe a note will already help too.
 
@@ -8671,7 +8671,7 @@ Rendering line numbers corresponding to lines that need to be measured isn't use
 11762,2,1,0,Internals,damieng,2016-05-18T17:21:47Z,11,4,2,2,"Addresses #11756
 "
 11761,1,0,0,Internals,damieng,2016-05-18T19:05:08Z,16,12,1,2,
-11758,1,1,0,Externals,stanfieldr,2016-05-16T20:07:51Z,0,0,0,0,"This fixes #11542 
+11758,1,1,0,Externals,stanfieldr,2016-05-16T20:07:51Z,1,1,1,0,"This fixes #11542 
 "
 11751,2,3,0,Externals,dgm34,2016-05-15T12:42:13Z,1,1,1,1,"The existing link to https://github.com/atom/solarized-dark 404s
 "
@@ -8687,7 +8687,7 @@ Rendering line numbers corresponding to lines that need to be measured isn't use
 "
 11671,2,0,0,Internals,joshaber,2016-05-03T14:33:42Z,26,2,3,0,"Part of https://github.com/atom/atom/issues/10979.
 "
-11669,1,2,0,Externals,tcyrus,2016-05-03T00:02:30Z,0,0,0,0,"Update `marked` to fix sanitization issue on david-dm
+11669,1,2,0,Externals,tcyrus,2016-05-03T00:02:30Z,1,1,1,0,"Update `marked` to fix sanitization issue on david-dm
 "
 11646,1,0,0,Internals,as-cii,2016-04-29T23:36:37Z,39,19,2,0,"This fixes an annoying problem that prevented the state of marker layers from being saved (i.e. selections history, bookmarks, etc.) when the window was reloaded either via `Cmd+R` in DevTools or via `Ctrl+Option+Cmd+L` in Atom.
 
@@ -8703,7 +8703,7 @@ The solution is to use idle callbacks only during the critical code path (i.e. o
 
 Remove `TextEditor`s dependency on the global project.
 "
-11639,4,5,4,Externals,BrainCrumbz,2016-05-04T21:17:15Z,0,0,0,6,"The first aim is to extract Windows Registry and PowerShell operations from squirrel-update: having those has dependencies, it is easier to mock them and thus squirell-update tests are simplified.
+11639,4,5,4,Externals,BrainCrumbz,2016-05-04T21:17:15Z,242,147,5,6,"The first aim is to extract Windows Registry and PowerShell operations from squirrel-update: having those has dependencies, it is easier to mock them and thus squirell-update tests are simplified.
 
 In perspective, this PR is functional to further changes addressing issue #5901. Here's why:
 
@@ -8767,7 +8767,7 @@ Remove `TextEditor`s dependency on `PackageManager`.
 
 Remove `TextEditor`s dependency on `NotificationManager`.
 "
-11580,1,2,0,Internals,damieng,2016-04-27T18:41:53Z,0,0,0,4,"This does two things:
+11580,1,2,0,Internals,damieng,2016-04-27T18:41:53Z,18,6,3,4,"This does two things:
 1. Changes the default install folder to better match atomsetup.exe location, e.g. `c:\users\bob\appdata\local\atom\app-dev\` instead of `c:\program files\atom`
 2. Only requests Admin rights if it can't write to the target instead of always prompting UAC
 "
@@ -8788,7 +8788,7 @@ These changes are needed to fix video chat in the Floobits Atom plugin (issue ht
 - Atom fails to launch from Bash when install dir contains space #11492
 - Atom fails to open in older versions of Bash #11164
 "
-11541,3,6,4,Externals,BrainCrumbz,2016-10-31T17:05:35Z,0,0,0,194,"Comments came out while discussing issue #11137
+11541,3,6,4,Externals,BrainCrumbz,2016-10-31T17:05:35Z,13,0,1,194,"Comments came out while discussing issue #11137
 "
 11534,5,1,0,Externals,50Wliu,2016-04-20T02:08:06Z,5,6,2,0,"Putting these updates into a PR to make sure nothing breaks and to give CI a break :P.
 
@@ -8810,7 +8810,7 @@ And more to come soon hopefully!
 Will merge once :green_apple:.
 "
 11511,1,1,0,Externals,rldaggie,2016-04-18T15:53:29Z,4,4,1,0,
-11506,1,6,0,Externals,wvanlint,2016-05-02T08:13:34Z,0,0,0,14,"This allows newer listeners to be prioritized based on when they are added.
+11506,1,6,0,Externals,wvanlint,2016-05-02T08:13:34Z,14,4,2,14,"This allows newer listeners to be prioritized based on when they are added.
 This is useful as more recent contexts often have to be resolved first.
 
 For example, when `core:move-down` is called in a `find-and-replace` editor, it will go through its history.
@@ -8883,7 +8883,7 @@ You can see a sample of a new build here: https://travis-ci.org/atom/atom/jobs/1
 
 This adds support for 32-bit linux systems. See #10819 
 "
-11420,1,1,0,Externals,wvanlint,2016-04-19T21:47:21Z,0,0,0,9,"This PR changes the positioning of the overlay from absolute to fixed.
+11420,1,1,0,Externals,wvanlint,2016-04-19T21:47:21Z,8,6,2,9,"This PR changes the positioning of the overlay from absolute to fixed.
 This ensures that no overflow will be triggered in surrounding elements, which is important especially for mini TextEditors.
 cc @nathansobo 
 "
@@ -8898,7 +8898,7 @@ https://atom.io/docs/api/v1.6.2/TextEditor#instance-decorateMarkerLayer
 "
 11413,1,2,0,Externals,IanLee1521,2016-06-09T18:26:20Z,1,0,1,61,"Based on comment in dot-atom/.apm/.apmrc, the .apm directory created as part of the default startup is a cache, therefore it shouldn't be included in git.
 "
-11412,1,1,0,Internals,damieng,2016-04-11T20:13:52Z,0,0,0,2,"Allows signing of the Windows executables (atom.exe, update.exe, atomsetup.exe) using the standard Windows SDK signing tool. 
+11412,1,1,0,Internals,damieng,2016-04-11T20:13:52Z,40,9,2,2,"Allows signing of the Windows executables (atom.exe, update.exe, atomsetup.exe) using the standard Windows SDK signing tool. 
 
 Included is a test signing pfx/p12 signing key with the password 'password'. You can specify your own using the WIN_P12KEY_PASSWORD and WIN_P12KEY_URL as the Atom team will do on official builds when signing with the official key.
 "
@@ -9035,7 +9035,7 @@ Many thanks to @jordanbtucker for providing the original implementation and movi
 
 /cc: @atom/core 
 "
-11323,2,0,0,Externals,clickthisnick,2016-05-04T18:22:37Z,0,0,0,34,"Update grammar
+11323,2,0,0,Externals,clickthisnick,2016-05-04T18:22:37Z,3,3,2,34,"Update grammar
 "
 11320,1,0,0,Internals,joshaber,2016-03-31T00:42:45Z,1,1,1,0,"Fixes build on Windows machines that don’t have bash. Somehow this apparently worked on our CI machines already.
 "
@@ -9124,7 +9124,7 @@ Moreover, this introduces a `clear()` method on `StorageFolder` that deletes the
 
 /cc: @nathansobo @kuychaco @iolsen 
 "
-11246,2,4,0,Internals,damieng,2016-04-04T19:23:21Z,0,0,0,12,"Gradually improving the Windows build experience, so far:
+11246,2,4,0,Internals,damieng,2016-04-04T19:23:21Z,36,29,2,12,"Gradually improving the Windows build experience, so far:
 - **clean** deletes all specified folders (doesn't stop on first missing one)
 - **build** removes any path entry containing a msbuild.exe (avoids node-gyp errors)
 "
@@ -9175,7 +9175,7 @@ Not sure if this will cause a build error in atom/atom too, hence this PR.
 11115,1,1,0,Internals,joshaber,2016-03-09T19:40:58Z,1,1,1,0,"Fixes a crash when creating a diff. See https://github.com/nodegit/nodegit/pull/945.
 "
 11111,1,5,0,Externals,mehcode,2016-03-10T08:39:54Z,1,1,1,0,
-11103,2,3,0,Internals,damieng,2016-03-09T17:36:19Z,0,0,0,0,
+11103,2,3,0,Internals,damieng,2016-03-09T17:36:19Z,1,50,2,0,
 11101,4,1,0,Internals,joshaber,2016-03-08T18:37:32Z,65,11,2,0,"Fixes https://github.com/atom/status-bar/issues/128.
 
 This mirrors the behavior of `GitRepository`.
@@ -9186,7 +9186,7 @@ The `numberToHexString` method incorrectly only put a 0 for numbers below 10 ins
 "
 11089,1,1,0,Internals,joshaber,2016-03-07T20:39:43Z,1,1,1,0,"Fixes https://github.com/atom/git-diff/issues/88 and https://github.com/atom/git-diff/issues/89.
 "
-11078,1,3,1,Externals,wvanlint,2016-03-11T22:37:07Z,0,0,0,5,"This PR makes it so `TextEditors` are added to the registry only when they explicitly opt in.
+11078,1,3,1,Externals,wvanlint,2016-03-11T22:37:07Z,9,7,2,5,"This PR makes it so `TextEditors` are added to the registry only when they explicitly opt in.
 This was mentioned in atom/atom#10851 (where I forgot to include it) to avoid leaking memory due to package authors not calling `destroy`.
 
 /cc @nathansobo 
@@ -9250,7 +9250,7 @@ What's missing:
 Fixes #11037
 Fixes https://github.com/atom/atom/issues/6956
 "
-11053,1,8,0,Internals,damieng,2016-03-05T03:33:14Z,0,0,0,0,"Existing solution caused Command Prompt to exit and sleep command is not built in to Windows.
+11053,1,8,0,Internals,damieng,2016-03-05T03:33:14Z,1,18,1,0,"Existing solution caused Command Prompt to exit and sleep command is not built in to Windows.
 
 New solution works by spawning powershell child process that passes it's PID to atom and then waits indefinitely. When atom terminates that process the parent process continues.
 
@@ -9442,7 +9442,7 @@ For the same edit, the method now takes `~ 135ms` to execute, but most of that t
 "
 10878,2,1,0,Internals,kuychaco,2016-02-18T21:57:06Z,9,1,2,0,"Fixes https://github.com/atom/atom/issues/5891
 "
-10874,1,3,3,Internals,damieng,2016-02-18T02:55:22Z,0,0,0,0,"Kind of experimental but currently clean on Windows fails most of the time because of the path lengths.
+10874,1,3,3,Internals,damieng,2016-02-18T02:55:22Z,29,8,1,0,"Kind of experimental but currently clean on Windows fails most of the time because of the path lengths.
 "
 10873,1,0,0,Internals,maxbrunsfeld,2016-02-17T23:05:16Z,3,1,1,0,
 10872,1,3,0,Internals,kuychaco,2016-02-18T00:16:02Z,18,1,2,0,"@joshaber pointed out that opening a file from fuzzy-finder currently does not make a pending pane item permanent. This PR makes it such that if you open a file without the `pending` option and the file is currently opened in pending state, the pending state will be terminated. 
@@ -9493,9 +9493,9 @@ There's one caveat I illustrated in 90c75fd which needs to be discussed, but I f
 
 /cc: @atom/core 
 "
-10858,1,1,0,Internals,damieng,2016-02-17T19:36:35Z,0,0,0,0,"This gets us the latest version of Squirrel updater with many Windows fixes.
+10858,1,1,0,Internals,damieng,2016-02-17T19:36:35Z,1,1,1,0,"This gets us the latest version of Squirrel updater with many Windows fixes.
 "
-10851,1,9,3,Externals,wvanlint,2016-03-01T00:34:03Z,0,0,0,12,"Currently, only `TextEditors` that are items of `Panes` are observable.
+10851,1,9,3,Externals,wvanlint,2016-03-01T00:34:03Z,85,2,5,12,"Currently, only `TextEditors` that are items of `Panes` are observable.
 From the model point-of-view, the `TextEditors` are linked to the workspace through the `PaneContainer` and `Panes`.
 
 There are other `TextEditors` that are of interest though.
@@ -9544,7 +9544,7 @@ _(Total: `~ 98ms`, 12x faster :racehorse:)_
 "
 10827,3,1,0,Internals,joshaber,2016-02-16T02:43:42Z,51,6,2,0,"Bring the fixes over from https://github.com/atom/atom/pull/10758 and https://github.com/atom/atom/pull/10797.
 "
-10818,1,20,0,Internals,damieng,2016-02-16T18:44:58Z,0,0,0,1,":checkered_flag: Register atom.exe as a file handler for the current user including updating the .exe location on upgrade and removing it on uninstall. 
+10818,1,20,0,Internals,damieng,2016-02-16T18:44:58Z,9,2,1,1,":checkered_flag: Register atom.exe as a file handler for the current user including updating the .exe location on upgrade and removing it on uninstall. 
 
 Addresses #4893 and #6860. Partially addresses #6177 in that we now do the right thing although Cyberduck on Windows still seems to have some issues - I couldn't get Edit With to even work with Notepad although the Open With from the transfer Window now works with Atom.
 
@@ -9598,7 +9598,7 @@ Themes that override the default of `500px` need to add their own Media Query.
 
 When using `em`s, here another approach: https://github.com/atom/one-dark-ui/commit/4567ee785b7ffa8067684266b1fa7f3f5590dbbb
 "
-10778,1,1,0,Externals,bbenoist,2016-02-11T22:06:02Z,0,0,0,0,"Found while I was taking some inspiration from the [Issue and Pull Request Labels](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#issue-and-pull-request-labels) section :eyeglasses: 
+10778,1,1,0,Externals,bbenoist,2016-02-11T22:06:02Z,1,1,1,0,"Found while I was taking some inspiration from the [Issue and Pull Request Labels](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#issue-and-pull-request-labels) section :eyeglasses: 
 
 @izuzak Nice #8469 anyway :+1:
 "
@@ -9665,7 +9665,7 @@ module.exports = {
 
 https://discuss.atom.io/t/tree-view-not-ignoring-ignored-names-names/25258
 "
-10747,2,0,0,Internals,damieng,2016-02-09T23:46:38Z,0,0,0,0,
+10747,2,0,0,Internals,damieng,2016-02-09T23:46:38Z,36,26,1,0,
 10743,4,3,0,Internals,joshaber,2016-02-10T14:22:57Z,22,3,3,0,"Fixes #10648.
 
 So this fix is a little fussy.
@@ -9848,7 +9848,7 @@ Closes https://github.com/atom/atom/issues/10388
 
 I haven't added tests for this because I want to remove this method somewhat soon (once https://github.com/atom/atom/issues/9974 is finished and we deprecate specifying config schemas in package's main modules).
 "
-10552,1,2,0,Externals,dirk-thomas,2016-02-04T00:44:45Z,0,0,0,11,"See https://github.com/atom/settings-view/pull/698#issuecomment-171725215
+10552,1,2,0,Externals,dirk-thomas,2016-02-04T00:44:45Z,20,16,1,11,"See https://github.com/atom/settings-view/pull/698#issuecomment-171725215
 
 Mentioning the grouping feature as ""just another type"" makes it pretty hard to find. Therefore I moved it into a separate section to make it more obvious.
 "
@@ -9939,7 +9939,7 @@ This PR implements it on text-editor too.
 
 cc @joshaber 
 "
-10349,1,2,0,Externals,Tyriar,2016-01-11T20:59:43Z,0,0,0,2,"Function key keymaps don't work when they feature upperface 'F' characters.
+10349,1,2,0,Externals,Tyriar,2016-01-11T20:59:43Z,2,2,2,2,"Function key keymaps don't work when they feature upperface 'F' characters.
 They still tend to work because they typically have an application menu item
 which is associated with it and falled back upon. The main difference is that
 the originalEvent (KeyboardEvent) is not retained when doing this fallback as
@@ -9981,7 +9981,7 @@ This addresses both of these with fixes that correctly update the user path unde
 Closes #10299 
 Closes #10300 
 "
-10296,1,3,0,Externals,viatsko,2016-01-06T18:49:46Z,0,0,0,0,"This will allow us to override base git repository implementation if needed
+10296,1,3,0,Externals,viatsko,2016-01-06T18:49:46Z,1,1,1,0,"This will allow us to override base git repository implementation if needed
 "
 10293,1,3,0,Internals,as-cii,2016-01-22T18:44:29Z,40,5,2,16,"Supersedes #10292.
 
@@ -9995,9 +9995,9 @@ This PR moves clipping of measured positions up to the editor and out of `LinesY
 
 Instead of just checking whether a row is visible in the model, we also check whether a DOM node with the line's assigned id is present. If It isn't, we force a synchronous render.
 "
-10257,1,1,0,Externals,thisiskj,2016-01-02T23:58:53Z,0,0,0,0,"Minor documentation update
+10257,1,1,0,Externals,thisiskj,2016-01-02T23:58:53Z,1,1,1,0,"Minor documentation update
 "
-10256,3,16,0,Externals,leo,2016-01-14T19:17:29Z,0,0,0,12,"This resolves #9952 (please read the issue for more infos). Here’s a quick screenshots of what this PR does:
+10256,3,16,0,Externals,leo,2016-01-14T19:17:29Z,18,15,3,12,"This resolves #9952 (please read the issue for more infos). Here’s a quick screenshots of what this PR does:
 <img width=""1070"" alt=""before-after"" src=""https://cloud.githubusercontent.com/assets/6170607/12075447/621151c6-b181-11e5-8c59-7c027a5f29c0.png"">
 "
 10249,3,2,0,Internals,joshaber,2016-01-05T17:40:28Z,9,4,3,3,"_Dependent on https://github.com/atom/git-utils/pull/63._
@@ -10026,7 +10026,7 @@ TypeError: Cannot read property 'pathToOpen' of undefined
 
 /cc @atom/feedback
 "
-10226,1,3,0,Externals,danielbayley,2016-01-26T02:18:50Z,0,0,0,26,"Deprecate `language-jxa` package.
+10226,1,3,0,Externals,danielbayley,2016-01-26T02:18:50Z,4,0,1,26,"Deprecate `language-jxa` package.
 "
 10219,1,1,0,Externals,pimentel,2016-02-04T00:34:25Z,1,1,1,35,"The current documentation doesn't make any note about paragraphs being enclosed within comments. This pull request updates that.
 "
@@ -10135,7 +10135,7 @@ Feedback welcome! :balloon:
 
 /cc: @nathansobo @maxbrunsfeld @atom/feedback 
 "
-9948,2,3,2,Externals,dirk-thomas,2015-12-07T19:19:56Z,0,0,0,2,"Currently the `config.cson` is being written in semi-random order (insertion order of the object properties). That makes it pretty difficult so visually find certain options or compare two `config.cson` files from different atom installations. Especially after changing configuration options back and forth the same set of config values results in a very different file.
+9948,2,3,2,Externals,dirk-thomas,2015-12-07T19:19:56Z,28,0,2,2,"Currently the `config.cson` is being written in semi-random order (insertion order of the object properties). That makes it pretty difficult so visually find certain options or compare two `config.cson` files from different atom installations. Especially after changing configuration options back and forth the same set of config values results in a very different file.
 
 By ordering the object properties alphabetically the output of that file becomes deterministic. The same configuration results in the same file. And diffing or comparing changes becomes much easier.
 - The first commit only contains the new spec (which obviously fails without any other changes):
@@ -10204,7 +10204,7 @@ Refs atom/language-javascript#277
 
 Closes #8556
 "
-9894,1,4,4,Externals,BrainCrumbz,2016-02-04T00:55:09Z,0,0,0,64,"The command line parameters for script/build command where missing examples on how they should be run. That might be usefule for people starting active contribution to the project.
+9894,1,4,4,Externals,BrainCrumbz,2016-02-04T00:55:09Z,8,2,1,64,"The command line parameters for script/build command where missing examples on how they should be run. That might be usefule for people starting active contribution to the project.
 "
 9878,1,3,0,Internals,nathansobo,2015-11-30T20:32:07Z,28,3,2,0,"Refs #9660
 
@@ -10220,7 +10220,7 @@ In this PR we use the new `priority` parameter to prevent packages from overridi
 
 /cc: @nathansobo @maxbrunsfeld @atom/feedback 
 "
-9802,1,1,6,Externals,ssorallen,2015-12-01T01:06:51Z,0,0,0,6,"The scope selector is referred to with the key `scope` on the options
+9802,1,1,6,Externals,ssorallen,2015-12-01T01:06:51Z,1,4,4,6,"The scope selector is referred to with the key `scope` on the options
 object, not `scopeDescriptor` as the current docs claim. Reference
 `scope` correctly.
 
@@ -10587,7 +10587,7 @@ Feedback super welcome! :bow:
 
 Closes atom/settings-view#695
 "
-9513,9,9,2,Externals,Ingramz,2015-11-12T23:12:27Z,0,0,0,2,"Fixes atom/atom#2734
+9513,9,9,2,Externals,Ingramz,2015-11-12T23:12:27Z,16,12,4,2,"Fixes atom/atom#2734
 
 This is a pull request version of https://github.com/atom/atom/issues/2734#issuecomment-155230824 in order to work together on solving the currently unfair grammar scoring system. The main problem with the current system is that it gives a higher score to HTML grammar for any file that begins with HTML doctype, but the file might be using PHP or some other (templating) language that utilizes HTML syntax (with a different file type, eg `php`).
 
@@ -10887,7 +10887,7 @@ After this lands, I will go on hunting other things that are slowing startup dow
 "
 9313,1,1,0,Externals,yakirac,2015-10-28T09:11:04Z,0,1,1,0,"Updated the documentation for onDidChange in config.coffee. The value is never returned on the object so the documentation was updated to reflect that. Should close https://github.com/atom/atom/issues/7918
 "
-9283,1,1,0,Externals,Tyriar,2015-10-26T07:27:55Z,0,0,0,0,
+9283,1,1,0,Externals,Tyriar,2015-10-26T07:27:55Z,1,1,1,0,
 9274,10,29,7,Internals,simurai,2016-02-01T21:01:34Z,136,22,6,100,"This PR adds a top and bottom bar to `atom-workspace`.
 
 ``` html
@@ -10931,7 +10931,7 @@ Note that I tried setting this in various places in code, but it seemed that was
 
 /cc @atom/feedback 
 "
-9260,1,0,0,Externals,fazlearefin,2016-01-26T18:57:09Z,0,0,0,95,"For Fedora 22+, `sudo dnf install atom.x86_64.rpm` will not work unless the pathname to the package is mentioned.
+9260,1,0,0,Externals,fazlearefin,2016-01-26T18:57:09Z,1,1,1,95,"For Fedora 22+, `sudo dnf install atom.x86_64.rpm` will not work unless the pathname to the package is mentioned.
 "
 9249,1,0,0,Internals,nathansobo,2015-10-22T15:40:26Z,26,6,2,0,"Fixes #7566
 Fixes #2871
@@ -11101,7 +11101,7 @@ This is how the heap looks after the changes in this PR:
 
 Refs #9012
 "
-9029,1,9,2,Externals,ssorallen,2015-10-12T18:19:37Z,0,0,0,10,"`onDidChangeActivePaneItem` is called synchronously when the active pane
+9029,1,9,2,Externals,ssorallen,2015-10-12T18:19:37Z,66,1,3,10,"`onDidChangeActivePaneItem` is called synchronously when the active pane
 item changes, and several non-critical actions preform work on that
 event. Critical UI feedback, like changing the active tab, needs to
 happen synchronously, but most other functionality should be run
@@ -11231,7 +11231,7 @@ In https://github.com/atom/text-buffer/pull/95, I added a field `load` to the `T
 
 In this latest version of `text-buffer`, I remove that `load` field. It was actually somewhat redundant; a better solution is to just avoid loading when buffers don't have a `filePath`.
 "
-8931,1,16,0,Externals,ssorallen,2015-10-01T19:30:31Z,0,0,0,6,"`Gutter::decorateMarker` passes its `decorationParams` object through to
+8931,1,16,0,Externals,ssorallen,2015-10-01T19:30:31Z,30,23,2,6,"`Gutter::decorateMarker` passes its `decorationParams` object through to
 `TextEditor::decorateMarker`. Rather than duplicate documentation and
 fall out-of-date (as was surfaced in #8920), link the
 `TextEditor::decorateMarker` as the canonical docs location.
@@ -11290,7 +11290,7 @@ Fixes #8508
 
 /cc @as-cii @nathansobo 
 "
-8897,1,1,0,Externals,ssorallen,2015-09-24T18:26:07Z,0,0,0,1,"The docs generator expects 'optional' starting with a lowercase 'o' to
+8897,1,1,0,Externals,ssorallen,2015-09-24T18:26:07Z,8,8,1,1,"The docs generator expects 'optional' starting with a lowercase 'o' to
 mark arguments as optional. Lowercase 'O' to properly generate the docs.
 "
 8895,2,3,2,Internals,as-cii,2015-09-24T08:33:44Z,13,1,1,1,"...and use `atom.assert` to verify that the constructor was run before the exception.
@@ -11436,7 +11436,7 @@ Feedback is super welcome and appreciated! Thanks! :bow:
 /cc: @nathansobo @atom/feedback for :eyes: 
 "
 8801,1,4,0,Internals,thedaniel,2015-09-19T10:14:53Z,1,1,1,3,
-8793,1,0,0,Externals,BrainCrumbz,2016-03-11T19:38:06Z,0,0,0,178,
+8793,1,0,0,Externals,BrainCrumbz,2016-03-11T19:38:06Z,59,32,1,178,
 8788,4,2,6,Internals,maxbrunsfeld,2015-09-15T21:17:53Z,89,0,1,0,"This adds a script, `railcar` that merges branches and updates version numbers in the way that we've talked about. With this script, the workflow for doing regularly scheduled releases will be:
 1. Check that all CI builds are green on `beta` and `master`
 2. Run `script/railcar`
@@ -11516,7 +11516,7 @@ Tested on OS X 10.10.5, Windows 8.1, Fedora 22, and Ubuntu 15.04
 
 /cc @simurai @atom/feedback 
 "
-8751,1,1,0,Externals,Ingramz,2015-09-11T07:02:17Z,0,0,0,0,
+8751,1,1,0,Externals,Ingramz,2015-09-11T07:02:17Z,1,1,1,0,
 8732,5,1,0,Internals,maxbrunsfeld,2015-09-14T18:21:41Z,25,10,5,4,"Previously, CI would upload assets when building the `master` branch. Now, it uploads assets to a pre-release when building the `beta` branch, and to a normal release when building the `stable` branch.
 - [x] Update build scripts to create and upload assets to pre and production releases from the `beta` and `stable` branches, respectively.
 - [x] Create a `beta` branch off of this branch. Verify that after CI runs, a draft pre-release is created and populated with assets.
@@ -11662,7 +11662,7 @@ However, this would skip the whole paired character and it's inconsistent with w
 
 /cc: @maxbrunsfeld @nathansobo @atom/feedback for :eyes: 
 "
-8646,1,6,0,Externals,jeancroy,2015-09-03T14:47:41Z,0,0,0,0,"Possible fix for https://github.com/atom/atom/issues/3624.
+8646,1,6,0,Externals,jeancroy,2015-09-03T14:47:41Z,19,3,2,0,"Possible fix for https://github.com/atom/atom/issues/3624.
 
 Problem is that line completion was triggered only on cursor line.
 Other editor like sublime will complete the missing selection both before the start and after the end of a multi-lines selection.
@@ -11689,9 +11689,9 @@ Fixes #8369
 
 /cc @50Wliu
 "
-8623,1,1,0,Externals,aranajhonny,2015-09-08T16:48:19Z,0,0,0,7,"Fixed link for instructions Node.js debian, ubuntu and fedora. It is not something remarkable for us , but it is better to be specific.
+8623,1,1,0,Externals,aranajhonny,2015-09-08T16:48:19Z,1,2,2,7,"Fixed link for instructions Node.js debian, ubuntu and fedora. It is not something remarkable for us , but it is better to be specific.
 "
-8617,2,3,0,Externals,CosmicWebServices,2015-09-01T14:08:03Z,0,0,0,0,"Windows 10 instructions
+8617,2,3,0,Externals,CosmicWebServices,2015-09-01T14:08:03Z,1,2,2,0,"Windows 10 instructions
 "
 8612,1,5,0,Internals,simurai,2015-09-08T18:35:12Z,1,1,1,7,"This PR adds support for the bundled system font (San Francisco) that ships in El Capitan **Beta**.
 
@@ -11746,7 +11746,7 @@ Didn't think a spec was necessary, but if someone wants one, I'll add it :).
 
 We simply move the cursor up or down by the number of whole lines that fit on screen, allowing autoscroll to adjust the scroll position. This causes there to be a margin under the location to which we move the cursor, but I think it’s better to provide context and keep the autoscroll experience consistent when using the keyboard.
 "
-8555,1,5,0,Externals,ryanpcmcquen,2015-08-28T16:02:08Z,0,0,0,0,"Confirmed here: https://github.com/atom/atom/issues/8508
+8555,1,5,0,Externals,ryanpcmcquen,2015-08-28T16:02:08Z,4,4,3,0,"Confirmed here: https://github.com/atom/atom/issues/8508
 "
 8548,3,4,0,Internals,nathansobo,2015-08-28T19:46:01Z,109,38,4,0,"Fixes #8539
 Fixes #6722
@@ -11794,7 +11794,7 @@ Ideally, we shouldn't need to be conservative about such kinds of calls but that
 
 /cc: @maxbrunsfeld @nathansobo @atom/feedback 
 "
-8533,1,2,0,Externals,ssorallen,2015-10-13T20:56:41Z,0,0,0,47,"- The defaults for the 'icon' values come from [Notification::getIcon][0].
+8533,1,2,0,Externals,ssorallen,2015-10-13T20:56:41Z,35,10,1,47,"- The defaults for the 'icon' values come from [Notification::getIcon][0].
 - `dismissable` defaults to `!!options.dismissable`, which equates to `false` for `undefined`.
 
 [0]:
@@ -11843,7 +11843,7 @@ Depends on https://github.com/atom/text-buffer/pull/92
 "
 8500,4,4,3,Externals,natthu,2015-08-31T12:24:12Z,12,1,2,6,"I work on a package that adds a gutter to show ""dot"" next to a line (setting breakpoints). I noticed that sometimes the gutter UI would not update even if the code to decorate the marker successfully executed. When I debugged Atom, I realized that since the order in which gutters are added is undeterministic (unless you set the right priorities), `updateCustomGutterDecorationState` would sometimes return early.
 "
-8497,1,2,1,Externals,ssorallen,2015-08-26T16:40:41Z,0,0,0,1,"The Electron MenuItem[1] `enabled` and `visible` options are exposed to
+8497,1,2,1,Externals,ssorallen,2015-08-26T16:40:41Z,5,0,1,1,"The Electron MenuItem[1] `enabled` and `visible` options are exposed to
 Atom context menus in menu_helpers.coffee[2] but are not yet documented.
 Both options are passed through to Electron.
 
@@ -11967,7 +11967,7 @@ Any feedback is very welcome and much appreciated! :eyes: :bow:
 
 /cc @nathansobo @maxbrunsfeld 
 "
-8420,1,9,2,Externals,jssln,2015-08-21T20:43:17Z,0,0,0,3,"It seems expected for custom `Gutter`s to be destroyed when its `TextEditor` is destroyed.
+8420,1,9,2,Externals,jssln,2015-08-21T20:43:17Z,16,1,2,3,"It seems expected for custom `Gutter`s to be destroyed when its `TextEditor` is destroyed.
 We decided that the `line-numbers` Gutter could not be deliberately `destroy`-ed, which is why there is a special case for it. 
 
 The change in this PR also prevents an exception that would be thrown if you call `Gutter::destroy` after the TextEditor has been destroyed:
@@ -11976,9 +11976,9 @@ The change in this PR also prevents an exception that would be thrown if you cal
 - Then if you call `Gutter::destroy`, it calls `GutterContainer::removeGutter`
 - ... which attempts to call `@gutters.indexOf`. But `@gutters` would be `null`, not an Array.
 "
-8419,1,8,1,Externals,aranajhonny,2015-08-18T21:33:46Z,0,0,0,0,"Update linux.md
+8419,1,8,1,Externals,aranajhonny,2015-08-18T21:33:46Z,1,1,1,0,"Update linux.md
 "
-8397,6,14,1,Externals,jonathandelgado,2015-08-25T22:09:43Z,0,0,0,10,"Adds the configuration option to disable the initial empty editor. [Many people](https://discuss.atom.io/t/preference-not-to-open-new-file-when-opening-atom/8476), myself included, find it annoying to constantly close these files.
+8397,6,14,1,Externals,jonathandelgado,2015-08-25T22:09:43Z,19,0,4,10,"Adds the configuration option to disable the initial empty editor. [Many people](https://discuss.atom.io/t/preference-not-to-open-new-file-when-opening-atom/8476), myself included, find it annoying to constantly close these files.
 
 Fixes #4573 by proxy, as well.
 "
@@ -12150,7 +12150,7 @@ However, because Chromium forks and the process that actually creates the window
 - language-javascript fixes a major regression with const highlighting
 - language-yaml fixes more issues with multiline text blocks
 "
-8158,12,25,0,Externals,MaximSokolov,2015-08-28T15:46:38Z,0,0,0,28,
+8158,12,25,0,Externals,MaximSokolov,2015-08-28T15:46:38Z,86,76,3,28,
 8151,1,0,0,Externals,mnquintana,2015-07-30T04:19:15Z,1,1,1,0,"This now hides deprecation-cop's status bar view unless the window is in dev mode. https://github.com/atom/deprecation-cop/pull/64
 "
 8150,1,0,0,Externals,mnquintana,2015-07-30T04:19:06Z,1,1,1,0,"This fixes an issue with VCS coloring if the project root was a symlink. (https://github.com/atom/tree-view/pull/487)
@@ -12194,13 +12194,13 @@ Will merge when green.
 
 Fixes #6675
 "
-8122,1,1,0,Externals,ssorallen,2015-07-29T00:33:29Z,0,0,0,0,"Use the `Returns` keyword in function docs so they are put
+8122,1,1,0,Externals,ssorallen,2015-07-29T00:33:29Z,6,6,1,0,"Use the `Returns` keyword in function docs so they are put
 in panels like other return values in docs.
 "
-8121,1,1,0,Externals,ssorallen,2015-07-29T00:32:59Z,0,0,0,0,"Use the `Returns` keyword in `get*Theme` function docs so they are put
+8121,1,1,0,Externals,ssorallen,2015-07-29T00:32:59Z,4,4,1,0,"Use the `Returns` keyword in `get*Theme` function docs so they are put
 in panels like other return values in docs.
 "
-8120,1,2,0,Externals,ssorallen,2015-07-29T00:32:34Z,0,0,0,0,"Use the `Returns` keyword in `PackageManager::getAvailablePackage*`
+8120,1,2,0,Externals,ssorallen,2015-07-29T00:32:34Z,3,3,1,0,"Use the `Returns` keyword in `PackageManager::getAvailablePackage*`
 docs so the return values are called out in panels like with other
 documentation.
 "
@@ -12262,7 +12262,7 @@ decoration = editor.decorateMarker(marker, {type: 'overlay', item: element, clas
 
 Usually, this isn't necessary, because you can apply styles to the item's view instead. I hit a problem with that when I tried to apply positioning styles to the item, though, because the overlay element's absolute positioning interfered with the positioning I was trying to apply. I've had [a workaround](https://github.com/smashwilson/merge-conflicts/blob/1088c7fbcf32924998ff6c88c41f088bf0da37c9/lib/view/covering-view.coffee#L23) in place for a while, but being able to apply styles to the overlay element itself would make it a bit more graceful, I think. It would also make overlay parameters a bit more consistent with those accepted by the other decorations.
 "
-8092,1,1,0,Externals,MaximSokolov,2015-07-27T16:27:56Z,0,0,0,0,
+8092,1,1,0,Externals,MaximSokolov,2015-07-27T16:27:56Z,2,0,1,0,
 8082,1,1,0,Externals,50Wliu,2015-07-25T23:21:42Z,1,1,1,0,"0.83.0 fixes an issue with regex highlighting after a `const` declaration.
 0.84.0 fixes the `setInterval` and `setTimeout` snippets not being properly escaped.
 "
@@ -12270,7 +12270,7 @@ Usually, this isn't necessary, because you can apply styles to the item's view i
 
 See atom/scandal#29
 "
-8062,1,1,0,Externals,MaximSokolov,2015-08-18T01:07:56Z,0,0,0,24,
+8062,1,1,0,Externals,MaximSokolov,2015-08-18T01:07:56Z,8,4,1,24,
 8061,3,0,0,Externals,50Wliu,2015-07-24T16:13:20Z,3,3,1,0,"- Javascript 0.82.0 now tokenizes the `$` in  `$something` as an instance constructor and also fixes tokenization when destructuring in `const` assignments (`const [first, second, ...rest] = array);`)
 - Python 0.38.0 correctly tokenizes `self.something` now
 - Go 0.31.0 adds the `fmt printf` snippet for debugging
@@ -12400,7 +12400,7 @@ description] pairs.
 
 This goes with atom/settings-view#589.
 "
-7896,1,2,0,Externals,rameshvarun,2015-09-21T21:04:43Z,0,0,0,68,"Several functions on the [PackageManager docs page](https://atom.io/docs/api/v1.0.2/PackageManager) return objects of type `Package`. The docs link to the address https://atom.io/docs/api/v1.0.2/Package, which does not exist as `Package` is not marked as an extended class (thus no docs page is generated for it). This PR makes `Package` an extended class so that the docs links are no longer broken.
+7896,1,2,0,Externals,rameshvarun,2015-09-21T21:04:43Z,1,1,1,68,"Several functions on the [PackageManager docs page](https://atom.io/docs/api/v1.0.2/PackageManager) return objects of type `Package`. The docs link to the address https://atom.io/docs/api/v1.0.2/Package, which does not exist as `Package` is not marked as an extended class (thus no docs page is generated for it). This PR makes `Package` an extended class so that the docs links are no longer broken.
 "
 7881,1,1,0,Externals,bolinfest,2015-07-14T13:25:44Z,1,1,1,0,"Upgrade Babel to pick up bug fixes and to ensure a version that
 has support for transforms such as `es7.classProperties`.
@@ -12408,8 +12408,8 @@ has support for transforms such as `es7.classProperties`.
 This transform is particularly useful for classes that subclass `React.Component`
 as shown in http://babeljs.io/blog/2015/06/07/react-on-es6-plus/#property-initializers.
 "
-7880,1,1,1,Externals,ghost,2015-07-17T21:29:03Z,0,0,0,3,
-7879,3,2,4,Externals,ssorallen,2015-07-22T21:44:30Z,0,0,0,9,"- Mark `dismiss` as an ""extended"" API because its use case is uncommon.
+7880,1,1,1,Externals,ghost,2015-07-17T21:29:03Z,1,1,1,3,
+7879,3,2,4,Externals,ssorallen,2015-07-22T21:44:30Z,22,2,1,9,"- Mark `dismiss` as an ""extended"" API because its use case is uncommon.
 - Mark event handler functions as public because responding to a
   notification being displayed or dismissed is useful.
 "
@@ -12678,7 +12678,7 @@ Closes https://github.com/atom/notifications/issues/79
 
 cc @kevinsawicki :zap: for catching that case as well
 "
-7767,1,2,0,Externals,ssorallen,2015-07-07T17:51:25Z,0,0,0,0,"Add missing `name` argument to `enablePackage` and `disablePackage` docs.
+7767,1,2,0,Externals,ssorallen,2015-07-07T17:51:25Z,4,0,1,0,"Add missing `name` argument to `enablePackage` and `disablePackage` docs.
 "
 7754,1,1,0,Internals,as-cii,2015-07-07T12:29:45Z,12,1,2,0,"In #7733 we have removed a couple of update statements that were no longer needed. Unfortunately, we didn’t catch a :bug: that caused the editor not to scroll automatically when the model changed.
 
@@ -12733,7 +12733,7 @@ If the dialog opens a file its title is changed to ""Open File"", and if it open
 "
 7640,1,1,0,Internals,nathansobo,2015-07-01T22:35:28Z,1,0,1,0,"/cc @benogle 
 "
-7638,2,18,14,Externals,joefitzgerald,2015-07-09T20:42:31Z,0,0,0,8,"This PR:
+7638,2,18,14,Externals,joefitzgerald,2015-07-09T20:42:31Z,163,15,11,8,"This PR:
 - Adds `activationHooks` to package.json
 - Triggers the `{grammar-package-name}:grammar-used` hook when a text-editor-element's grammar is set
 
@@ -12815,13 +12815,13 @@ Closes #6548
 "
 7558,4,2,3,Internals,nathansobo,2015-06-30T20:54:36Z,68,3,4,1,"This was briefly introduced in #7350, but reverted before we went 1.0 to minimize risk. It's the logical next step in attacking our uncaught exceptions.
 "
-7521,1,1,0,Externals,ghost,2015-06-29T02:26:13Z,0,0,0,0,"Use of license objects or a ""licenses"" property containing an array of license objects are now deprecated. Instead, use SPDX expressions. https://docs.npmjs.com/files/package.json#license
+7521,1,1,0,Externals,ghost,2015-06-29T02:26:13Z,1,6,1,0,"Use of license objects or a ""licenses"" property containing an array of license objects are now deprecated. Instead, use SPDX expressions. https://docs.npmjs.com/files/package.json#license
 "
 7458,1,1,0,Externals,nounoursheureux,2015-07-24T01:09:11Z,1,1,1,27,"It is no longer selected by double-clicking. #7047 
 "
 7426,1,1,0,Externals,drewkett,2015-06-27T14:01:56Z,1,1,1,1,"PYTHON environment variable needs to be in all caps
 "
-7411,2,2,0,Externals,deprint,2015-07-06T20:56:20Z,0,0,0,11,"`TextEditor` has a function called `setMini` that toggles the mini state of an editor. The problem is that it only ""changes"" the `TextEditor` itself and `TextEditorPresenter`, but not `TextEditorElement`.
+7411,2,2,0,Externals,deprint,2015-07-06T20:56:20Z,17,3,2,11,"`TextEditor` has a function called `setMini` that toggles the mini state of an editor. The problem is that it only ""changes"" the `TextEditor` itself and `TextEditorPresenter`, but not `TextEditorElement`.
 Before fix:
 ![unfixed-setmini](https://cloud.githubusercontent.com/assets/7817714/8353884/1fbc8b9e-1b43-11e5-965a-8e420f80ab94.png)
 After fix:
@@ -12846,7 +12846,7 @@ I'd love to have this here `will-remove-item` event on Pane. The motivation is f
 
 There are probably many possible solutions here, but this seemed the most generic. WDYT?
 "
-7381,1,1,0,Externals,blopker,2015-06-23T10:53:43Z,0,0,0,0,"Cheers! :beers: 
+7381,1,1,0,Externals,blopker,2015-06-23T10:53:43Z,1,1,1,0,"Cheers! :beers: 
 "
 7377,3,5,0,Externals,mnquintana,2015-07-27T17:42:48Z,6,1,4,34,"Closes https://github.com/atom/atom/issues/3377
 Closes https://github.com/atom/about/issues/2
@@ -12870,7 +12870,7 @@ Let me know what you think!
 "
 7373,1,1,0,Internals,nathansobo,2015-06-22T20:09:11Z,36,111,4,0,"Reverts atom/atom#7350
 "
-7368,1,2,0,Externals,amayer5125,2015-06-22T16:16:17Z,0,0,0,0,"Fedora 22 uses dnf
+7368,1,2,0,Externals,amayer5125,2015-06-22T16:16:17Z,12,1,1,0,"Fedora 22 uses dnf
 yum command will not work
 "
 7360,4,1,2,Internals,izuzak,2015-06-22T18:10:17Z,23,0,2,0,"This fixes https://github.com/atom/command-palette/issues/42 using the approach suggested in https://github.com/atom/command-palette/issues/42#issuecomment-104730041.
@@ -12966,7 +12966,7 @@ Addresses https://github.com/atom/atom/commit/384b88eecf6aae287f9a7a5c79a1f52dd0
 
 Closes https://github.com/atom/atom/pull/7309
 "
-7294,1,2,0,Externals,aki77,2015-06-16T21:26:51Z,0,0,0,0,"decoration listener is not destroyed.
+7294,1,2,0,Externals,aki77,2015-06-16T21:26:51Z,9,1,2,0,"decoration listener is not destroyed.
 
 **Active Packages**
 - bracket-matcher
@@ -13027,7 +13027,7 @@ i=document.createElement('input'); i.classList.add('native-key-bindings'); i.typ
 
 and verifying that the cut now works with this change.
 "
-7237,1,4,0,Externals,ssorallen,2015-06-11T22:22:48Z,0,0,0,0,"Add argument and return type docs to fill in the documentation site.
+7237,1,4,0,Externals,ssorallen,2015-06-11T22:22:48Z,23,1,1,0,"Add argument and return type docs to fill in the documentation site.
 "
 7235,1,3,0,Externals,mnquintana,2015-06-11T22:00:07Z,1,1,1,0,"This adds VCS coloring for tabs. (Thanks @acontreras89!)
 "
@@ -13093,7 +13093,7 @@ Screen Capture showing fix:
 
 /cc @kevinsawicki 
 "
-7175,1,1,0,Externals,nikhilofthesouth,2015-06-09T15:55:50Z,0,0,0,0,"Was bothering me a little. Deprecate old misspelled API, removing from docs. 
+7175,1,1,0,Externals,nikhilofthesouth,2015-06-09T15:55:50Z,5,1,1,0,"Was bothering me a little. Deprecate old misspelled API, removing from docs. 
 "
 7173,3,10,4,Internals,nathansobo,2015-06-21T16:17:59Z,47,9,3,12,"![screenshot 2015-06-08 23 52 18](https://cloud.githubusercontent.com/assets/1789/8046221/79c32c68-0e39-11e5-8ea2-76fc21e68880.png)
 
@@ -13101,7 +13101,7 @@ I'm now considering chunking the population of the line index on the UI thread t
 "
 7172,1,0,0,Internals,nathansobo,2015-06-08T22:00:06Z,20,3,2,0,"Fixes #7160
 "
-7170,1,1,0,Externals,erfanio,2015-06-08T21:50:31Z,0,0,0,0,"When building from source there is a problem with the `atom.desktop`. The icon that it points to doesn't exit.
+7170,1,1,0,Externals,erfanio,2015-06-08T21:50:31Z,2,1,2,0,"When building from source there is a problem with the `atom.desktop`. The icon that it points to doesn't exit.
 I added `atom.png` to get unpacked from app.asar and changed `atom.desktop` to point to and fixed the problem
 "
 7169,1,1,0,Externals,mnquintana,2015-06-08T16:31:07Z,2,2,1,0,"The example was using a `project` global instead of `atom.project`.
@@ -13246,7 +13246,7 @@ Fixes https://github.com/atom/atom/issues/6985
 "
 7071,1,1,0,Externals,50Wliu,2015-06-02T23:33:32Z,1,1,1,0,"Closes #7066
 "
-7067,1,1,0,Externals,ghost,2015-06-02T20:37:54Z,0,0,0,0,
+7067,1,1,0,Externals,ghost,2015-06-02T20:37:54Z,0,1,1,0,
 7056,2,0,0,Internals,kevinsawicki,2015-06-02T15:51:33Z,23,1,2,0,"Prevents Atom from failing to open because of a read error with a serialized editor.
 
 Closes #6955
@@ -13489,7 +13489,7 @@ No more duplicated work. Opening the file took about **3.2 seconds**.
 
 ![screen shot 2015-05-13 at 8 17 45 pm](https://cloud.githubusercontent.com/assets/326587/7625548/e51e262a-f9ad-11e4-995f-8c0236b4dce7.png)
 "
-6776,17,1,2,Externals,jssln,2015-05-14T22:43:39Z,0,0,0,0,"This is the first part in a series of follow-ups to polish off https://github.com/atom/atom/pull/5217.
+6776,17,1,2,Externals,jssln,2015-05-14T22:43:39Z,780,690,8,0,"This is the first part in a series of follow-ups to polish off https://github.com/atom/atom/pull/5217.
 
 This PR does the following:
 - Changes `@state.gutters` in TextEditorPresenter to be an Array of Objects of the form:
@@ -13711,7 +13711,7 @@ After:
 "
 6690,1,10,0,Internals,maxbrunsfeld,2015-05-07T22:24:13Z,0,1,1,0,"Closes #6464
 "
-6687,1,1,0,Externals,oclbdk,2015-05-07T18:21:38Z,0,0,0,0,
+6687,1,1,0,Externals,oclbdk,2015-05-07T18:21:38Z,1,1,1,0,
 6684,6,5,0,Internals,maxbrunsfeld,2015-05-13T18:08:21Z,13,9,1,6,"We now save the open windows whenever:
 - A new window is opened
 - A window loses focus
@@ -13850,7 +13850,7 @@ npm ERR! not ok code 0
 Closes https://github.com/atom-community/autocomplete-plus/issues/394
 Closes https://github.com/atom-minimap/minimap/issues/317
 "
-6570,1,1,0,Externals,jssln,2015-04-29T21:26:29Z,0,0,0,0,"...m gutter element
+6570,1,1,0,Externals,jssln,2015-04-29T21:26:29Z,17,0,2,0,"...m gutter element
 
 This is @nathansobo's fix for line numbers (https://github.com/atom/atom/commit/192997c8cf4479c4cae155207ad3b175c0ee9498) applied to custom gutters.
 "
@@ -13898,7 +13898,7 @@ Fixes #6556
 "
 6550,1,0,0,Externals,mnquintana,2015-04-28T11:54:36Z,1,1,1,0,":arrow_up: bracket-matcher@0.74.0
 "
-6547,1,3,0,Externals,mpkh,2015-04-29T21:52:28Z,0,0,0,1,"related issue on discuss: https://discuss.atom.io/t/ctrl-x-tab-selection/13615
+6547,1,3,0,Externals,mpkh,2015-04-29T21:52:28Z,9,0,1,1,"related issue on discuss: https://discuss.atom.io/t/ctrl-x-tab-selection/13615
 
 I strongly suggest to keep `alt` there and not `ctrl`
 - I just can't rotate my hand to press `ctrl+1` or alike, I don't know how people use it, it's very uncomfortable
@@ -14063,7 +14063,7 @@ One new error that users are likely to run into is this one in subclass construc
 
 As best I can tell, this was a recent-ish update to the ES6 constructor semantics spec that Babel is now enforcing: https://gist.github.com/allenwb/53927e46b31564168a1d. /cc @sebmck
 "
-6433,1,1,0,Externals,vvakame,2015-04-19T15:12:26Z,0,0,0,0,
+6433,1,1,0,Externals,vvakame,2015-04-19T15:12:26Z,1,1,1,0,
 6431,2,0,0,Internals,nathansobo,2015-04-20T20:07:54Z,35,10,2,2,"Fixes #5771
 
 When we change config values rapidly, we end up detecting our own changes to the user config file, causing a load to be requested. If we have made changes to the config since the last write that haven't yet been saved, our changes end up getting clobbered when the stale values are loaded. My simple solution is to just never load values from disk when there are unsaved changes pending.
@@ -14072,7 +14072,7 @@ This is actually a pretty nuanced problem to get right in the general case, and 
 
 /cc @maxbrunsfeld since this interacts with your original improvements to make config reads and writes asynchronous.
 "
-6429,2,3,0,Externals,ghost,2015-04-17T19:44:58Z,0,0,0,0,
+6429,2,3,0,Externals,ghost,2015-04-17T19:44:58Z,1,1,1,0,
 6407,2,0,0,Internals,kevinsawicki,2015-04-16T22:14:12Z,10,4,1,0,"While profiling startup I noticed that https://github.com/atom/atom-shell/blob/29338e2fa488c87a02a466d28b7f78ff9fc86903/atom/common/lib/asar.coffee#L56 was showing up in the profile a lot.
 
 This fixes that by verifying that the `grammars` and `settings` folders exists before reading them.
@@ -14302,7 +14302,7 @@ This ensures model elements such as `TextEditor` won't have emissary mixins incl
 
 This is a follow-on pull request to #6103 
 "
-6248,53,19,8,Internals,as-cii,2015-04-16T16:54:20Z,0,0,0,12,"Closes #6222  :green_heart: :green_heart: :green_heart:
+6248,53,19,8,Internals,as-cii,2015-04-16T16:54:20Z,53,9,7,12,"Closes #6222  :green_heart: :green_heart: :green_heart:
 - [x] Setup Travis
   - [x] OS X setup. [You can see a passing build here.](https://travis-ci.org/as-cii/atom/builds/57160743)
   - [x] `script/cibuild` didn't work out of the box on Travis; on my OS X machine it doesn't work either, [showing the same failures](https://travis-ci.org/as-cii/atom/builds/57005243). @kevinsawicki: any idea why we're getting those errors? `run-specs` task is not really reliable on my machine and I usually run tests through `apm test`: do you think we can keep it in Travis as well?
@@ -14350,14 +14350,14 @@ Nathan, I tweaked the orginal dog scenario to be a happier one :dog: :grinning:
 
 [r E n D e R e D](https://github.com/atom/atom/blob/0f43b246b4ef5c1759c81440e8b0b2abbf9230d3/CONTRIBUTING.md)
 "
-6206,1,1,0,Externals,mertkahyaoglu,2015-04-01T17:36:57Z,0,0,0,0,
+6206,1,1,0,Externals,mertkahyaoglu,2015-04-01T17:36:57Z,0,2,1,0,
 6205,2,0,0,Internals,kevinsawicki,2015-04-01T16:53:48Z,31,0,1,0,"Folders of the style `npm-10200-49dae08c` are filling up our CI machines so delete them all each time a CI build runs since they are leftovers from previous builds and are never reused or needed again.
 "
-6202,1,4,0,Externals,jessegrosjean,2015-04-09T19:05:15Z,0,0,0,8,"This exports the pathwatcher File and Directory classes through require('atom').
+6202,1,4,0,Externals,jessegrosjean,2015-04-09T19:05:15Z,3,0,1,8,"This exports the pathwatcher File and Directory classes through require('atom').
 
 I think this makes sense since those classes are already publicly documented as part of the Atom platform API, but currently there's no way for a package to require and instantiate them. The alternative is to add the pathwatcher module to my own package, but this seems redundant since File and Directory are already documented as part of the Atom platform. Also since pathwatcher is a native package it's even more problematic then it would be with a normal package.
 "
-6200,1,1,0,Externals,mertkahyaoglu,2015-04-01T15:31:57Z,0,0,0,0,
+6200,1,1,0,Externals,mertkahyaoglu,2015-04-01T15:31:57Z,1,2,1,0,
 6199,10,1,0,Internals,zcbenz,2015-04-01T20:13:40Z,2,2,2,0,
 6197,17,0,4,Internals,benogle,2015-04-02T01:24:24Z,393,268,11,0,"Here is an overlay outside the editor bounds with a `-250px` `left-margin`:
 
@@ -14388,7 +14388,7 @@ cc @nathansobo @bolinfest
 "
 6173,1,0,0,Internals,benogle,2015-03-30T21:38:28Z,13,0,1,0,"Will be used by syntax themes, and autocomplete
 "
-6167,7,8,4,Externals,jessegrosjean,2015-04-02T17:52:55Z,0,0,0,3,"Currently screenPositionForPixelPosition special cases pixel positions
+6167,7,8,4,Externals,jessegrosjean,2015-04-02T17:52:55Z,32,0,3,3,"Currently screenPositionForPixelPosition special cases pixel positions
 below the last row so that the column position is always set to the
 last column of the last line, even if the pixel 'x' position is less
 then that column.
@@ -14515,7 +14515,7 @@ Closes #5706
 
 /cc: @nathansobo 
 "
-6007,1,3,0,Externals,octref,2015-03-18T00:00:40Z,0,0,0,0,"For file format that Atom doesn't recognize as a
+6007,1,3,0,Externals,octref,2015-03-18T00:00:40Z,1,0,1,0,"For file format that Atom doesn't recognize as a
 programming language, such as log files,
 skip Tokenization since no syntax highlighting should be done.
 "
@@ -14769,7 +14769,7 @@ cc @benogle @nathansobo for :eyes:
 "
 5768,1,0,0,Internals,maxbrunsfeld,2015-02-26T19:55:17Z,33,6,2,0,"Refs #770, #5728.
 "
-5762,23,8,4,Internals,as-cii,2015-02-28T17:58:01Z,0,0,0,2,"This PR is still experimental, as it still needs some :heart:, but it demonstrates a few concepts discussed in #5025. It introduces, in facts, the notion of batching along with some other performance improvements :racehorse: You can find some pieces of information about batching in the aforementioned issue, but I'll report some key ideas here as well.
+5762,23,8,4,Internals,as-cii,2015-02-28T17:58:01Z,391,355,12,2,"This PR is still experimental, as it still needs some :heart:, but it demonstrates a few concepts discussed in #5025. It introduces, in facts, the notion of batching along with some other performance improvements :racehorse: You can find some pieces of information about batching in the aforementioned issue, but I'll report some key ideas here as well.
 
 We noticed that a lot of computation was wasted in `TextEditorPresenter`, especially when performing multi-operations (e.g. select many things, write on many lines, etc.). If we write a character on 10 lines simultaneously, the whole UI would be recomputed 10 times, even though this was an atomic operation.
 
@@ -14818,7 +14818,7 @@ else
 
 /cc @nathansobo
 "
-5750,2,2,0,Externals,jimgraham,2015-02-26T17:06:50Z,0,0,0,0,"Do not set the icon in the updater dialog when
+5750,2,2,0,Externals,jimgraham,2015-02-26T17:06:50Z,4,2,1,0,"Do not set the icon in the updater dialog when
 - on Windows
 - calling the `showMessageBox` function.
 
@@ -14835,7 +14835,7 @@ Looks like this when complete:
 
 Packages just using services will no longer need a no-op `activate` function exported.
 "
-5733,2,1,0,Internals,as-cii,2015-02-25T18:19:55Z,0,0,0,0,":racehorse: :racehorse: :racehorse: 
+5733,2,1,0,Internals,as-cii,2015-02-25T18:19:55Z,3,3,1,0,":racehorse: :racehorse: :racehorse: 
 
 /cc: @nathansobo 
 "
@@ -14851,7 +14851,7 @@ Packages just using services will no longer need a no-op `activate` function exp
 
 /cc @nathansobo @kevinsawicki 
 "
-5714,1,2,0,Internals,as-cii,2015-02-24T20:44:07Z,0,0,0,0,"If one cursor changed, all of them were recomputed in `TextEditorPresenter`. With a small refactoring, we gain quite a lot of speed (noticeable especially on multiline selections when moving left and right).
+5714,1,2,0,Internals,as-cii,2015-02-24T20:44:07Z,18,11,1,0,"If one cursor changed, all of them were recomputed in `TextEditorPresenter`. With a small refactoring, we gain quite a lot of speed (noticeable especially on multiline selections when moving left and right).
 
 :racehorse: :racehorse: :racehorse: 
 
@@ -14867,7 +14867,7 @@ Also, even though the deprecation message is parameterized by `filePath`, multip
 "
 5679,1,2,0,Externals,jbrains,2015-02-23T17:36:22Z,1,1,1,1,"A minor improvement to the ""Your First Package"" guide.
 "
-5678,2,4,0,Internals,as-cii,2015-02-23T20:36:28Z,0,0,0,1,"This pull-request introduces a performance improvement in `mergeIntersectingSelection`. Before changing it the cost of this function was `O(n^2)`: selections were accessed always and in sparse order, causing the traversing time to increase exponentially as more and more selections were added. 
+5678,2,4,0,Internals,as-cii,2015-02-23T20:36:28Z,7,7,1,1,"This pull-request introduces a performance improvement in `mergeIntersectingSelection`. Before changing it the cost of this function was `O(n^2)`: selections were accessed always and in sparse order, causing the traversing time to increase exponentially as more and more selections were added. 
 
 Before merging selections, we now order them first and try to intersect the current selection with the previous one only. This brings the cost of `mergeIntersectingSelections` down to `O(n log n)`, changing this:
 
@@ -14885,7 +14885,7 @@ All the specs are green, therefore this ""new algorithm"" shouldn't have changed
 
 Hopefully, this should be a significant step forward towards #5163 :smile: 
 "
-5677,1,1,0,Externals,ghost,2015-02-22T09:42:40Z,0,0,0,0,
+5677,1,1,0,Externals,ghost,2015-02-22T09:42:40Z,3,3,1,0,
 5660,7,2,4,Externals,bolinfest,2015-02-24T01:21:48Z,25,1,2,2,"...s null rather than throws.
 
 The UI locks up if this method does not return.
@@ -14932,7 +14932,7 @@ cc @kevinsawicki
 "
 5573,1,1,0,Externals,postcasio,2015-02-18T01:58:33Z,18,18,7,1,"In CSS3, single colon for pseudo-elements is deprecated.
 "
-5567,28,62,11,Internals,as-cii,2015-02-26T02:06:35Z,0,0,0,10,"This fixes #1125.
+5567,28,62,11,Internals,as-cii,2015-02-26T02:06:35Z,178,63,6,10,"This fixes #1125.
 
 It still needs a lot of refactoring (and some test cases too), but I just wanted to evaluate the approach that me and @nathansobo agreed on the aforementioned issue. To recap, the following is a brief explanation of how the solution works.
 
@@ -15264,7 +15264,7 @@ However, with default settings on the build scripts, everything still behaves th
 "
 5305,1,1,0,Externals,mnquintana,2015-01-29T17:15:11Z,1,1,1,0,"Fixes #5304
 "
-5300,1,0,0,Externals,ghost,2015-01-29T02:45:27Z,0,0,0,0,"Change http://github.com to https://github.com to avoid plaintext HTTP connections.
+5300,1,0,0,Externals,ghost,2015-01-29T02:45:27Z,1,1,1,0,"Change http://github.com to https://github.com to avoid plaintext HTTP connections.
 "
 5299,7,66,24,Externals,bolinfest,2015-02-02T21:11:33Z,196,2,4,4,"Transpile all .js files with 6to5.
 
@@ -15358,7 +15358,7 @@ Closes #5165
 5228,1,1,1,Internals,benogle,2015-01-23T18:33:20Z,4,4,1,0,
 5220,5,1,0,Internals,kevinsawicki,2015-01-22T22:11:37Z,25,0,2,0,"Start shipping these new themes
 "
-5217,53,14,159,Externals,jssln,2015-04-22T19:29:17Z,0,0,0,90,"Summary: This implements the gutter API described in https://github.com/atom/atom/issues/5038.
+5217,53,14,159,Externals,jssln,2015-04-22T19:29:17Z,1691,243,28,90,"Summary: This implements the gutter API described in https://github.com/atom/atom/issues/5038.
 
 Test Plan: Added unit tests. Tested manually as well -- if you rebase before the commit ""Remove test-only CSS"", there is some default CSS that makes gutters and decorations obviously visible when you add them via commands in the console. Example test commands, on top of this default CSS:
 
@@ -15390,7 +15390,7 @@ g.destroy()
 g = e.addGutter({name: 'test'})
 ```
 "
-5201,1,1,0,Externals,wyand,2015-01-27T22:09:52Z,0,0,0,5,"When Atom is installed with [Homebrew](https://github.com/Homebrew/homebrew), it will be in `~/Applications` instead of `/Applications`. This change updates the `atom.sh` startup script to check both `/Applications` and `~/Applications` before falling back to a metadata search.
+5201,1,1,0,Externals,wyand,2015-01-27T22:09:52Z,15,9,1,5,"When Atom is installed with [Homebrew](https://github.com/Homebrew/homebrew), it will be in `~/Applications` instead of `/Applications`. This change updates the `atom.sh` startup script to check both `/Applications` and `~/Applications` before falling back to a metadata search.
 
 Behavior is unchanged when `$ATOM_PATH` is unset or empty.
 "
@@ -15427,7 +15427,7 @@ Closes #5107
 Closes #5112 
 Closes #3231
 "
-5110,1,6,0,Externals,amayer5125,2015-03-12T00:37:43Z,0,0,0,54,"Macs generate ._ files when saving to a filesystem other then HFS
+5110,1,6,0,Externals,amayer5125,2015-03-12T00:37:43Z,1,1,1,54,"Macs generate ._ files when saving to a filesystem other then HFS
 In shared environments this is a big problem
 "
 5086,7,6,2,Internals,kevinsawicki,2015-01-16T17:47:01Z,37,5,3,0,"If a buffer's serialized path was a directory upon deserialization then Atom would previously fail to launch.
@@ -15440,7 +15440,7 @@ Fixes #5084
 "
 5068,2,1,0,Internals,nathansobo,2015-01-15T03:04:02Z,28,25,7,0,"We're talking about adding APIs for multiple gutters, so the name 'gutter' for these decorations doesn't really make sense. What we're actually decorating is the _line numbers_, which will be just one of the potential gutters on an atom editor.
 "
-5066,1,1,0,Externals,adrianlee44,2015-01-14T23:52:25Z,0,0,0,0,"I see this error when using `git-blame` package which is using the deprecated method `getOriginUrl`. Since it's the method is referring to itself, it's causing `Maximum call stack size` (https://github.com/alexcorre/git-blame/issues/56).
+5066,1,1,0,Externals,adrianlee44,2015-01-14T23:52:25Z,3,3,1,0,"I see this error when using `git-blame` package which is using the deprecated method `getOriginUrl`. Since it's the method is referring to itself, it's causing `Maximum call stack size` (https://github.com/alexcorre/git-blame/issues/56).
 "
 5060,1,2,2,Internals,maxbrunsfeld,2015-01-14T21:13:52Z,9,5,2,0,"The first commit fixes an error that caused #4099; we were accidentally comparing folds from two different `DisplayBuffer`s, on the same `TextBuffer`.
 
@@ -15555,7 +15555,7 @@ Closes #3082
 - [x] `unable to watch path` errors for config, keymap, user scripts on startup
 - [x] Make sure the bad-config errors arent crazy
 "
-4901,2,2,2,Externals,danfuzz,2015-01-08T01:34:33Z,0,0,0,0,"There were two problems:
+4901,2,2,2,Externals,danfuzz,2015-01-08T01:34:33Z,5,5,2,0,"There were two problems:
 - In the URL lists, the reference was listed as `[less]`, but in the prose it was listed as `[LESS]`. I made it `[LESS]` in the URL lists, which seems to match the rest of the docs.
 - In both cases in the prose, the reference `[LESS]` was followed by a prose parenthetical. Markdown treats these as literal URLs. Adding a quoting backslash before the open paren fixes this.
 "
@@ -15641,7 +15641,7 @@ Right now it [uses private properties on Config](https://github.com/atom/setting
 
 Refs atom/settings-view#294
 "
-4743,1,1,0,Externals,Kangaroopower,2014-12-23T17:05:22Z,0,0,0,0,"Previously, the emitter didn't return the new type of grammar, just an undefined to signal when the grammar changed. This patch makes it so that the type of grammar is returned when the texteditor's grammar changes, as per what the API says it does
+4743,1,1,0,Externals,Kangaroopower,2014-12-23T17:05:22Z,1,1,1,0,"Previously, the emitter didn't return the new type of grammar, just an undefined to signal when the grammar changed. This patch makes it so that the type of grammar is returned when the texteditor's grammar changes, as per what the API says it does
 "
 4734,1,1,0,Externals,KINFOO,2014-12-22T17:53:49Z,4,0,1,0,"I am available to improve it
 "
@@ -15740,7 +15740,7 @@ This adds a `atom.js` wrapper that spawns `atom.exe` and immediately exits so th
 
 Fixes #4178
 "
-4535,1,0,0,Externals,mark-hahn,2014-12-12T19:58:26Z,0,0,0,1,"If you call `Package::activateNow` when Atom is waiting for a command to activate it, then `activateNow` blows up expecting a promise.  This fixes that and allows `activateNow` to be used at any time on a loaded package.
+4535,1,0,0,Externals,mark-hahn,2014-12-12T19:58:26Z,1,1,1,1,"If you call `Package::activateNow` when Atom is waiting for a command to activate it, then `activateNow` blows up expecting a promise.  This fixes that and allows `activateNow` to be used at any time on a loaded package.
 "
 4531,3,1,2,Internals,benogle,2014-12-11T02:17:09Z,83,0,2,0,"We've had a lot of errors related to not having some binary installed. The errors are terrible: https://github.com/atom/atom/issues/4525
 
@@ -15767,7 +15767,7 @@ Fixes #4445.
 4454,1,3,0,Externals,andreicristianpetcu,2014-12-08T20:17:06Z,2,1,2,0,"Please use ndenv for nodejs versioning and pyenv for python versioning
 Your .node-version tells ndenv that it needs version v0.10.21 but v0.10.21 has an old npm (1.3) so I get an error that I need npm 1.4+. I bumped the version of node to the current version v0.10.33 and the build passes. Also, I see you need python 2 so I used python 2.7.6 and it worked. Please use ndenv and pyenv for managing your python and nodejs versions. It's easy to use and it's friendly with other projects on the same system.
 "
-4430,2,3,1,Externals,steelbrain,2014-12-08T17:43:53Z,0,0,0,1,"Fixes atom/atom#4427
+4430,2,3,1,Externals,steelbrain,2014-12-08T17:43:53Z,1,1,1,1,"Fixes atom/atom#4427
 "
 4414,1,0,0,Internals,maxbrunsfeld,2014-12-05T22:06:22Z,8,0,1,0,"Fixes atom/notifications#6
 "
@@ -15776,9 +15776,9 @@ Your .node-version tells ndenv that it needs version v0.10.21 but v0.10.21 has a
 "
 4406,1,0,0,Internals,maxbrunsfeld,2014-12-05T17:44:29Z,6,1,2,0,"This will be useful when updating the [styleguide's examples](https://github.com/atom/styleguide/blob/master/lib/styleguide-view.coffee#L48) to use custom elements.
 "
-4405,1,0,0,Externals,ryanpcmcquen,2014-12-05T18:38:42Z,0,0,0,0,":penguin: 
+4405,1,0,0,Externals,ryanpcmcquen,2014-12-05T18:38:42Z,4,0,1,0,":penguin: 
 "
-4393,1,1,0,Externals,envygeeks,2014-12-05T18:47:11Z,0,0,0,1,"Move the Debian alternatives entry up so it's below and grouped with
+4393,1,1,0,Externals,envygeeks,2014-12-05T18:47:11Z,9,9,1,1,"Move the Debian alternatives entry up so it's below and grouped with
 ""no such file or directory"" since it's an alternate solution to symlinking.
 "
 4390,1,0,0,Internals,benogle,2014-12-03T22:15:33Z,25,0,3,0,
@@ -15804,7 +15804,7 @@ By default overlays are positioned at the head of the given marker. This option 
 
 I tried various other approaches for positioning the overlay in autocomplete without adding this option, but the complexity of the text manipulation (due to the fact that the case of the prefix and suffix can be altered) meant that any other markers I created were always getting moved to undesirable places. Since we restore the selections following the text manipulation, simply positioning the overlay at the tail is the most convenient and simple approach.
 "
-4322,2,5,0,Externals,tsunamistate,2014-12-10T00:31:56Z,0,0,0,13,"**Please review, first RP ever**
+4322,2,5,0,Externals,tsunamistate,2014-12-10T00:31:56Z,13,9,2,13,"**Please review, first RP ever**
 
 This updates Windows installation section of README and adds separate Chocolatey installation file, if user desires so.
 
@@ -15944,7 +15944,7 @@ Closes #2244
 Closes #2272
 Closes #3027
 "
-4209,1,1,0,Externals,stramel,2014-11-17T16:39:02Z,0,0,0,0,"Update `git fetch` command to include the prune flag which will remove remote branches that no longer exist.
+4209,1,1,0,Externals,stramel,2014-11-17T16:39:02Z,1,1,1,0,"Update `git fetch` command to include the prune flag which will remove remote branches that no longer exist.
 "
 4196,1,2,0,Internals,zcbenz,2014-11-17T21:37:30Z,1,1,1,2,"Changelog:
 - Add `plugins` attribute for `<webview>`
@@ -16089,7 +16089,7 @@ Closes #4117
 "
 4121,6,1,0,Internals,maxbrunsfeld,2014-11-10T17:25:36Z,44,41,5,0,"Motivated by [this bracket-matcher PR](https://github.com/atom/bracket-matcher/pull/82).
 "
-4119,1,0,0,Externals,j-em,2014-11-10T18:34:38Z,0,0,0,1," load the bootstrap style for thumbnails, this fix: #4104
+4119,1,0,0,Externals,j-em,2014-11-10T18:34:38Z,1,0,1,1," load the bootstrap style for thumbnails, this fix: #4104
 "
 4105,1,1,0,Internals,lee-dohm,2014-11-10T17:18:42Z,1,3,1,2,"Noticed that ""soon"" is now.
 
@@ -16110,7 +16110,7 @@ I updated the listeners for all editor commands and for the `textInput` event to
 
 Closes #1606
 "
-4068,1,1,0,Externals,jpelgrom,2014-11-05T16:18:00Z,0,0,0,0,"Added a keyboard shortcut for the ""Open folder"" action found in the file menu, based on the behaviour in the Linux version of Atom: Ctrl + Shift + O. Also logical because the keyboard shortcut for the secondary saving option (save as) is set to the original shortcut plus Shift.
+4068,1,1,0,Externals,jpelgrom,2014-11-05T16:18:00Z,1,0,1,0,"Added a keyboard shortcut for the ""Open folder"" action found in the file menu, based on the behaviour in the Linux version of Atom: Ctrl + Shift + O. Also logical because the keyboard shortcut for the secondary saving option (save as) is set to the original shortcut plus Shift.
 
 PRed after discussion in [this thread at discuss.atom.io](https://discuss.atom.io/t/keyboard-shortcut-to-open-folder-on-windows/13080?u=jpelgrom).
 "
@@ -16182,7 +16182,7 @@ Closes #1806
 
 It’s possible that bundled packages stray into this corner case, so I’d like us to catch and fix misbehaving packages before exposing users to any exceptions. Once we go one release with this turned on, we can enable the exception for all builds.
 "
-3968,1,2,0,Internals,lee-dohm,2014-10-30T16:38:11Z,0,0,0,4,"This behavior is great for safe mode so I figured we could extend it to non-safe-mode when the configured themes aren't available for some reason. This will prevent the UI from looking wonky if things are mis-configured.
+3968,1,2,0,Internals,lee-dohm,2014-10-30T16:38:11Z,10,17,2,4,"This behavior is great for safe mode so I figured we could extend it to non-safe-mode when the configured themes aren't available for some reason. This will prevent the UI from looking wonky if things are mis-configured.
 "
 3965,1,3,0,Externals,brunetton,2014-10-27T16:13:05Z,1,1,1,1,
 3953,9,1,2,Internals,kevinsawicki,2014-10-24T21:13:40Z,95,13,5,0,"Adds support for editing [combining characters](http://en.wikipedia.org/wiki/Combining_character).
@@ -16226,7 +16226,7 @@ Adds a Dockerfile to build and upload the RPM using a Fedora 20 image.
 
 The Debian Dockerfile was moved to `build/debian/Dockerfile`, since this one will be actively used I decided to put it at the root of the repo.
 "
-3925,1,4,1,Externals,jessfraz,2014-10-22T18:12:52Z,0,0,0,0,"I'm just going to leave this here.
+3925,1,4,1,Externals,jessfraz,2014-10-22T18:12:52Z,50,0,1,0,"I'm just going to leave this here.
 
 You see I was trying to containerize a node webkit app, so I
 thought why not atom. Except halfway through I realized it
@@ -16268,7 +16268,7 @@ For me this drops 25-50ms off of package load/activate time and should be more f
 
 Also this removes ~175 files/folders from the distribution which makes it a little leaner.
 "
-3916,1,3,0,Externals,suda,2014-10-22T16:31:11Z,0,0,0,1,"By default many packages (including apm) [discover config directory manually](https://github.com/atom/apm/blob/master/src/config.coffee#L11). Setting ATOM_HOME allows changing default config directory without breaking apm.
+3916,1,3,0,Externals,suda,2014-10-22T16:31:11Z,3,0,1,1,"By default many packages (including apm) [discover config directory manually](https://github.com/atom/apm/blob/master/src/config.coffee#L11). Setting ATOM_HOME allows changing default config directory without breaking apm.
 "
 3915,1,3,0,Internals,zcbenz,2014-10-21T15:02:18Z,1,1,1,0,"Fixes #3826 
 Fixes #3854 
@@ -16392,10 +16392,10 @@ The next step will introduce targeting stylesheets to specific contexts. When an
 
 Currently, the new style manager only focuses on _applying_ stylesheets. Loading is still handled in the theme manager. It should probably be moved so the theme manager only deals with themes, not stylesheet loading and compilation.
 "
-3828,1,1,0,Externals,zigal,2014-10-15T00:27:16Z,0,0,0,0,"see #3827 
+3828,1,1,0,Externals,zigal,2014-10-15T00:27:16Z,1,0,1,0,"see #3827 
 "
 3825,3,0,0,Internals,zcbenz,2014-10-14T14:28:12Z,3,4,3,0,
-3822,1,1,0,Externals,suda,2014-10-15T00:32:42Z,0,0,0,0,"xcopy [doesn't handle paths longer than 254 characters](http://www.terminally-incoherent.com/blog/2007/02/05/xcopy-insufficient-memory/) and it's recommended to use [robocopy](http://technet.microsoft.com/en-us/library/cc733145.aspx) (available on Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012) instead.
+3822,1,1,0,Externals,suda,2014-10-15T00:32:42Z,1,1,1,0,"xcopy [doesn't handle paths longer than 254 characters](http://www.terminally-incoherent.com/blog/2007/02/05/xcopy-insufficient-memory/) and it's recommended to use [robocopy](http://technet.microsoft.com/en-us/library/cc733145.aspx) (available on Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012) instead.
 "
 3817,13,0,0,Internals,benogle,2014-10-14T00:25:49Z,172,152,14,0,"I'm sure people will be wondering ""WTF is a `scopes`?!"". This gives them their own name `scopeDescriptor`. Later on we can write a doc explaining what a scope descriptor is. For now, the docs point to `Config::get` which is a nice concrete usage of scopeDescriptors. 
 "
@@ -16449,7 +16449,7 @@ which can be done with the yum package manager:
 **NOTE**: I have only tested in the Fedora-20 machine, but it should work in
 CentOS and Red Hat Linux as long as the rpm build environment is installed.
 "
-3773,1,1,0,Externals,matkoniecz,2014-10-09T15:56:10Z,0,0,0,0,"fixes #3771 
+3773,1,1,0,Externals,matkoniecz,2014-10-09T15:56:10Z,1,1,1,0,"fixes #3771 
 "
 3769,3,10,3,Externals,Maxhodges,2014-10-20T15:58:12Z,2,0,1,11,"improper trailing and leading spaces can cause your bindings to fail.Since cson has very little adoption relative to json, I think it's important to warn new users that they need to understand CoffeeScript notation or else a single space could break their file. I spent one full hour today trying to get an auto-indent mapping to work. The solution involved adding one leading space!
 "
@@ -16722,7 +16722,7 @@ We should probably talk to the author of color-picker and any other packages tha
 
 Closes #3618
 "
-3619,2,9,0,Internals,lee-dohm,2014-09-26T18:47:58Z,0,0,0,2,"Fixes #3592 
+3619,2,9,0,Internals,lee-dohm,2014-09-26T18:47:58Z,35,2,3,2,"Fixes #3592 
 
 Since @thedaniel [suggested](https://github.com/atom/atom/issues/3592#issuecomment-56398349) that this should be part of the default behavior, I took some of the code from the [scroll-past-end package](https://atom.io/packages/scroll-past-end) and added the functionality.
 "
@@ -16982,12 +16982,12 @@ I left the original `pollDOM` call in so that everything else that it does still
 
 I wasnt sure how we wanted to handle this, as pane items can be anything. Do we still want to support the path-changed event on random pane items? Do we want to enforce an `onDidChangeTitle` method? This is one case where string events are really nice.
 "
-3508,1,1,0,Externals,envygeeks,2014-09-10T01:45:50Z,0,0,0,0,"/cc @kevinsawicki 
+3508,1,1,0,Externals,envygeeks,2014-09-10T01:45:50Z,1,1,1,0,"/cc @kevinsawicki 
 "
 3507,21,5,18,Internals,benogle,2014-09-10T19:11:26Z,228,82,14,0,
-3499,2,2,3,Externals,envygeeks,2014-09-10T01:31:22Z,0,0,0,1,
+3499,2,2,3,Externals,envygeeks,2014-09-10T01:31:22Z,9,0,1,1,
 3495,10,15,0,Internals,zcbenz,2014-09-09T18:43:42Z,11,4,4,1,
-3472,1,1,0,Externals,pinak,2014-09-08T15:34:52Z,0,0,0,2,"This adds Atom in open with menu in KDE (possibly other DE's) for text files therefore providing better integration.
+3472,1,1,0,Externals,pinak,2014-09-08T15:34:52Z,1,0,1,2,"This adds Atom in open with menu in KDE (possibly other DE's) for text files therefore providing better integration.
 "
 3470,10,2,0,Internals,kevinsawicki,2014-09-08T17:09:06Z,48,42,3,2,"Previously jQuery was used, but using the DOM APIs directly takes 1/3 of the time.
 
@@ -17513,7 +17513,7 @@ This moves that logic into the Git class where it belongs.
 "
 3244,1,0,0,Internals,benogle,2014-08-13T00:08:22Z,8,2,1,0,"This is the real fix for #3075 
 "
-3243,1,1,0,Externals,kaiserfro,2014-08-12T23:35:54Z,0,0,0,0,"The getScrollWidth function in editor.coffee has extra, unnecessary function parameters.
+3243,1,1,0,Externals,kaiserfro,2014-08-12T23:35:54Z,1,1,1,0,"The getScrollWidth function in editor.coffee has extra, unnecessary function parameters.
 "
 3241,9,0,4,Internals,benogle,2014-08-12T23:03:10Z,73,9,4,0,"autocomplete and go-to-line both preempt the `textInput` event to prevent character insertion. 
 
@@ -17617,7 +17617,7 @@ Test Plan:
 Made some deliberate lint errors then ran `script/grunt coffeelint` and
 verified the output looked the same with and without this change.
 "
-3208,1,4,2,Externals,luca-moser,2014-08-11T21:45:08Z,0,0,0,2,"Fixes issue https://github.com/atom/atom/issues/3200 by putting quotes on the 'command' var only if it contains white space. This allows command paths with white space to still be executed but at the same time allows also commands like 'grunt' to work by not putting unnecessary quotes around the command.
+3208,1,4,2,Externals,luca-moser,2014-08-11T21:45:08Z,4,1,1,2,"Fixes issue https://github.com/atom/atom/issues/3200 by putting quotes on the 'command' var only if it contains white space. This allows command paths with white space to still be executed but at the same time allows also commands like 'grunt' to work by not putting unnecessary quotes around the command.
 
 Signed-off-by: Luca Moser moser.luca@gmail.com
 "
@@ -17635,9 +17635,9 @@ Fixes #2785
 
 I activated this option in this PR, but I'm not sure whether it should be default. /cc @kevinsawicki @nathansobo 
 "
-3186,2,3,2,Externals,nshtg,2014-08-11T21:51:14Z,0,0,0,6,"Closes #3173.
+3186,2,3,2,Externals,nshtg,2014-08-11T21:51:14Z,17,2,3,6,"Closes #3173.
 "
-3185,1,1,0,Externals,sryze,2014-08-05T17:17:24Z,0,0,0,0,
+3185,1,1,0,Externals,sryze,2014-08-05T17:17:24Z,13,0,1,0,
 3171,4,7,5,Externals,dmnd,2014-08-14T00:41:57Z,26,7,2,10,"![image](http://i.imgur.com/0WCzYA7.gif)
 
 Fixes #1891.
@@ -17654,7 +17654,7 @@ I didn't add any specs for this - advice welcome here. I also haven't tested
 on Windows or Linux but it looks like `setRepresentedFilename` is a noop on
 those platforms.
 "
-3169,3,11,0,Internals,lee-dohm,2014-08-13T22:24:06Z,0,0,0,10,"There have been a few reports of files mysteriously going back to the last version in the tree. My theory is that it is because of people fat-fingering the Undo command because the default keyboard mapping is too similar. This will at least prevent most accidental data loss.
+3169,3,11,0,Internals,lee-dohm,2014-08-13T22:24:06Z,39,2,3,10,"There have been a few reports of files mysteriously going back to the last version in the tree. My theory is that it is because of people fat-fingering the Undo command because the default keyboard mapping is too similar. This will at least prevent most accidental data loss.
 
 Fixes atom/atom#3168
 "
@@ -17665,7 +17665,7 @@ Fixes atom/atom#3168
 - Using raw DOM APIs instead of jQuery to receive keydown events
 - Avoiding some temp objects in `atom-keymap`'s `keystrokeForKeyboardEvent` method.
 "
-3139,1,4,0,Externals,nshtg,2014-07-31T15:32:58Z,0,0,0,0,"Trying to update a module is quite a pain since you have to actually update the version before you can even see if you broke anything since atom will refuse to load the plugin.
+3139,1,4,0,Externals,nshtg,2014-07-31T15:32:58Z,4,3,1,0,"Trying to update a module is quite a pain since you have to actually update the version before you can even see if you broke anything since atom will refuse to load the plugin.
 
 I had to search quite a bit until I found the storage cache (since it's not under ~/.atom). I think it's okay if the load time in dev-mode is a little bit higher if we always check the native modules.
 "
@@ -17678,7 +17678,7 @@ Fixes atom/find-and-replace#146
 "
 3120,1,0,0,Internals,kevinsawicki,2014-07-31T15:32:53Z,0,3,3,1,"Do not merge until https://github.com/atom/atom-shell/pull/530 is merged and released.
 "
-3116,2,18,4,Externals,nshtg,2014-08-15T20:52:15Z,0,0,0,17,"**324 warnings in 42 files** (coffeelint) have been fixed.
+3116,2,18,4,Externals,nshtg,2014-08-15T20:52:15Z,151,151,13,17,"**324 warnings in 42 files** (coffeelint) have been fixed.
 
 Mostly just unnecessary double quotes, unnecessary fat arrows, miss-spaced `->` and empty functions (`-> return`). I have not been able to run the specs on my setup, so please feel free to do so on your own (in case I broke something).
 
@@ -17705,7 +17705,7 @@ This is needed for packages to use React until that React bug is fixed. If packa
 "
 3098,1,2,3,Externals,Bengt,2014-07-28T23:51:10Z,1,0,1,2,"Add step for checking out the latest release by git tag.
 "
-3096,1,1,0,Externals,marcbachmann,2014-07-28T15:51:18Z,0,0,0,2,"I don't think that this was the desired behaviour.
+3096,1,1,0,Externals,marcbachmann,2014-07-28T15:51:18Z,0,4,1,2,"I don't think that this was the desired behaviour.
 I do not know if that caused a bug.
 "
 3077,4,0,1,Internals,nathansobo,2014-07-25T00:37:54Z,63,13,4,0,"Fixes #3075
@@ -17714,7 +17714,7 @@ I do not know if that caused a bug.
 "
 3062,1,3,0,Externals,ehuss,2014-07-28T23:44:06Z,7,1,1,4,"The sourceURL needs to be a URL, not a file path.
 "
-3049,1,1,0,Externals,dsandstrom,2014-07-23T17:08:02Z,0,0,0,0,"What she said.
+3049,1,1,0,Externals,dsandstrom,2014-07-23T17:08:02Z,2,0,2,0,"What she said.
 "
 3044,7,3,4,Internals,benogle,2014-07-23T23:35:02Z,26,43,4,1,"Handles toggling of `editor.showLineNumbers` as well.
 
@@ -17722,7 +17722,7 @@ I moved the `gutterWidth` into the `EditorComponent` state as react takes care o
 
 Fixes #3039
 "
-3042,1,1,0,Externals,kube,2014-07-22T21:46:09Z,0,0,0,0,
+3042,1,1,0,Externals,kube,2014-07-22T21:46:09Z,1,0,1,0,
 3038,4,1,0,Internals,kevinsawicki,2014-07-22T18:19:48Z,4,1,2,0,"Compliments the base16-tomorrow-dark-theme
 
 Shoutout to @dgraham for making this happen.
@@ -17737,7 +17737,7 @@ Now the control and desktop files are never written to the source tree and inste
 
 Refs #2129
 "
-3022,3,0,0,Externals,batjko,2014-07-21T17:58:54Z,0,0,0,0,"Just a few suggested changes to reflect experiences over a few months of building on several Windows machines.
+3022,3,0,0,Externals,batjko,2014-07-21T17:58:54Z,15,5,1,0,"Just a few suggested changes to reflect experiences over a few months of building on several Windows machines.
 - The Posix tools comment doesn't seem to be applicable (anymore)? 
 - Added further instructions when using pre-installed Git.
 - Added the frequent issue of first-time build failures (random `node-gyp` errors), which don't reoccur on second try.
@@ -17747,18 +17747,18 @@ Feel free to amend or suggest further changes.
 "
 3021,1,2,0,Externals,dmnd,2014-07-21T15:51:49Z,1,1,1,0,"destoryed -> destroyed
 "
-3014,3,0,4,Externals,Frozenfire92,2014-07-20T18:00:13Z,0,0,0,1,
+3014,3,0,4,Externals,Frozenfire92,2014-07-20T18:00:13Z,5,1,1,1,
 3006,1,0,0,Internals,nathansobo,2014-07-18T01:17:00Z,1,1,1,0,"Closes atom/vim-mode#348. See that issue for more explanation.
 "
-2996,7,11,4,Externals,thomasjo,2014-08-25T17:14:46Z,0,0,0,39,"**NOTE: This pull request is still work in progress. I just wanted to open it early to keep my intent and progress public, and discoverable.**
+2996,7,11,4,Externals,thomasjo,2014-08-25T17:14:46Z,24,0,3,39,"**NOTE: This pull request is still work in progress. I just wanted to open it early to keep my intent and progress public, and discoverable.**
 
 The sole purpose of this pull request is to add grammar scope information to `EditorView` instances, so that e.g. editor key bindings can trigger based on grammar. Useful if you want to invoke different build or formatting commands in various packages, for different types of grammars.
 
 Right now I'm solving this by appending CSS classes to the view, but I'm leaning towards adding a `data-scope` attribute instead, to prevent pollution and potential conflicts that might cause all manner of mayhem.
 "
-2994,1,1,0,Externals,jordanbtucker,2014-07-21T16:13:59Z,0,0,0,4,"fixes issue #2989
+2994,1,1,0,Externals,jordanbtucker,2014-07-21T16:13:59Z,2,0,1,4,"fixes issue #2989
 "
-2992,3,1,0,Externals,nshtg,2014-07-20T18:01:02Z,0,0,0,4,"Tested on a fresh install of `3.15.5-2-ARCH x86_64`.
+2992,3,1,0,Externals,nshtg,2014-07-20T18:01:02Z,17,16,1,4,"Tested on a fresh install of `3.15.5-2-ARCH x86_64`.
 "
 2982,31,1,0,Internals,kevinsawicki,2014-07-23T17:27:29Z,93,227,26,8,"After the Windows release, there were several comments/tweets about how many files are in the Atom app distro and it taking awhile to unzip.
 
@@ -17803,7 +17803,7 @@ Refs atom/tree-view#180
 - [ ] Review old editor specs and make sure we cover everything
 - [x] Check that styling matches
 "
-2950,2,2,0,Internals,lee-dohm,2014-07-15T15:06:02Z,0,0,0,1,"Previously the indent guide was always showing on the whitespace only lines in the React editor. This is the same behavior as in the old editor and had the same fix, just ported to `LinesComponent`.
+2950,2,2,0,Internals,lee-dohm,2014-07-15T15:06:02Z,24,6,2,1,"Previously the indent guide was always showing on the whitespace only lines in the React editor. This is the same behavior as in the old editor and had the same fix, just ported to `LinesComponent`.
 
 Still TODO:
 - [x] Figure out how to port over the test from @kevinsawicki's change
@@ -17824,7 +17824,7 @@ This pull always imports the [fallback variables](https://github.com/atom/atom/t
 
 Fixes #2892; Requires atom/less-cache#3
 "
-2927,1,17,0,Externals,batjko,2014-07-11T15:01:29Z,0,0,0,0,"This behavior is standard WIndows and Linux for shift-delete.
+2927,1,17,0,Externals,batjko,2014-07-11T15:01:29Z,2,2,2,0,"This behavior is standard WIndows and Linux for shift-delete.
 
 Previously shift-delete was a redundant mapping, anyway. So this brings it further in line with expected behavior for Windows and Linux users.
 ![image](https://cloud.githubusercontent.com/assets/7287076/3550681/6cae3d78-08dc-11e4-8ea4-61e81a35d5d5.png)
@@ -17864,7 +17864,7 @@ I'd prefer to merge this pull. Curious about your thoughts
 
 Closes #2896
 "
-2904,1,1,0,Externals,nshtg,2014-07-10T15:25:20Z,0,0,0,0,
+2904,1,1,0,Externals,nshtg,2014-07-10T15:25:20Z,1,1,1,0,
 2895,2,1,0,Internals,thedaniel,2014-07-10T21:26:21Z,35,8,1,0,"While adding docs for renaming packages, I noticed that only the version section had h3 titles for each action, so I added them to the other sections and adjusted the heading levels while I was at it.
 "
 2889,5,0,0,Internals,kevinsawicki,2014-07-10T21:30:01Z,19,7,1,1,"Because of atom/atom-shell#473 there are invalid window dimensions in the serialized state for people using Atom on Windows.
@@ -17991,7 +17991,7 @@ It's a bit awkward, though. @nathansobo take a look and let me know if you think
 "
 2788,4,0,0,Internals,kevinsawicki,2014-07-01T18:48:12Z,5,0,1,0,"Fixes https://github.com/atom/chocolatey/issues/8
 "
-2784,2,3,1,Externals,nshtg,2014-07-01T21:22:12Z,0,0,0,0,"That & I fixed the jasmine docs link since you redirected to the **2.0** docs. When I was reading your guide for the first time I was sad and angry at myself that I couldn't get my `done()` tests to work. :wink:
+2784,2,3,1,Externals,nshtg,2014-07-01T21:22:12Z,69,1,1,0,"That & I fixed the jasmine docs link since you redirected to the **2.0** docs. When I was reading your guide for the first time I was sad and angry at myself that I couldn't get my `done()` tests to work. :wink:
 "
 2783,4,1,5,Internals,benogle,2014-07-01T17:45:27Z,24,4,5,0,"Right now, if find-and-replace / scandal encounters a bogus or unreadable file, it just doesnt finish. No good. This bubbles errors up from the new scandal to the consumer of the `project.scan` and `project.replace`.
 
@@ -18166,14 +18166,14 @@ Fixes #1845
 Fixes #2634
 "
 2656,2,0,0,Internals,benogle,2014-06-18T20:11:11Z,6,6,1,0,
-2653,2,1,2,Externals,deprint,2014-06-22T03:42:21Z,0,0,0,3,"Continues  #2630
+2653,2,1,2,Externals,deprint,2014-06-22T03:42:21Z,6,4,1,3,"Continues  #2630
 Fixes #2647
 Installs desktop file with respect to `INSTALL_PREFIX`.
 - `sudo script/grunt install` will install `Atom.desktop` to `/usr/local/share/applications` instead of `/usr/share/applications/`
 - When a custom `INSTALL_PREFIX` is set the user will have to install the desktop file manually by copying `$INSTALL_PREFIX/share/applications/Atom.desktop` to `/usr/local/share/applications`
 - Fix when `INSTALL_PREFIX` ends with `/`
 "
-2630,2,11,1,Externals,deprint,2014-06-18T00:58:51Z,0,0,0,0,"Fixes #1969
+2630,2,11,1,Externals,deprint,2014-06-18T00:58:51Z,22,3,3,0,"Fixes #1969
 Running `sudo script/grunt install` also installs a desktop-file for atom in `/usr/share/applications`
 "
 2629,6,0,0,Internals,kevinsawicki,2014-06-16T22:04:00Z,9,2,1,0,"This reduces the built `.zip` file from ~100MB to ~65MB.
@@ -18206,7 +18206,7 @@ References:
 - [Debian's ""Build-Essential"" package](https://packages.debian.org/de/wheezy/build-essential)
 - [StackOverflow Q&A on a ""Build-Essential"" equivalent on Fedora](http://unix.stackexchange.com/questions/1338/what-is-the-fedora-equivalent-of-the-debian-build-essential-package)
 "
-2608,3,8,2,Externals,philschatz,2014-07-01T17:08:18Z,0,0,0,17,"Fixes atom/tree-view#131 and refs #2601.
+2608,3,8,2,Externals,philschatz,2014-07-01T17:08:18Z,29,1,2,17,"Fixes atom/tree-view#131 and refs #2601.
 
 I was unable to reproduce #2601 but this may fix the problem in general. atom/tree-view#131 occurs when disabling the Tree View package, re-enabling it, and then context clicking in the Editor pane.
 "
@@ -18246,7 +18246,7 @@ See #2507 for the original decorations
 
 Closes #2578
 "
-2602,1,1,0,Externals,joliv,2014-06-13T17:55:00Z,0,0,0,0,"Pretty simple, but doesn't come on a clean install.
+2602,1,1,0,Externals,joliv,2014-06-13T17:55:00Z,3,0,1,0,"Pretty simple, but doesn't come on a clean install.
 "
 2588,1,0,0,Internals,benogle,2014-06-12T00:30:59Z,16,3,2,0,"This moves the cursor on pageUp / pageDown
 
@@ -18290,7 +18290,7 @@ npm: v1.4.9
 Python: v2.7.6
 ```
 "
-2571,3,2,2,Internals,lee-dohm,2014-06-12T15:45:47Z,0,0,0,2,"Fixes #2526
+2571,3,2,2,Internals,lee-dohm,2014-06-12T15:45:47Z,9,6,2,2,"Fixes #2526
 
 This slightly alters the heuristic for deciding whether to uncomment or to comment blocks of code. Previously, it would key off the first line of code and only if that was commented would it check the other lines. Now it checks all lines of code and uncomments the block if all non-blank lines are commented out.
 "
@@ -18304,7 +18304,7 @@ It is an option called `editor.scrollSensitivity`. Not sure what the units shoul
 
 Refs #1906
 "
-2561,1,4,0,Externals,batjko,2014-06-09T16:06:18Z,0,0,0,0,"For issue:  ""Paste via Shift+Insert not working (Windows)"" #2546
+2561,1,4,0,Externals,batjko,2014-06-09T16:06:18Z,4,0,2,0,"For issue:  ""Paste via Shift+Insert not working (Windows)"" #2546
 This has been added to the linux and win32 keymaps.
 
 :memo: 
@@ -18316,7 +18316,7 @@ Shift+Insert: Paste
 
 ![image](https://cloud.githubusercontent.com/assets/7287076/3217351/9eef6c88-efde-11e3-9e26-3e04d7b06bac.png)
 "
-2532,2,6,0,Externals,karlin,2014-06-11T11:39:30Z,0,0,0,4,
+2532,2,6,0,Externals,karlin,2014-06-11T11:39:30Z,52,0,5,4,
 2531,1,1,0,Externals,radum,2014-06-06T15:52:39Z,1,1,1,0,"Now `script/clean` uses `del /F /Q /S` to cleanup the folders but `del /S` deletes specified files from all subdirectories, so if we pass a folder as a parameter it will only delete the files within the folder and all subfolders recursively but not the actual folders. And this can cause problems, see Issue #2487
 
 A better way is to use `rmdir /S /Q` as it takes care of the folder itself and it's contents.
@@ -18347,7 +18347,7 @@ Closes #2459
 "
 2515,3,0,2,Internals,thedaniel,2014-06-05T23:24:03Z,27,0,1,0,
 2510,2,5,0,Externals,wulftone,2014-06-05T05:12:33Z,9,0,1,0,
-2508,1,1,0,Externals,onkrot,2014-06-05T03:34:58Z,0,0,0,0,
+2508,1,1,0,Externals,onkrot,2014-06-05T03:34:58Z,2,2,1,0,
 2507,45,30,44,Internals,benogle,2014-06-09T23:30:48Z,715,23,9,4,"A decoration is an object attached to a buffer row. Here's a decoration:
 
 ``` js
@@ -18457,7 +18457,7 @@ Closes #2428
 "
 2493,1,0,0,Internals,izuzak,2014-06-03T18:45:58Z,9,0,3,0,"Adds search links to build docs for Linux/Windows/OSX so that it's easier to find other build error reports.
 "
-2492,1,2,0,Externals,p-e-w,2014-06-03T17:37:43Z,0,0,0,0,"In Chrome on Linux, the Developer Tools open with <kbd>Ctrl+Shift+I</kbd>. Since many Linux devs have that shortcut hardwired into their brain, it makes a lot of sense for Atom to use it too.
+2492,1,2,0,Externals,p-e-w,2014-06-03T17:37:43Z,1,1,1,0,"In Chrome on Linux, the Developer Tools open with <kbd>Ctrl+Shift+I</kbd>. Since many Linux devs have that shortcut hardwired into their brain, it makes a lot of sense for Atom to use it too.
 "
 2481,15,0,0,Internals,nathansobo,2014-06-03T10:15:40Z,192,128,8,0,"In addition to fixing selection/cursor updates, this PR aims to clean up measurement and perform the minimal number of updates in response to changes that affect the line height and character width.
 
@@ -18561,7 +18561,7 @@ Fixes #2375
 2419,1,1,0,Internals,benogle,2014-05-27T19:45:33Z,1,1,1,0,"Cursor was invisible when over the indent guides. Super frustrating! Not sure if this is the best way to do this @nathansobo 
 "
 2400,1,3,0,Externals,Gaelan,2014-05-27T15:50:42Z,1,0,1,1,
-2399,1,1,0,Externals,nshtg,2014-05-27T15:51:28Z,0,0,0,1,"Should be self explanatory.
+2399,1,1,0,Externals,nshtg,2014-05-27T15:51:28Z,1,1,1,1,"Should be self explanatory.
 "
 2387,2,0,0,Internals,nathansobo,2014-05-27T18:20:51Z,5,1,2,3,"Fixes #2343
 
@@ -18576,7 +18576,7 @@ This probably should have always happened at the model anyway.
 Closes #2385
 "
 2380,4,3,2,Externals,ddavison,2014-05-23T23:14:30Z,17,3,1,0,
-2371,1,5,0,Externals,karlin,2014-05-23T16:24:10Z,0,0,0,0,
+2371,1,5,0,Externals,karlin,2014-05-23T16:24:10Z,77,0,3,0,
 2370,3,0,0,Internals,nathansobo,2014-05-23T18:54:15Z,56,26,3,0,"Because we need to draw content before scrolling to it, the editor's scrolling behavior is completely synthetic. We use `translate3d` to move the `.lines` div around and never actually set the `scrollTop` or `scrollLeft` of the `.scroll-view` that contains them.
 
 However, if the hidden input field ever gets out of the visible area of the scroll view, the browser tries to be helpful and scroll it into view, which changes the `scrollTop` and `scrollLeft` and ruins everything. This PR tries to stop that.
@@ -18588,7 +18588,7 @@ However, if the hidden input field ever gets out of the visible area of the scro
 
 cc @kevinsawicki @probablycorey 
 "
-2364,2,16,0,Externals,themaninthesuitcase,2014-05-29T16:51:46Z,0,0,0,6,"TabView uses getLongTitle to provide a less ambiguous file title should multiple files have the same name.  However if these files also happen to be in a sub folder of the same name the ambiguity remains.
+2364,2,16,0,Externals,themaninthesuitcase,2014-05-29T16:51:46Z,2,1,1,6,"TabView uses getLongTitle to provide a less ambiguous file title should multiple files have the same name.  However if these files also happen to be in a sub folder of the same name the ambiguity remains.
 
 By increasing the long title to be relative from the project root this ambiguity is removed.
 
@@ -18600,7 +18600,7 @@ After:
 
 Applies to atom/tabs#57
 "
-2362,1,1,0,Externals,CoolOppo,2014-05-22T22:55:36Z,0,0,0,0,"This could be mildly confusing to some who are unfamiliar with using bash.
+2362,1,1,0,Externals,CoolOppo,2014-05-22T22:55:36Z,1,1,1,0,"This could be mildly confusing to some who are unfamiliar with using bash.
 "
 2360,2,1,2,Internals,thedaniel,2014-05-23T17:18:06Z,192,0,2,0,"This adds docs for the REST API used by apm & Atom's update system. I was going to just add it to the atom.io site, but figured it made sense here (and will end up on the site this way anyway).
 "
@@ -18637,16 +18637,16 @@ To do:
 "
 2312,2,5,0,Externals,zelon,2014-05-22T16:30:58Z,1,1,1,2,"Many people are confused by indicating just Visual Studio 2010 Express without SP1
 "
-2295,2,7,1,Internals,lee-dohm,2014-05-21T19:38:23Z,0,0,0,2,"Both documents had some really great stuff to them, but there was too much overlap. I did my best to unify them into one document, taking the best features of each.
+2295,2,7,1,Internals,lee-dohm,2014-05-21T19:38:23Z,112,183,3,2,"Both documents had some really great stuff to them, but there was too much overlap. I did my best to unify them into one document, taking the best features of each.
 "
-2290,1,1,0,Externals,varesa,2014-05-19T17:06:16Z,0,0,0,1,"Move the line number for the variable close to the actual current location.
+2290,1,1,0,Externals,varesa,2014-05-19T17:06:16Z,1,1,1,1,"Move the line number for the variable close to the actual current location.
 Add a note to not to include unescaped backward slashes as they would appear in normal Windows paths.
 "
-2284,1,1,0,Externals,pritambaral,2014-05-20T17:50:26Z,0,0,0,2," Fixes #2186
+2284,1,1,0,Externals,pritambaral,2014-05-20T17:50:26Z,4,0,1,2," Fixes #2186
 "
-2278,1,3,0,Externals,GeoffreyFrogeye,2014-05-17T19:39:55Z,0,0,0,0,"Fixes #2251 for good
+2278,1,3,0,Externals,GeoffreyFrogeye,2014-05-17T19:39:55Z,2,2,1,0,"Fixes #2251 for good
 "
-2269,4,6,6,Externals,pritambaral,2014-05-19T19:20:50Z,0,0,0,3,"`/tmp` isn't always available, is on precious [RAM-backed fs that is cleared at boot](https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt) or simply not
+2269,4,6,6,Externals,pritambaral,2014-05-19T19:20:50Z,17,28,7,3,"`/tmp` isn't always available, is on precious [RAM-backed fs that is cleared at boot](https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt) or simply not
 what the user has set his `$TMPDIR` to. According to specifications, we
 should use `$TMPDIR`, which node lets us find through `os.tmpdir()`.
 
@@ -18668,11 +18668,11 @@ This PR improves the React editor, but it's not yet the holy grail of performanc
 - [x] Fix the go-to-line view.
 - [x] Preserve the scroll target to prevent sudden halting of velocity scrolling.
 "
-2246,1,5,0,Externals,flannelhead,2014-05-15T17:24:15Z,0,0,0,0,"In Chromium the metaKey property of a mousedown event might never get set to true on Linux and Windows as there is no special, well defined meta key on the keyboard (see this [issue](https://code.google.com/p/chromium/issues/detail?id=95874)). Hence I made editor-view.coffee check for e.ctrlKey instead if the platform is not Mac, which makes ctrl+click to add a cursor as desired.
+2246,1,5,0,Externals,flannelhead,2014-05-15T17:24:15Z,1,1,1,0,"In Chromium the metaKey property of a mousedown event might never get set to true on Linux and Windows as there is no special, well defined meta key on the keyboard (see this [issue](https://code.google.com/p/chromium/issues/detail?id=95874)). Hence I made editor-view.coffee check for e.ctrlKey instead if the platform is not Mac, which makes ctrl+click to add a cursor as desired.
 "
-2243,1,1,0,Internals,lee-dohm,2014-05-15T17:13:35Z,0,0,0,0,"Found a couple more documentation issues.
+2243,1,1,0,Internals,lee-dohm,2014-05-15T17:13:35Z,4,3,1,0,"Found a couple more documentation issues.
 "
-2240,1,1,0,Internals,lee-dohm,2014-05-15T03:05:41Z,0,0,0,0,"@ProbablyCorey documented this process on Discuss and I figured it should be added to the official documentation. I hope that I was able to match the documentation practices the Atom team uses for general documentation.
+2240,1,1,0,Internals,lee-dohm,2014-05-15T03:05:41Z,25,0,2,0,"@ProbablyCorey documented this process on Discuss and I figured it should be added to the official documentation. I hope that I was able to match the documentation practices the Atom team uses for general documentation.
 
 See: http://discuss.atom.io/t/how-to-setup-development-for-core-modules-like-atom-keymap/9221/18?u=leedohm
 "
@@ -18692,7 +18692,7 @@ Presumptions:
 
 Allows packages to override the default hiding of the cursor when selecting text.
 "
-2198,5,10,12,Externals,hkdobrev,2014-05-16T22:37:00Z,0,0,0,3,"Suggested Emoji for:
+2198,5,10,12,Externals,hkdobrev,2014-05-16T22:37:00Z,6,0,1,3,"Suggested Emoji for:
 - Fixing something on Mac OS
 - Fixing a bug
 - Burning whitespace
@@ -18760,7 +18760,7 @@ As in #1294: If you put the cursor before a tag and press ENTER the indentation 
 
 ![fixed_and_expected_behavior](https://cloud.githubusercontent.com/assets/1194855/2938232/075e9018-d8fc-11e3-925a-34176bcaae63.gif)
 "
-2162,1,1,0,Externals,teddybradford,2014-05-12T15:31:04Z,0,0,0,1,
+2162,1,1,0,Externals,teddybradford,2014-05-12T15:31:04Z,1,1,1,1,
 2160,1,4,0,Externals,dyross,2014-05-11T19:58:39Z,4,2,1,0,"Addresses https://github.com/atom/atom/issues/1925 and https://github.com/atom/atom/issues/2140
 "
 2144,1,1,0,Externals,aureliojargas,2014-05-10T20:06:42Z,6,6,1,0,"Currently both `...` and `$(...)` are used for command substitution. It's better to chose just one and stick to it, to avoid confusion.
@@ -18798,7 +18798,7 @@ Tested on Ubuntu 14.04.
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/2339213/2934564/b22c2902-d7d4-11e3-9044-7b8f4728a5bd.png)
 "
-2133,2,1,0,Externals,aaronhalford,2014-05-10T00:19:07Z,0,0,0,0,"Cleaned up typos in Linux build instructions. Added troubleshooting section that can be expanded upon as Fedora, CentOS, Mint, and other distro fixes come rolling in.
+2133,2,1,0,Externals,aaronhalford,2014-05-10T00:19:07Z,6,3,1,0,"Cleaned up typos in Linux build instructions. Added troubleshooting section that can be expanded upon as Fedora, CentOS, Mint, and other distro fixes come rolling in.
 "
 2128,1,1,0,Externals,alfredxing,2014-05-09T18:36:40Z,1,0,1,0,"Add a `fullscreen` class to body when full screen is triggered, as suggested
 by in #1694.
@@ -18808,7 +18808,7 @@ This would allow for specific styles when in full screen mode.
 2117,1,0,2,Externals,sophearak,2014-05-09T18:30:39Z,12,0,1,0,
 2114,1,2,0,Externals,Someguy123,2014-05-09T18:29:50Z,15,0,1,0,"Add troubleshooting to Windows build instructions
 "
-2113,1,1,0,Externals,MScottBlake,2014-05-09T18:25:46Z,0,0,0,0,
+2113,1,1,0,Externals,MScottBlake,2014-05-09T18:25:46Z,2,0,1,0,
 2112,1,1,0,Externals,paulcbetts,2014-05-09T02:21:53Z,4,0,1,0,"Some people ask why we need GitHub for Windows, let's explain a bit
 "
 2111,1,7,0,Externals,Locke23rus,2014-05-09T18:13:13Z,19,7,4,0,
@@ -18817,11 +18817,11 @@ This would allow for specific styles when in full screen mode.
 2081,1,1,0,Externals,xcvd,2014-05-09T00:03:25Z,1,0,1,0,"Within windows build shift-backspace currently does nothing. Behaviour
 untested in linux (perhaps linux.cson should be modified too?)
 "
-2074,2,7,0,Externals,dertuxmalwieder,2014-05-10T15:37:17Z,0,0,0,2,"Signed-off-by: Cthulhux zeug@tuxproject.de
+2074,2,7,0,Externals,dertuxmalwieder,2014-05-10T15:37:17Z,24,1,3,2,"Signed-off-by: Cthulhux zeug@tuxproject.de
 "
 2073,1,1,0,Externals,captn3m0,2014-05-08T23:53:31Z,1,1,1,0,"This is to get install to work behind firewalls where `git://` is blocked.
 "
-2071,1,1,0,Internals,lee-dohm,2014-05-08T17:21:00Z,0,0,0,0,
+2071,1,1,0,Internals,lee-dohm,2014-05-08T17:21:00Z,5,3,2,0,
 2067,1,17,0,Externals,paulcbetts,2014-05-09T01:06:16Z,1,3,1,0,"GitHub for Windows makes a lot of the path issues easier, but we left out the part where they need to click 'Git Shell'
 "
 2059,2,3,1,Externals,bradgearon,2014-05-08T22:14:37Z,4,1,1,0,"avoids NOENT error when searching for packages
@@ -18846,7 +18846,7 @@ See joyent/node#2318 for more information.
 Atom would previously assume this file uses softTabs because of the block comment using leading spaces. Now Atom will ignore comments when figuring out if a file uses soft or hard tabs.
 "
 2013,1,1,0,Externals,pborreli,2014-05-07T15:56:19Z,21,21,10,0,
-2006,1,2,0,Externals,mpkh,2014-05-07T15:48:49Z,0,0,0,0,"else-way there will be ""failure during conversion to COFF""
+2006,1,2,0,Externals,mpkh,2014-05-07T15:48:49Z,1,1,1,0,"else-way there will be ""failure during conversion to COFF""
 description on StackOverflow: http://stackoverflow.com/questions/10888391/error-link-fatal-error-lnk1123-failure-during-conversion-to-coff-file-inval
 "
 1995,1,2,0,Externals,dpen2000,2014-05-07T21:37:53Z,1,1,1,0,"Change 2010 express edition link because old one redirects to a general page about Visual Studio
@@ -18854,21 +18854,21 @@ description on StackOverflow: http://stackoverflow.com/questions/10888391/error-
 1993,1,1,0,Externals,mattbelland,2014-05-07T02:30:08Z,3,3,1,0,"This is just a little typo fix in docs/publishing-a-package.md.
 Atom also auto-removed some whitespace, so I figured I'd wrap that in this commit too.
 "
-1991,1,1,0,Externals,evinugur,2014-05-07T16:05:56Z,0,0,0,0,"Since you ignore `.DS_Store` I think it's appropriate to ignore `Thumbs.db` in the editor too now since Windows users can also use Atom. These two files are functionally identical between the operating systems and are just clutter.
+1991,1,1,0,Externals,evinugur,2014-05-07T16:05:56Z,1,2,2,0,"Since you ignore `.DS_Store` I think it's appropriate to ignore `Thumbs.db` in the editor too now since Windows users can also use Atom. These two files are functionally identical between the operating systems and are just clutter.
 
 I also threw Thumbs.db into the gitignore since Windows developers could accidentally commit it when contributing to Atom. (which you might see more of since it's open source now)
 "
 1988,1,1,1,Externals,Ferk,2014-05-07T16:12:49Z,1,1,1,0,"The current source tarballs fail to build when the 'set-version' task wants to obtain the version number through git.
 This fix attempts to avoid this, using the package.json version when no .git directory is found in the root of the sources.
 "
-1978,1,1,0,Externals,kelunik,2014-05-06T22:03:49Z,0,0,0,0,"Allows users to link to their OS's instructions.
+1978,1,1,0,Externals,kelunik,2014-05-06T22:03:49Z,3,3,1,0,"Allows users to link to their OS's instructions.
 "
-1977,3,11,0,Externals,1ace,2014-05-14T00:33:40Z,0,0,0,7,"`script/bootstrap` reads `if (nodeMinorVersion !== '10') {`, shouldn't that be a `< 10`?
+1977,3,11,0,Externals,1ace,2014-05-14T00:33:40Z,5,3,1,7,"`script/bootstrap` reads `if (nodeMinorVersion !== '10') {`, shouldn't that be a `< 10`?
 
 This script currently prevents me from building `atom` with nodejs v0.11, but I doubt that was intended.
 "
 1975,1,1,0,Externals,giodamelio,2014-05-06T21:53:24Z,1,0,1,0,
-1972,1,1,0,Externals,dsine-de,2014-05-06T21:32:17Z,0,0,0,0,
+1972,1,1,0,Externals,dsine-de,2014-05-06T21:32:17Z,1,1,1,0,
 1971,11,14,7,Externals,abe33,2014-05-12T18:10:37Z,56,6,3,5,"It provides the fix for #1928.
 
 Includes:
@@ -18881,18 +18881,18 @@ Includes:
   the`Editor::pasteText` method
 "
 1957,2,1,1,Externals,bogdan-kulynych,2014-05-06T19:48:16Z,2,1,1,0,
-1951,1,1,0,Externals,jeffbonhag,2014-05-06T18:16:36Z,0,0,0,0,"gyp/npm uses /usr/bin/python to build, which is a problem on systems where
+1951,1,1,0,Externals,jeffbonhag,2014-05-06T18:16:36Z,1,0,1,0,"gyp/npm uses /usr/bin/python to build, which is a problem on systems where
 /usr/bin/python is Python 3 or higher.  Fortunately, you can tell npm which
 Python to use.
 "
-1941,1,7,0,Externals,qJake,2014-05-06T17:34:38Z,0,0,0,0,"Windows instructions were missing ""Git"" prerequisite (users were getting ""Git not found in PATH"" errors from npm).
+1941,1,7,0,Externals,qJake,2014-05-06T17:34:38Z,2,0,1,0,"Windows instructions were missing ""Git"" prerequisite (users were getting ""Git not found in PATH"" errors from npm).
 "
 1935,1,1,0,Externals,tombh,2014-05-06T20:32:17Z,7,1,1,0,"This is the only way I could figure out how to get the exit code from `nohup` _and_ still suppress output whilst notifying of the actual error.
 
 EDIT: BTW this is useful because `atom` just silently fails if something goes wrong.
 "
 1929,1,1,0,Externals,pierredup,2014-05-06T15:31:18Z,1,1,1,0,
-1927,1,1,0,Externals,aaronraimist,2014-05-06T15:26:38Z,0,0,0,0,":memo:
+1927,1,1,0,Externals,aaronraimist,2014-05-06T15:26:38Z,1,1,1,0,":memo:
 Updates Jasmine link in CONTRIBUTING.md
 "
 1926,1,1,0,Externals,0b10011,2014-05-06T15:24:00Z,5,5,1,0,"Touch screens without `:hover` are unable to see the tooltip.
@@ -19816,7 +19816,7 @@ Fixes #1270
 
 ![source-map](https://f.cloud.github.com/assets/639601/1971567/0d6f976a-8332-11e3-80b3-4cee9c26b614.gif)
 "
-1457,1,1,0,Externals,shama,2014-01-22T03:58:03Z,0,0,0,0,"Just a small typo when perusing the docs trying to catch up. :)
+1457,1,1,0,Externals,shama,2014-01-22T03:58:03Z,1,1,1,0,"Just a small typo when perusing the docs trying to catch up. :)
 "
 1456,6,2,3,Internals,probablycorey,2014-01-22T01:59:55Z,36,10,5,0,"For Example: On OS X, keymap files named `keymap.cson` and `darwin.cson` would load, but `win32.cson` would not load.
 "
@@ -19828,7 +19828,7 @@ Fixes #1270
 - [x] Include `View` from space-pen
 - [x] Add `docs/README.md`
 "
-1449,1,4,0,Internals,BinaryMuse,2014-01-20T22:46:51Z,0,0,0,0,"I'm guessing that this is more of a personal preference thing, but it's bugged me several times so I thought I'd start a conversation around it.
+1449,1,4,0,Internals,BinaryMuse,2014-01-20T22:46:51Z,23,7,3,0,"I'm guessing that this is more of a personal preference thing, but it's bugged me several times so I thought I'd start a conversation around it.
 
 I think it would be more natural for the tab to the _left_ of your active tab to activate when you close your active tab instead of the one to the right. This is especially true when you open a file with `cmd+t`, make a quick change, and then close it; I would expect to be back where I was before I opened the file, but instead I'm a tab over.
 "
@@ -20102,7 +20102,7 @@ This does duplicate some code with the browser process but that still needs to h
 
 Closes #1203
 "
-1309,4,5,5,Externals,shama,2013-12-17T01:59:22Z,0,0,0,3,"Fixes #1248
+1309,4,5,5,Externals,shama,2013-12-17T01:59:22Z,39,0,2,3,"Fixes #1248
 "
 1308,3,5,4,Internals,benogle,2013-12-16T19:12:44Z,61,33,4,3,"When focused on places like the tree-view and find and replace, we should be able to use a few commands like `cmd-w` and `cmd-s`. This pull moves these things to be handled in the workspaceView.
 "
@@ -20203,10 +20203,10 @@ WDYT? Good? Bad? Ugly?
 
 cc @gjtorikian for quality
 "
-1220,1,6,4,Externals,shama,2013-12-11T16:37:01Z,0,0,0,6,"It is more reliable to use the `grunt` binary created by npm in the `node_modules/.bin/` folder. This way if the path or name of the binary gets updated or installed another way (see gruntjs/grunt#943), the path `node_modules/.bin/grunt` will always remain the same.
+1220,1,6,4,Externals,shama,2013-12-11T16:37:01Z,7,6,3,6,"It is more reliable to use the `grunt` binary created by npm in the `node_modules/.bin/` folder. This way if the path or name of the binary gets updated or installed another way (see gruntjs/grunt#943), the path `node_modules/.bin/grunt` will always remain the same.
 "
 1219,5,1,2,Internals,zcbenz,2013-12-09T09:00:24Z,36,26,3,3,
-1218,1,3,0,Externals,shama,2013-12-05T05:12:10Z,0,0,0,0,"Just a couple typo fixes I saw while perusing the docs.
+1218,1,3,0,Externals,shama,2013-12-05T05:12:10Z,2,2,2,0,"Just a couple typo fixes I saw while perusing the docs.
 "
 1208,1,0,0,Internals,kevinsawicki,2013-12-04T23:34:11Z,20,3,2,0,"@cameronmcefee found an infinite loop crash over in atom/language-ruby-on-rails#1
 "

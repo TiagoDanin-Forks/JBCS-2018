@@ -203,7 +203,7 @@ If this is acceptable I will update the contributing to also reference the new C
 - replace `res` by `response` for both router commands and http calls
 
 cf https://github.com/github/hubot/issues/1285 https://github.com/github/hubot/issues/1129 "
-1329,3,1,0,Externals,jbosse,2017-05-13T18:50:15Z,0,0,0,0,This solution can be found on SO but it might be nice to have it here.
+1329,3,1,0,Externals,jbosse,2017-05-13T18:50:15Z,3,0,1,0,This solution can be found on SO but it might be nice to have it here.
 1328,1,1,0,Internals,technicalpickles,2017-05-13T20:06:37Z,1,0,1,0,"It seemed like a good idea at the time, but the generator at https://github.com/github/generator-hubot is a bit of a maintenance headache. Previously, it was just part of the hubot package and just dropped files on disks without a 'real' generator.
 
 https://github.com/github/generator-hubot/issues has some of the current issue, but I have also seen in the past lots of issues with just installing `yeoman`, since it has a ton of dependencies.
@@ -236,7 +236,7 @@ cc @technicalpickles @gr2m"
 1320,2,1,0,Internals,bkeepers,2017-05-10T23:59:37Z,3,38,1,0,"This cuts the list of adapters down to just the most popular services, and then links to a [GitHub topic search for `hubot-adapter`](https://github.com/search?q=topic%3Ahubot-adapter&type=Repositories) for the full list.
 
 I'll open an issue on all the adapters to ask them to add the topic to their repository."
-1317,1,1,0,Externals,Sirius-A,2017-05-08T12:43:21Z,0,0,0,0,I guess that you want to keep the copyright in 2017 as well :grinning:.
+1317,1,1,0,Externals,Sirius-A,2017-05-08T12:43:21Z,1,1,1,0,I guess that you want to keep the copyright in 2017 as well :grinning:.
 1312,1,0,0,Internals,bkeepers,2017-04-30T16:13:40Z,1,1,1,0,Fixes https://github.com/github/hubot/issues/1211
 1309,4,0,0,Internals,benbalter,2017-05-01T13:06:32Z,79,69,15,4,"With the goal of making the documentation readable on both GitHub.com and GitHub Pages, this pull request updates the Hubot documentation to use relative, rather than absolute links to link to one markdown file from another (e.g., from `/docs/index.md`, `scripts.md` or `./scripts.md` instead of `/docs/scripts.md).
 
@@ -254,7 +254,7 @@ I also removed the explicit `@robot.server.close()` calls in 2 test files, as ca
 
 I hope this change in the README could improve the quality of our irc channel :)"
 1272,1,1,0,Externals,Hbrinj,2017-04-30T23:45:54Z,1,1,1,147,Signed-off-by: Houman Brinjcargorabi <hbrinjcar@gmail.com>
-1255,3,0,2,Externals,ksatirli,2017-04-30T23:48:14Z,0,0,0,184,"Hi!
+1255,3,0,2,Externals,ksatirli,2017-04-30T23:48:14Z,1,1,1,184,"Hi!
 
 One of the code examples is missing a `->` and thus will not pass linting checks (or actually work).
 "
@@ -307,7 +307,7 @@ The main contributors for this adapter are
   - [Kasper Deng](https://github.com/kasperdeng)
 - [Shouxi Huang](https://github.com/hsx1612727380)
 "
-1135,1,1,0,Externals,MonicaG,2016-02-25T22:59:30Z,0,0,0,2,"…Hubot Scripts' section
+1135,1,1,0,Externals,MonicaG,2016-02-25T22:59:30Z,1,1,1,2,"…Hubot Scripts' section
 "
 1133,1,1,0,Internals,technicalpickles,2016-02-25T23:00:29Z,10,10,1,8,"Awhile back in hubot's history, adapters were changed to take an
 'envelope' instead of a user or room object. The adapter class was
@@ -320,7 +320,7 @@ I noticed this when someone was adding a script using it, and I was checking the
 
 Refer to http://english.stackexchange.com/questions/5732/why-is-the-spelling-of-pronounce-and-pronunciation-different
 "
-1123,1,4,0,Externals,xt0rted,2016-02-26T00:08:12Z,0,0,0,32,"Fixed the quotes in the deploy script step, and the name of the azure blob storage brain as per [hubot-azure-scripts](https://github.com/bfcamara/hubot-azure-scripts/blob/2105b4cb3dc331157e19c90e6dabf2247e6553a6/brain/storage-blob-brain.coffee)
+1123,1,4,0,Externals,xt0rted,2016-02-26T00:08:12Z,2,2,1,32,"Fixed the quotes in the deploy script step, and the name of the azure blob storage brain as per [hubot-azure-scripts](https://github.com/bfcamara/hubot-azure-scripts/blob/2105b4cb3dc331157e19c90e6dabf2247e6553a6/brain/storage-blob-brain.coffee)
 "
 1122,1,1,0,Externals,shaunkawano,2016-01-20T13:50:01Z,1,1,1,0,"Use `create` instead of deprecated `add` addons command
 "
@@ -463,10 +463,10 @@ This is work towards https://github.com/github/hubot/issues/858
 1106,3,3,4,Externals,gotchahn,2017-05-24T03:17:54Z,10,6,2,504,"For avoiding `413 Request Entity too large` in some responses.
 fixes #1105 
 "
-1103,1,0,0,Externals,aqnouch,2016-01-08T23:34:57Z,0,0,0,7,
+1103,1,0,0,Externals,aqnouch,2016-01-08T23:34:57Z,1,1,1,7,
 1101,1,1,0,Externals,cycomachead,2016-01-08T23:45:50Z,3,3,1,21,
 1099,1,2,0,Externals,philnash,2016-01-08T23:48:41Z,2,1,1,22,
-1097,1,1,0,Externals,EllisV,2016-01-09T00:08:50Z,0,0,0,27,"Hello,
+1097,1,1,0,Externals,EllisV,2016-01-09T00:08:50Z,1,0,1,27,"Hello,
 
 I would like to add a [Skyweb Adapter](https://github.com/EllisV/hubot-skyweb) which uses Skyweb library (communicates with Skype via HTTP) to a list of adapters.
 "
@@ -530,8 +530,8 @@ have a Slack user id.
 
 Without this change, `parseInt` ends up returning undefined for strings like `U0123456`.
 "
-1049,1,3,0,Externals,doque,2015-09-15T20:25:23Z,0,0,0,0,
-1042,1,1,0,Externals,xuoe,2015-08-31T13:45:17Z,0,0,0,0,
+1049,1,3,0,Externals,doque,2015-09-15T20:25:23Z,1,1,1,0,
+1042,1,1,0,Externals,xuoe,2015-08-31T13:45:17Z,3,3,2,0,
 1041,3,1,0,Externals,davidkassa,2015-10-09T17:22:40Z,23,7,2,40,
 1039,1,0,0,Externals,danielcompton,2015-08-28T13:41:31Z,1,1,1,0,"The Slack adapter has been moved to https://github.com/slackhq/hubot-slack
  and is redirecting, but this link is still going to the old repo location.
@@ -755,10 +755,10 @@ http://npm1k.org/
 "
 947,1,0,0,Externals,pauliwang,2015-05-26T16:33:27Z,1,1,1,5,"Adding missing verb
 "
-945,1,1,0,Externals,adamgross42,2015-06-04T15:16:51Z,0,0,0,17,
-944,1,0,0,Externals,adamgross42,2015-05-26T17:18:14Z,0,0,0,8,"`/guide.html` gives an error.
+945,1,1,0,Externals,adamgross42,2015-06-04T15:16:51Z,2,2,1,17,
+944,1,0,0,Externals,adamgross42,2015-05-26T17:18:14Z,1,1,1,8,"`/guide.html` gives an error.
 "
-942,1,0,0,Externals,adamgross42,2015-05-26T17:17:57Z,0,0,0,9,"Since both of these links end up at https://github.com/github/hubot-scripts, let's change the second one to point to https://github.com/hubot-scripts since those aren't linked right now, and that's where the newer scripts are.
+942,1,0,0,Externals,adamgross42,2015-05-26T17:17:57Z,1,1,1,9,"Since both of these links end up at https://github.com/github/hubot-scripts, let's change the second one to point to https://github.com/hubot-scripts since those aren't linked right now, and that's where the newer scripts are.
 "
 938,1,1,2,Externals,ta1kt0me,2015-06-08T15:50:00Z,1,0,1,30,"According to master's hubot/docs/index.md
 
@@ -768,7 +768,7 @@ http://npm1k.org/
 "
 935,1,3,0,Externals,jcbantuelle,2015-05-14T19:16:18Z,1,0,1,6,"When sending post data via JSON, not all servers will properly parse this by default. Explicitly providing the Content-Type header is more robust.
 "
-931,1,1,0,Externals,petedmarsh,2015-06-08T15:55:01Z,0,0,0,39,"Previously the bin/hubot script would silently ignore options it was passed that it didn't know about. So the following would start hubot:
+931,1,1,0,Externals,petedmarsh,2015-06-08T15:55:01Z,3,0,1,39,"Previously the bin/hubot script would silently ignore options it was passed that it didn't know about. So the following would start hubot:
 
 ```
 hubot --adaptor something
@@ -840,13 +840,13 @@ express.bodyParser() is deprecated in favor of only using the parts you need.
 I've replaced it with only the parsing bits that I believe Hubot is using: url encoded and json.
 If Hubot does in fact need to parse multipart uploads, this patch will not work.
 "
-898,2,2,0,Externals,100ideas,2015-03-23T15:56:18Z,0,0,0,5,"Updated scripting.md chatsecrets HTTP Listener example to try express.js body-parser middleware first before falling back on JSON.parse.
+898,2,2,0,Externals,100ideas,2015-03-23T15:56:18Z,10,1,1,5,"Updated scripting.md chatsecrets HTTP Listener example to try express.js body-parser middleware first before falling back on JSON.parse.
 
 Added `curl` example showing how to POST to the chatsecrets HTTP Listener example.
 
 more info: https://github.com/github/hubot/issues/894
 "
-889,1,0,0,Externals,mcmahoniel,2015-03-18T15:13:31Z,0,0,0,3,"Spelling correction.
+889,1,0,0,Externals,mcmahoniel,2015-03-18T15:13:31Z,1,1,1,3,"Spelling correction.
 "
 888,2,7,0,Externals,geoffreyanderson,2015-04-03T21:36:12Z,71,71,3,20,
 887,1,0,0,Internals,technicalpickles,2015-03-13T21:02:03Z,6,1,2,0,"Featuring https://github.com/github/hubot/pull/886
@@ -901,7 +901,7 @@ cc @aroben @aaronstaves @afeld @michaelansel
 "
 864,1,0,0,Externals,michaelansel,2015-02-20T16:13:39Z,2,0,1,5,"Documentation update for #622 
 "
-857,2,5,1,Externals,ablwr,2015-02-11T21:19:30Z,0,0,0,10,"Updated the current pronoun references to a new hubot to be neutral for gender inclusivity. Github's Hubot may identify as male due to his programming, but new Hubots have no gender associated and, I propose, should remain neutral unless programmed otherwise by their respective authors.
+857,2,5,1,Externals,ablwr,2015-02-11T21:19:30Z,3,3,1,10,"Updated the current pronoun references to a new hubot to be neutral for gender inclusivity. Github's Hubot may identify as male due to his programming, but new Hubots have no gender associated and, I propose, should remain neutral unless programmed otherwise by their respective authors.
 "
 856,1,0,0,Internals,technicalpickles,2015-01-30T23:20:58Z,7,7,1,0,"Make sure generator documentation specifies '--adapter=something', rather than '--adapter something'.
 
@@ -919,7 +919,7 @@ This should help aleviate https://github.com/github/hubot/issues/838 at least fr
 - [Add options argument to robot.http](https://github.com/github/hubot/pull/836) cc @rgbkrk @johntdyer @MacKeeper  https://github.com/github/hubot/pull/612
 - [Handle a script not exporting a function](https://github.com/github/hubot/pull/835) c @lajlev @MrSaints #829
 "
-839,3,4,3,Externals,todd,2015-03-07T00:26:06Z,0,0,0,74,"As discussed in #728, this PR adds support for an `EXPRESS_PORT` variable to set the port for Express to listen on while also retaining support for the current `PORT` variable. `EXPRESS_PORT` will be favored over `PORT`. My only outstanding question is whether we should also add `EXPRESS_BIND_ADDRESS` - this hasn't been an issue I've run into, but it might be nice for the sake of consistency.
+839,3,4,3,Externals,todd,2015-03-07T00:26:06Z,4,2,2,74,"As discussed in #728, this PR adds support for an `EXPRESS_PORT` variable to set the port for Express to listen on while also retaining support for the current `PORT` variable. `EXPRESS_PORT` will be favored over `PORT`. My only outstanding question is whether we should also add `EXPRESS_BIND_ADDRESS` - this hasn't been an issue I've run into, but it might be nice for the sake of consistency.
 
 cc: @technicalpickles
 "
@@ -969,11 +969,11 @@ script won't have loaded in time when using the `--config-check` flag.
 "
 824,3,3,0,Internals,keithduncan,2014-12-05T21:09:22Z,8,1,2,1,"#730 reboot
 "
-820,1,2,0,Externals,stkent,2014-11-20T20:06:40Z,0,0,0,0,
+820,1,2,0,Externals,stkent,2014-11-20T20:06:40Z,1,1,1,0,
 819,1,3,0,Externals,akiomik,2014-11-25T22:58:26Z,1,0,1,6,
-818,1,2,0,Externals,JrGoodle,2014-11-17T15:34:03Z,0,0,0,4,"converted lingering reference to bender to myhubot
+818,1,2,0,Externals,JrGoodle,2014-11-17T15:34:03Z,1,1,1,4,"converted lingering reference to bender to myhubot
 "
-817,1,0,0,Externals,TheIronMarx,2014-11-07T17:30:16Z,0,0,0,0,
+817,1,0,0,Externals,TheIronMarx,2014-11-07T17:30:16Z,1,1,1,0,
 816,1,0,0,Externals,benodom,2014-11-06T18:56:58Z,1,1,1,0,
 814,4,0,0,Internals,technicalpickles,2014-11-07T23:56:45Z,29,6,1,6,"This includes the contributing update from https://github.com/github/hubot/pull/606 about the yeoman generator, as well as other things I've been thinking about:
 - how to give contributors insight into what things maintainers are thinking about
@@ -991,11 +991,11 @@ The end goal is going to be having people use https://github.com/hubot-scripts/h
 "
 808,1,2,0,Internals,technicalpickles,2014-10-29T14:23:05Z,7,1,2,0,"Primarily includes https://github.com/github/hubot/pull/806 for addressing a security vulnerability in express's dependency's dependency.
 "
-806,1,4,0,Externals,tombell,2014-10-29T14:09:33Z,0,0,0,1,"Update Express to the latest 3.x version due to this http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7191
+806,1,4,0,Externals,tombell,2014-10-29T14:09:33Z,1,1,1,1,"Update Express to the latest 3.x version due to this http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7191
 
 This should suffice until Express is fully removed.
 "
-805,1,2,0,Externals,MrSaints,2014-10-27T17:58:45Z,0,0,0,0,"It's not a high priority problem, it's just a _typo_ in the documentation.
+805,1,2,0,Externals,MrSaints,2014-10-27T17:58:45Z,1,1,1,0,"It's not a high priority problem, it's just a _typo_ in the documentation.
 
 `--check-config` doesn't seem to exist. It is `--config-check` according to the source.
 "
@@ -1039,7 +1039,7 @@ Also, need to install yo before calling it.
 
 Went with minor release, as it's 'new' functionality, but retains the `--create` flag still, albeit warning to replace it. 
 "
-795,1,2,0,Externals,rantrix,2014-10-29T14:36:08Z,0,0,0,10,"setupExpress() assigns @pingIntervalId but then it is being reset to null
+795,1,2,0,Externals,rantrix,2014-10-29T14:36:08Z,1,1,1,10,"setupExpress() assigns @pingIntervalId but then it is being reset to null
 right after.
 "
 794,1,4,0,Externals,ahayworth,2014-10-29T14:48:20Z,2,2,1,12,"Sometimes when copying and pasting hubot commands, one might unintentionally
@@ -1056,7 +1056,7 @@ We ran into this problem at Meraki when copying and pasting commands that were s
 "
 788,1,1,1,Externals,kevinsimper,2015-02-13T23:00:24Z,2,0,1,125,"Pull request as a solution to #785
 "
-784,1,0,0,Externals,sethjackson,2014-10-08T14:06:05Z,0,0,0,0,"Add help for the recently added adapter command.
+784,1,0,0,Externals,sethjackson,2014-10-08T14:06:05Z,1,0,1,0,"Add help for the recently added adapter command.
 "
 776,1,0,0,Internals,technicalpickles,2014-09-25T00:50:26Z,6,1,2,0,"Only really includes https://github.com/github/hubot/pull/748, but still worth releasing by itself.
 "
@@ -1107,7 +1107,7 @@ Tested this briefly, and seems to work as expected.
 
 My only concern at the moment has to do with `package.json` entry. This should be flexible, but we might need to be updating the minimal version as hubot-auth, which wouldn't be great. It might be better to do something like `npm install hubot-auth --save`, so it'll grab the latest version and lock it at a particular minor version (ie `~1.1.2`). That might take a bit more doing than we want to in `creator.coffee` though.
 "
-745,1,0,0,Externals,jjasghar,2014-08-19T15:02:46Z,0,0,0,0,"Added the new community org link.
+745,1,0,0,Externals,jjasghar,2014-08-19T15:02:46Z,2,1,1,0,"Added the new community org link.
 "
 743,1,0,0,Externals,huafu,2014-08-18T15:33:30Z,1,0,1,6,"As mentioned by @technicalpickles in #740 here is the addition of `Gitter` adapter to the list
 "
@@ -1124,7 +1124,7 @@ My only concern at the moment has to do with `package.json` entry. This should b
 "
 732,2,2,0,Internals,technicalpickles,2014-07-24T14:30:03Z,35,26,3,8,"Implementation of https://github.com/github/hubot/issues/713. The main thing is that it changes some async FS operations to be sync, and then when `--config-check` is set, just loads the scripts and then exits, rather than starting the bot with `bot.run()`.
 "
-720,7,4,6,Internals,parkr,2014-07-24T15:07:12Z,0,0,0,34,"Fixes #719.
+720,7,4,6,Internals,parkr,2014-07-24T15:07:12Z,55,0,4,34,"Fixes #719.
 "
 712,1,0,0,Externals,ngs,2014-06-12T21:36:01Z,2,2,1,1,"Hi,
 
@@ -1161,7 +1161,7 @@ DEBUG Message '[object Object]' matched regex //^[@]?Hubot[:,]?\s_(?:PING$)/i/
 becomes:
 DEBUG Message 'hubot ping' matched regex //^[@]?Hubot[:,]?\s_(?:PING$)/i/
 "
-695,1,4,0,Externals,dblandin,2014-05-19T13:29:17Z,0,0,0,11,"I recently tried to setup a webhook integration with a Hubot script and discovered (after some debugging) that a default response is not sent back to the client within an HTTP listener.
+695,1,4,0,Externals,dblandin,2014-05-19T13:29:17Z,4,2,1,11,"I recently tried to setup a webhook integration with a Hubot script and discovered (after some debugging) that a default response is not sent back to the client within an HTTP listener.
 
 Would be nice to add a little documentation on how to send back a response and a link to further reading in the NodeJS docs.
 "
@@ -1265,7 +1265,7 @@ This sorts files before loading them, in order to be consistent across whatever.
 
 cc @jfryman 
 "
-600,1,0,0,Externals,wingrunr21,2013-10-29T21:34:06Z,0,0,0,7,"As discussed in #596
+600,1,0,0,Externals,wingrunr21,2013-10-29T21:34:06Z,1,1,1,7,"As discussed in #596
 "
 599,1,4,0,Externals,cannikin,2013-12-31T18:30:17Z,1,1,1,75,"mustachify.me has six different mustaches these days!
 
@@ -1285,7 +1285,7 @@ cc @jfryman
 There was an extra word after ""pod bay""
 "
 590,1,0,0,Externals,pawelrychlik,2013-09-26T23:20:34Z,3,3,1,0,
-585,2,0,0,Internals,simonsj,2013-09-17T20:12:18Z,0,0,0,0,"- make the error messages emitted from the Campfire adapter all unique, so that they're easier to trace down
+585,2,0,0,Internals,simonsj,2013-09-17T20:12:18Z,9,8,1,0,"- make the error messages emitted from the Campfire adapter all unique, so that they're easier to trace down
 - add logging of the body text for the case of HTTPS status codes > 401; the additional reason information can be really helpful
 "
 583,1,0,0,Externals,spajus,2013-09-11T23:22:09Z,1,0,1,0,"There are several hubot scripts that have `Authors:` block with two or more people instead of `Author:`
@@ -1327,12 +1327,12 @@ src/scripts/room-info.coffee
 
 When any of these scripts are included, `hubot help` prints author names as commands.
 "
-582,1,0,0,Externals,vanetix,2013-09-10T21:35:50Z,0,0,0,0,"Previously spaces were replaced when using a hubot alias, now spaces are retained from the initial script documentation. For example `marvindie - End HubotBot process` is now corrected to `marvin die - End HubotBot process`.
+582,1,0,0,Externals,vanetix,2013-09-10T21:35:50Z,3,3,1,0,"Previously spaces were replaced when using a hubot alias, now spaces are retained from the initial script documentation. For example `marvindie - End HubotBot process` is now corrected to `marvin die - End HubotBot process`.
 "
 579,1,1,0,Externals,balbeko,2013-08-25T10:30:43Z,51,2,1,0,"Reopening a PR #565
 "
 578,1,0,0,Externals,thiagopnts,2013-08-24T22:26:16Z,4,0,1,0,
-576,2,1,0,Externals,commadelimited,2013-08-16T14:13:55Z,0,0,0,0,"Two small spelling corrections:
+576,2,1,0,Externals,commadelimited,2013-08-16T14:13:55Z,2,2,2,0,"Two small spelling corrections:
 - Change 'peak' to 'peek'
 - Change 'train you users' to 'train your users'
 "
@@ -1341,16 +1341,16 @@ Not sure that there is an easy way to do that and not to break any of current co
 "
 572,1,1,0,Externals,pseudomuto,2013-08-15T14:17:42Z,9,9,1,0,"Small revisions to the file for typos and grammar. Changed the final commit line to use 'git commit' rather than 'git ci' to be consistent with the first example
 "
-570,120,0,0,Externals,tombell,2013-08-13T17:33:29Z,0,0,0,0,"Merge `master` branch into `vthree-think` so we're able to update the documentation which will need updating for v3.
+570,120,0,0,Externals,tombell,2013-08-13T17:33:29Z,1005,270,23,0,"Merge `master` branch into `vthree-think` so we're able to update the documentation which will need updating for v3.
 "
 569,4,0,0,Externals,jhubert,2013-08-13T17:35:43Z,73,6,3,0,"Per github/hubot#549, this creates a patterns.md file with some initial patterns to get it started.
 "
-566,2,0,2,Externals,jhubert,2013-08-10T23:18:06Z,0,0,0,0,"This allows scripts to list out all users with a specific role by calling robot.auth.usersWithRole.
+566,2,0,2,Externals,jhubert,2013-08-10T23:18:06Z,7,0,1,0,"This allows scripts to list out all users with a specific role by calling robot.auth.usersWithRole.
 
 I'm using this for a group notification script as well as for a shared twitter account script.
 "
-563,1,0,0,Externals,tombell,2013-08-09T19:08:13Z,0,0,0,0,
-562,5,2,0,Externals,tombell,2013-08-12T17:57:30Z,0,0,0,2,"This turns brains into first class citizens in Hubot, not just a script. Hubot will call `robot.run()` when the brain emits a `ready` event. This event should be fired when data has been loaded into the brain and ready to be used.
+563,1,0,0,Externals,tombell,2013-08-09T19:08:13Z,2,2,1,0,
+562,5,2,0,Externals,tombell,2013-08-12T17:57:30Z,53,34,5,2,"This turns brains into first class citizens in Hubot, not just a script. Hubot will call `robot.run()` when the brain emits a `ready` event. This event should be fired when data has been loaded into the brain and ready to be used.
 
 A brain is basically an `npm` package named `hubot-brain-{something}` and has the old brain script as the entry point. So should be super simple to extract them out of `hubot-scripts`.
 "
@@ -1360,18 +1360,18 @@ A brain is basically an `npm` package named `hubot-brain-{something}` and has th
 
 The link now matches the repo found on NPM.
 "
-559,1,3,0,Externals,tombell,2013-08-08T14:19:24Z,0,0,0,0,"This is more idiomatic for node applications and simplifies the `Robot` class.
+559,1,3,0,Externals,tombell,2013-08-08T14:19:24Z,1,23,1,0,"This is more idiomatic for node applications and simplifies the `Robot` class.
 "
 558,1,1,0,Externals,nwest,2013-08-07T19:07:33Z,5,5,1,0,"Two links still point to the wiki when they should point to the adapters doc.
 "
-557,4,5,0,Externals,tombell,2013-08-09T16:34:35Z,0,0,0,2,"Allows users to add `robot.on 'error', (err) -> something()` to a script and maybe report uncaught exceptions somewhere. These are **uncaught** exceptions, this won't report any errors that have been handled internally.
+557,4,5,0,Externals,tombell,2013-08-09T16:34:35Z,24,0,1,2,"Allows users to add `robot.on 'error', (err) -> something()` to a script and maybe report uncaught exceptions somewhere. These are **uncaught** exceptions, this won't report any errors that have been handled internally.
 "
 555,1,1,0,Externals,felixdv,2013-08-06T17:46:38Z,1,1,1,3,
-554,1,0,0,Externals,tombell,2013-07-31T17:20:28Z,0,0,0,1,"Fixes #552
+554,1,0,0,Externals,tombell,2013-07-31T17:20:28Z,5,5,1,1,"Fixes #552
 "
-553,2,0,0,Externals,tombell,2013-07-29T17:59:55Z,0,0,0,1,"This will make Travis build any branch where the name starts with `vthree-rethink` which will allow branches off the main `vthree-rethink` branch to be tested before being merged back into `vthree-rethink`.
+553,2,0,0,Externals,tombell,2013-07-29T17:59:55Z,2,2,2,1,"This will make Travis build any branch where the name starts with `vthree-rethink` which will allow branches off the main `vthree-rethink` branch to be tested before being merged back into `vthree-rethink`.
 "
-548,1,1,0,Externals,preflightsiren,2013-08-16T18:43:39Z,0,0,0,21,"first attempt at fleshing those docs out.
+548,1,1,0,Externals,preflightsiren,2013-08-16T18:43:39Z,33,1,1,21,"first attempt at fleshing those docs out.
 "
 547,1,1,0,Externals,knomedia,2013-07-26T02:47:15Z,1,1,1,0,"Seems like the docs report the wrong environment variable to set to get Hubot to ping itself and keep your heroku dyno from going idle. Docs current report it as `HUBOT_HEROKU_URL`, looks like `robot.coffee` is using `HEROKU_URL` See: https://github.com/github/hubot/blob/master/src/robot.coffee#L240 for reference.
 "
@@ -1380,17 +1380,17 @@ The link now matches the repo found on NPM.
 This will let scripters write scripts that can send out actions, while adapter owners can choose to support it or not.
 "
 545,1,1,0,Externals,needcaffeine,2013-07-25T03:56:43Z,1,1,1,0,
-543,1,1,0,Externals,balbeko,2013-07-24T03:04:36Z,0,0,0,0,".gitignore template renamed to gitignore, and after copying to destination folder it get renamed back
+543,1,1,0,Externals,balbeko,2013-07-24T03:04:36Z,16,3,2,0,".gitignore template renamed to gitignore, and after copying to destination folder it get renamed back
 "
-540,1,0,0,Externals,bartolsthoorn,2013-07-22T14:24:04Z,0,0,0,0,"Really minor thing, but caught me
+540,1,0,0,Externals,bartolsthoorn,2013-07-22T14:24:04Z,1,1,1,0,"Really minor thing, but caught me
 "
 539,21,3,0,Internals,technicalpickles,2013-07-21T19:22:22Z,376,358,21,0,"I started this branch to experiment with chai, mocha, and sinon (arghhh, developers naming things), and it's proven pretty good so far. I'll be continuing this work in the vthree rethink, and once the big things are covered, will do a review to see if there's any good patterns to embrace and bad patterns to stop using.
 "
-538,1,0,0,Externals,tombell,2013-07-21T16:01:35Z,0,0,0,0,"This ignores `master` as that's still our old tests on Travis-CI.
+538,1,0,0,Externals,tombell,2013-07-21T16:01:35Z,3,0,1,0,"This ignores `master` as that's still our old tests on Travis-CI.
 "
-536,1,1,0,Externals,bartolsthoorn,2013-07-21T01:18:50Z,0,0,0,0,"^
+536,1,1,0,Externals,bartolsthoorn,2013-07-21T01:18:50Z,1,1,1,0,"^
 "
-535,4,0,0,Externals,tombell,2013-07-21T14:58:56Z,0,0,0,0,":rocket: 
+535,4,0,0,Externals,tombell,2013-07-21T14:58:56Z,13,18,5,0,":rocket: 
 "
 533,1,0,0,Internals,technicalpickles,2013-07-19T20:20:48Z,12,1,2,0,"It's about that time.
 "
@@ -1478,12 +1478,12 @@ Could you review it? Thanks.
 "
 483,1,0,0,Externals,dianakhuang,2013-04-23T18:32:07Z,1,0,1,0,"Currently, CatchAllMessages do not have the user or room set correctly. This fix just calls the correct parent constructor to ensure that this happens.
 "
-482,1,0,0,Externals,kch,2013-04-23T10:50:10Z,0,0,0,0,
+482,1,0,0,Externals,kch,2013-04-23T10:50:10Z,2,2,2,0,
 481,1,0,0,Externals,rafaelfranca,2013-04-22T09:01:20Z,1,1,1,0,
 479,1,0,0,Externals,rafaelfranca,2013-04-18T12:23:25Z,1,1,1,0,"In the script it is called `HUBOT_AUTH_ADMIN`
 "
 475,2,0,0,Externals,tombell,2013-04-11T10:13:21Z,140,0,2,0,
-472,1,0,0,Externals,JetFault,2013-04-09T07:36:47Z,0,0,0,0,"Ukranian -> Ukrainian
+472,1,0,0,Externals,JetFault,2013-04-09T07:36:47Z,1,1,1,0,"Ukranian -> Ukrainian
 "
 466,2,0,0,Externals,apolishch,2013-04-05T19:26:25Z,12,0,2,1,"TypeError: Uncaught, unspecified ""error"" event.
   at TypeError (<anonymous>:null:null)
@@ -1498,7 +1498,7 @@ Could you review it? Thanks.
   at _stream_readable.js:870:14
   at process._tickCallback (node.js:415:13)
 "
-462,1,0,0,Externals,pcarrier,2013-04-03T11:31:27Z,0,0,0,0,
+462,1,0,0,Externals,pcarrier,2013-04-03T11:31:27Z,9,2,1,0,
 460,1,0,0,Externals,bhardin,2013-03-29T23:48:54Z,1,1,1,0,"Better matching.
 
 https://github.com/hipchat/hubot-hipchat/pull/88
@@ -1517,18 +1517,18 @@ Documenting my own understanding setting up in README.md as I figure it out.
 "
 452,1,0,0,Externals,creatorrr,2013-03-25T21:19:01Z,0,10,1,0,"For changes made in pull request #451
 "
-451,1,0,0,Externals,creatorrr,2013-03-25T17:50:07Z,0,0,0,0,"As decided on the discussion with @atmos and @kashyapp at https://github.com/github/hubot/pull/446
+451,1,0,0,Externals,creatorrr,2013-03-25T17:50:07Z,1,5,1,0,"As decided on the discussion with @atmos and @kashyapp at https://github.com/github/hubot/pull/446
 "
 450,1,0,0,Externals,busbyjon,2013-03-25T16:16:23Z,1,1,1,0,"the final comma on this line was stopping npm parse the file when
 running npm install
 "
 449,1,0,0,Externals,kashyapp,2013-03-25T06:50:02Z,1,1,1,0,"My previous change pushed in a bug to the http route of help.coffee. Was doing string interpolation with single quotes.
 "
-447,5,3,4,Externals,creatorrr,2013-03-25T12:58:06Z,0,0,0,1,"_Added two new methods to robot.brain_
+447,5,3,4,Externals,creatorrr,2013-03-25T12:58:06Z,86,1,2,1,"_Added two new methods to robot.brain_
 - `get(key)` finds and returns value by key from internal store.
 - `set(key, value)` or `set({key: value})` adds key-value pair to the internal store.
 "
-446,3,11,8,Externals,creatorrr,2013-03-24T02:55:36Z,0,0,0,0,"- Replaced connect with express 3.1.0
+446,3,11,8,Externals,creatorrr,2013-03-24T02:55:36Z,37,33,3,0,"- Replaced connect with express 3.1.0
 - Added socket.io to enable websockets on the HTTP listener.
 "
 445,2,1,0,Externals,kashyapp,2013-03-23T10:57:24Z,6,6,2,0,
@@ -1593,7 +1593,7 @@ Also, no changes to `README.md` were made as this feels more adapter specific an
 "
 422,1,0,0,Externals,philippbeckmann,2013-02-26T18:54:25Z,4,0,2,0,"Added bin\hubot.cmd to prepare and launch a hosted-hubot on windows.
 "
-421,1,0,0,Externals,omares,2013-02-26T18:57:12Z,0,0,0,0,"In the version of hubot 2.4.7 the listner class expects the utils.inspect method to be available. See [L22 of inspect.coffee](https://github.com/github/hubot/blob/master/src/listener.coffee#L22).
+421,1,0,0,Externals,omares,2013-02-26T18:57:12Z,2,0,1,0,"In the version of hubot 2.4.7 the listner class expects the utils.inspect method to be available. See [L22 of inspect.coffee](https://github.com/github/hubot/blob/master/src/listener.coffee#L22).
 
 ```
 @robot.logger.debug ""Message '#{message}' matched regex /#{inspect @regex}/"" if @regex
@@ -1635,7 +1635,7 @@ Best,
 408,2,0,0,Externals,pgib,2013-02-08T15:19:50Z,29,5,4,0,"Currently, a Robot (named Hubot, for example) will only respond to messages that begin with Hubot. But Tooter and Ferceberk conventions have people in the habit of using @ convention within Campfire (and other) chats, and even clients like Flint support this usage for name completion. This simple updates makes the Robot @-friendly. And who doesn't like a friendly robot?
 "
 406,1,0,0,Externals,ctborg,2013-02-04T20:33:39Z,1,1,1,0,
-403,1,0,0,Externals,haf,2013-01-31T20:52:41Z,0,0,0,0,"`grep -r robot.user .`
+403,1,0,0,Externals,haf,2013-01-31T20:52:41Z,3,3,1,0,"`grep -r robot.user .`
 "
 402,1,1,0,Externals,tombell,2013-01-22T18:25:17Z,10,5,3,0,"Received messages can now have a message ID to identify the message, useful for
 the Campfire adapter.
@@ -1653,12 +1653,12 @@ from that directory.
 
 I cannot for the life of me understand why my test gives the warning about documentation when robot_test does not..
 "
-393,3,2,2,Externals,x1a0,2013-01-17T09:05:45Z,0,0,0,0,"- When message instances are initiated, a 16-bytes random ID is given.
+393,3,2,2,Externals,x1a0,2013-01-17T09:05:45Z,1,0,1,0,"- When message instances are initiated, a 16-bytes random ID is given.
 - In Response, message_id is also put in envelope so adapter could read that to know which message it is replying on.
 
 In this way, a HTTP adapter could work. Please see this issue created by me: https://github.com/github/hubot/issues/389
 "
-390,1,0,0,Externals,x1a0,2013-01-15T12:30:30Z,0,0,0,0,"I think it's a tiny mistake :)
+390,1,0,0,Externals,x1a0,2013-01-15T12:30:30Z,1,1,1,0,"I think it's a tiny mistake :)
 "
 388,3,4,0,Externals,tombell,2013-01-11T23:42:20Z,25,21,5,0,"This is a completely dirty hack because Node doesn't have built in deep object cloning, and I didn't want to add another dependency to hubot just for this.
 
@@ -1696,7 +1696,7 @@ TypeError: Cannot read property 'results' of null
     at Socket.socketOnEnd [as onend](http.js:1356:12)
     at TCP.onread (net.js:418:26)
 "
-361,1,1,0,Externals,voidlily,2012-10-27T04:26:08Z,0,0,0,2,"Inside square brackets, unescaped hyphens are position dependent. They act like hyphens normally when at the beginning or end of a square bracket expression. Otherwise it's used to signify a character range.
+361,1,1,0,Externals,voidlily,2012-10-27T04:26:08Z,3,3,1,2,"Inside square brackets, unescaped hyphens are position dependent. They act like hyphens normally when at the beginning or end of a square bracket expression. Otherwise it's used to signify a character range.
 
 http://stackoverflow.com/questions/4068629/how-to-match-hyphens-with-regular-expression/4068725#4068725
 
@@ -1716,7 +1716,7 @@ For example: You have a script, which can trigger and event that some one commit
 
 As a plus with the same event triggered by different scripts, so it wouldn't make a difference if you commit into github or just another (maybe SVN) repo. But other scripts can rely on that 'commit-received' command and act the same way.
 "
-341,1,3,0,Externals,marsam,2012-09-08T20:27:32Z,0,0,0,15,
+341,1,3,0,Externals,marsam,2012-09-08T20:27:32Z,1,1,1,15,
 336,1,1,0,Externals,elmoeleven,2012-08-23T05:46:28Z,2,2,1,2,"simply changed '&&' to 'and' to make it more coffee-fied
 "
 335,1,0,0,Externals,Seldaek,2012-09-08T19:25:32Z,4,2,1,21,"imgtype=face tries to return results that contain human faces making it easier for mustachify to do its job.
@@ -1745,11 +1745,11 @@ Specifically it adds:
 322,1,1,0,Externals,ferlores,2012-07-27T12:19:20Z,1,1,1,0,
 317,1,0,0,Externals,ferlores,2012-07-14T21:55:32Z,1,1,1,0,"The command work if the user name has a trailing space, usefull if using it with IRC
 "
-313,2,1,0,Externals,tombell,2012-07-17T17:20:37Z,0,0,0,7,"Adding an HTTP route for browsing `hubot help` via a page. This can help with services that kick users for flooding (e.g. IRC).
+313,2,1,0,Externals,tombell,2012-07-17T17:20:37Z,55,4,2,7,"Adding an HTTP route for browsing `hubot help` via a page. This can help with services that kick users for flooding (e.g. IRC).
 
 Needs prettying up if anyone has any ideas.
 "
-310,1,0,0,Externals,ejfinneran,2012-07-04T01:35:50Z,0,0,0,6,"This fixes an issue identified in #275 where if Hubot joined multiple rooms, userForId
+310,1,0,0,Externals,ejfinneran,2012-07-04T01:35:50Z,10,5,2,6,"This fixes an issue identified in #275 where if Hubot joined multiple rooms, userForId
 would return the user object with the room attribute from the first
 message as persisted by Redis so the each subsequent message would always get sent to the room from the first message.
 
@@ -1920,7 +1920,7 @@ ReferenceError: self is not defined
 241,1,0,0,Externals,jonklo,2012-02-10T19:06:18Z,1,1,1,0,
 237,2,4,0,Externals,tombell,2012-02-10T19:06:33Z,18,10,2,3,"Ping ping ping. Should hopefully keep the process from idling on Heroku.
 "
-229,2,0,0,Externals,ejfinneran,2012-01-28T00:35:55Z,0,0,0,0,"This fixes a bug in the catch-all listener (Pull request #228) which caused it to fire even if a previous listener had handled the message.
+229,2,0,0,Externals,ejfinneran,2012-01-28T00:35:55Z,21,13,5,0,"This fixes a bug in the catch-all listener (Pull request #228) which caused it to fire even if a previous listener had handled the message.
 
 This also fixes the test suite in general since it was broken when an extra argument was added to the Robot constructor.
 "
@@ -1963,15 +1963,15 @@ Pull Request: master
 
 Pull Request: master
 "
-217,1,0,0,Externals,schisamo,2011-12-22T22:27:36Z,0,0,0,0,"In HipChat if you prefix a username with an '@' symbol it directs a notification at that user.  It's fun to notify a user of their pending role change using this mechanism.
+217,1,0,0,Externals,schisamo,2011-12-22T22:27:36Z,3,3,1,0,"In HipChat if you prefix a username with an '@' symbol it directs a notification at that user.  It's fun to notify a user of their pending role change using this mechanism.
 
 This change makes that @ symbol optional.
 "
 211,1,0,0,Externals,smgt,2011-12-15T19:53:38Z,3,2,1,0,"If you try for example `hubot mustache me Hugo Öringe gorkamorka` hubot dies since the result is empty from google. This pull request will check if the result is empty and do nothing if that is true.
 "
-210,2,11,0,Externals,sapegin,2011-12-15T20:47:22Z,0,0,0,0,"The Gtalk adapter from Hubot repo didn’t work for me.
+210,2,11,0,Externals,sapegin,2011-12-15T20:47:22Z,10,7,1,0,"The Gtalk adapter from Hubot repo didn’t work for me.
 "
-208,1,4,0,Externals,ejfinneran,2011-12-14T17:41:07Z,0,0,0,0,"This method is handy for sending a message to a room that is triggered by something other than a received message like HTTP requests.
+208,1,4,0,Externals,ejfinneran,2011-12-14T17:41:07Z,20,3,3,0,"This method is handy for sending a message to a room that is triggered by something other than a received message like HTTP requests.
 
 I tested this with hubot-xmpp and it worked fine but if this won't work with other adapters let me know.
 "
@@ -1981,17 +1981,17 @@ An alternative to this is to use `@robot.cb?` in `Danger#send()`
 "
 204,2,0,0,Externals,horaceko,2011-12-07T08:14:49Z,15,2,1,0,"Making use of the new support for topics in the parent Adapter class (added in #79). This also necessitated adding a method in the adapter to perform HTTP PUT.
 "
-199,1,0,0,Externals,DavidWittman,2011-12-01T08:36:33Z,0,0,0,0,"There exist three different types of mustache at mustachify.me, numbered 0-2. These changes will psuedorandomly select a mustache to apply to the image.
+199,1,0,0,Externals,DavidWittman,2011-12-01T08:36:33Z,1,2,2,0,"There exist three different types of mustache at mustachify.me, numbered 0-2. These changes will psuedorandomly select a mustache to apply to the image.
 "
 198,1,3,0,Externals,trumbitta,2011-11-30T16:36:29Z,4,1,1,0,"Had a connection refused error, googled, and found github/hubot/#42
 
 Installing redis-server solved the issue.
 "
-195,1,0,0,Externals,alexwhitman,2011-11-27T15:08:55Z,0,0,0,0,"Allows for a more graceful shutdown
+195,1,0,0,Externals,alexwhitman,2011-11-27T15:08:55Z,5,0,2,0,"Allows for a more graceful shutdown
 "
 192,2,0,0,Externals,tombell,2011-11-24T16:15:16Z,30,19,1,0,"Updated the `shell.coffee` adapter to look and feel like a proper REPL. If anyone has experience doing the auto complete stuff with the `readline` module, could be possible to auto complete hubot commands.
 "
-191,1,0,0,Externals,ejfinneran,2011-11-24T02:04:51Z,0,0,0,0,"This is useful for XMPP where groupchat users only have an ID and not a
+191,1,0,0,Externals,ejfinneran,2011-11-24T02:04:51Z,15,0,2,0,"This is useful for XMPP where groupchat users only have an ID and not a
 name.  Highlighted in issue #186.
 "
 190,5,0,0,Externals,iangreenleaf,2011-11-24T02:04:26Z,24,1,3,0,"I thought the robot should recognize a few more forms of requests to recite the three laws. I wrote some tests, too. Hope you like!
@@ -2000,12 +2000,12 @@ name.  Highlighted in issue #186.
 "
 184,1,0,0,Externals,igorgue,2011-11-20T20:58:46Z,1,1,1,0,"Before an alias called ""megatron"" couldn't be mentioned with a "":"" or "","" (e.g.: ""MEGATRON: the rules"") just without it. This change makes the alias work just like the ""Hubot"".
 "
-183,1,0,0,Externals,occ,2011-11-17T03:42:32Z,0,0,0,0,"Some irc services (like anope) doesn't have the dot in ""Password accepted"" notice. 
+183,1,0,0,Externals,occ,2011-11-17T03:42:32Z,1,1,1,0,"Some irc services (like anope) doesn't have the dot in ""Password accepted"" notice. 
 Removed the dot
 "
 182,1,0,0,Externals,ivey,2011-11-17T02:41:55Z,3,0,1,0,"Chat messages from the bot will come from chatroom@server/username not username@server, so hubot responds to himself.
 "
-179,1,0,0,Externals,pescuma,2011-11-16T20:30:17Z,0,0,0,0,
+179,1,0,0,Externals,pescuma,2011-11-16T20:30:17Z,13,16,1,0,
 178,1,0,0,Externals,russelldavis,2011-11-16T08:42:38Z,1,1,1,0,"Can't use hubot with the hipchat adapter without this change. I'm guessing the other adapters that still inherit from Robot are broken as well.
 "
 177,1,0,0,Externals,berg,2011-11-14T01:15:49Z,2,4,1,0,"""fully qualified"" hipchat replies look like this: @""Fooby Barbot""
@@ -2013,7 +2013,7 @@ This means replies/mentions will go to the right person if you've got more than 
 "
 176,1,3,0,Externals,malditogeek,2011-11-13T20:31:44Z,4,0,1,0,"Necessary for those cases when the host/port can't be inferred by the JID. (Google apps for business in my case.)
 "
-175,5,0,0,Externals,madzak,2011-11-13T19:38:42Z,0,0,0,0,"Some custom IRC servers may use port 6697 as a regular port rather than secure. The code will now support an environment variable which can turn off ssl connection regardless of port. The default behavior is still in tact.
+175,5,0,0,Externals,madzak,2011-11-13T19:38:42Z,3,2,1,0,"Some custom IRC servers may use port 6697 as a regular port rather than secure. The code will now support an environment variable which can turn off ssl connection regardless of port. The default behavior is still in tact.
 
 Some custom nickserv's might not use the string 'now identified' but use 'now recognized'. The code will now look for something more common which appears to be 'Password accepted.'
 "
@@ -2025,17 +2025,17 @@ Adapters will need to `export.use = (robot) -> ...` where this returns a new ins
 "
 173,1,1,0,Externals,cldwalker,2011-11-12T11:53:02Z,6,2,1,1,"As we're using more commands, calling help spams a chatroom, especially in irc. Allowing help to search minimizes that spam. Also comes in handy when u want to pull up commands by a certain argument type: `hubot: help <img>` .
 "
-170,1,0,0,Externals,tacoe,2011-11-10T14:13:52Z,0,0,0,0,"just a classname change
+170,1,0,0,Externals,tacoe,2011-11-10T14:13:52Z,1,1,1,0,"just a classname change
 "
-168,1,1,0,Externals,pescuma,2011-11-09T19:09:28Z,0,0,0,0,"This patch makes the gtalk adapter create users and send Robot.EnterMessage / Robot.LeaveMessage on login/logoff.
+168,1,1,0,Externals,pescuma,2011-11-09T19:09:28Z,73,26,1,0,"This patch makes the gtalk adapter create users and send Robot.EnterMessage / Robot.LeaveMessage on login/logoff.
 
 One question: what is the expected behaviour when a user logs off: remove it from the users list or not?
 "
-167,1,0,0,Externals,mrtazz,2011-11-09T16:27:53Z,0,0,0,0,"This allows usernames with an underscore to be assigned roles. Also roles can contain an underscore and a dash also.
+167,1,0,0,Externals,mrtazz,2011-11-09T16:27:53Z,3,3,1,0,"This allows usernames with an underscore to be assigned roles. Also roles can contain an underscore and a dash also.
 "
 165,1,0,0,Externals,arttu,2011-11-09T11:15:39Z,1,0,1,0,"Resolves issue discussed @ https://github.com/github/hubot/issues/153
 "
-164,1,0,0,Externals,agrieser,2011-11-09T11:16:06Z,0,0,0,0,"In node 0.6, process.ARGV is no longer defined.
+164,1,0,0,Externals,agrieser,2011-11-09T11:16:06Z,1,1,1,0,"In node 0.6, process.ARGV is no longer defined.
 Use process.argv instead
 "
 162,4,6,3,Externals,andresilva,2011-11-13T20:47:14Z,23,16,3,4,
@@ -2057,20 +2057,20 @@ at Module._compile (module.js:407:26)
 
 When trying to start hubot with `./bin/hubot -a xmpp -n bot`.  These changes fix that error and hubot is able to connect to xmpp again.
 "
-154,1,0,0,Externals,pescuma,2011-11-07T16:31:13Z,0,0,0,0,"Ignore also direct messages using gtalk whitelist
+154,1,0,0,Externals,pescuma,2011-11-07T16:31:13Z,25,27,1,0,"Ignore also direct messages using gtalk whitelist
 "
-152,1,1,0,Externals,pescuma,2011-11-07T13:24:18Z,0,0,0,0,"Handle in a better way if the whitelists are not set. It also show a nicer message when the env vars are not set.
+152,1,1,0,Externals,pescuma,2011-11-07T13:24:18Z,32,17,1,0,"Handle in a better way if the whitelists are not set. It also show a nicer message when the env vars are not set.
 "
-150,2,4,0,Externals,mexitek,2011-11-07T10:33:55Z,0,0,0,0,"For those who do not use the enterprise apps from google. You can now have Hubot accept a request from previously defined list of users or from a list of domains.
+150,2,4,0,Externals,mexitek,2011-11-07T10:33:55Z,59,18,1,0,"For those who do not use the enterprise apps from google. You can now have Hubot accept a request from previously defined list of users or from a list of domains.
 ### Additional Environment Variables
 - `HUBOT_GTALK_WHITELIST_DOMAINS=""foo.com,bar.com,domain.com""`
 - `HUBOT_GTALK_WHITELIST_USERS=""foo@domain.com,bar@otherdomain.com""`
 "
-148,1,6,3,Externals,Vrtak-CZ,2011-11-13T20:17:05Z,0,0,0,7,"XMPP Clients reserved slash for command so i think better then --enable-slash is --alias for define custom alias (in XMPP MUC is ""standardized"" '!' for bot commands).
+148,1,6,3,Externals,Vrtak-CZ,2011-11-13T20:17:05Z,14,6,2,7,"XMPP Clients reserved slash for command so i think better then --enable-slash is --alias for define custom alias (in XMPP MUC is ""standardized"" '!' for bot commands).
 "
-146,1,0,0,Externals,Vrtak-CZ,2011-11-06T14:35:42Z,0,0,0,0,"fix 406 'Only occupants are allowed to send messages to the conference' error
+146,1,0,0,Externals,Vrtak-CZ,2011-11-06T14:35:42Z,11,8,8,0,"fix 406 'Only occupants are allowed to send messages to the conference' error
 "
-145,1,0,0,Externals,Vrtak-CZ,2011-11-06T13:49:47Z,0,0,0,0,"syntax
+145,1,0,0,Externals,Vrtak-CZ,2011-11-06T13:49:47Z,16,4,1,0,"syntax
 
 ``` sh
 export HUBOT_XMPP_ROOMS=""classic@conf.jabber.org,secured@conf.jabber.org:passwd""
@@ -2098,7 +2098,7 @@ Using comma to address person (or a bot) feels more natural than colon for me. P
 "
 134,1,0,0,Externals,mbmccormick,2011-11-01T18:59:52Z,0,1,1,0,"The Google Talk adapter currently defaults Hubot's status to ""Chatty"", which is somewhat annoying and unnecessary. By removing the `<show />` stanzas when setting Hubot's status via XMPP, Hubot will set it's status to ""Available"" when it comes online.
 "
-129,2,0,0,Externals,Mange,2011-10-31T16:13:55Z,0,0,0,0,"This fixes a problem with how Hubot works in the [Talker](http://talkerapp.com) chat rooms. In Talker, you mention users with the `@user` syntax instead of the IRC-style `user:`.
+129,2,0,0,Externals,Mange,2011-10-31T16:13:55Z,27,18,1,0,"This fixes a problem with how Hubot works in the [Talker](http://talkerapp.com) chat rooms. In Talker, you mention users with the `@user` syntax instead of the IRC-style `user:`.
 
 The talker adapter currently replaced `@hubot` with `Hubot:` but that does not help if the bot isn't named Hubot.
 
@@ -2122,7 +2122,7 @@ Protip: you can use your flow's email address, eg. flow_name+hubot@subdomain.flo
 ./bin/hubot -a flowdock
 ```
 "
-126,5,2,0,Externals,tombell,2011-11-04T22:17:25Z,0,0,0,4,"Cleaned up the Twilio adapter by adding a scoped HTTP client into the `Robot` class. Also tidied up the `console.log` calls.
+126,5,2,0,Externals,tombell,2011-11-04T22:17:25Z,80,62,2,4,"Cleaned up the Twilio adapter by adding a scoped HTTP client into the `Robot` class. Also tidied up the `console.log` calls.
 
 Off topic, maybe it's worth implementing a small logging class similar to Ruby's `Logger` so all the output is consistent?
 "
@@ -2138,7 +2138,7 @@ instead of
 /who is Russell Davis?
 ```
 "
-117,1,0,0,Externals,jasford,2011-10-30T19:20:20Z,0,0,0,0,"I have a couple scripts written in JavaScript (instead of CoffeeScript) and wanted to get the benefit of the help script being able to show my new commands. This simple change lets you do this:
+117,1,0,0,Externals,jasford,2011-10-30T19:20:20Z,1,1,1,0,"I have a couple scripts written in JavaScript (instead of CoffeeScript) and wanted to get the benefit of the help script being able to show my new commands. This simple change lets you do this:
 
 ```
 // Interacts with the Google Maps API.
@@ -2159,7 +2159,7 @@ instead of this:
 
 Have left the command structure as is as discussded in #81
 "
-110,5,9,9,Externals,mexitek,2011-11-01T02:02:47Z,0,0,0,1,"### What it does so far
+110,5,9,9,Externals,mexitek,2011-11-01T02:02:47Z,83,2,3,1,"### What it does so far
 - All methods in place for adapter
 - Logs into gtalk (also any custom domain hosted on google apps) successfully
 - Receives and sends successfully
@@ -2170,11 +2170,11 @@ Have left the command structure as is as discussded in #81
 "
 104,5,0,0,Externals,victorcoder,2011-10-29T21:32:21Z,113,1,2,0,"Adapter for the talkerapp.com service
 "
-103,1,0,2,Externals,djl,2011-10-29T22:28:58Z,0,0,0,0,"Hubot was missing support for SSL IRC connections, now it's not :)
+103,1,0,2,Externals,djl,2011-10-29T22:28:58Z,1,0,1,0,"Hubot was missing support for SSL IRC connections, now it's not :)
 
 It may be better to have an explicit `HUBOT_IRC_SSL` var, rather than inspecting the port number but 6697 is traditionally used for SSL connections.
 "
-99,1,0,0,Externals,markpasc,2011-10-28T21:59:50Z,0,0,0,0,"This patch uses the bot's name (the `--name` argument) if no `HUBOT_IRC_NICK` environment variable is set, allowing you to omit the latter when they match (which they should, since otherwise IRC clients' nick completion will help you misaddress the bot).
+99,1,0,0,Externals,markpasc,2011-10-28T21:59:50Z,1,1,1,0,"This patch uses the bot's name (the `--name` argument) if no `HUBOT_IRC_NICK` environment variable is set, allowing you to omit the latter when they match (which they should, since otherwise IRC clients' nick completion will help you misaddress the bot).
 "
 98,4,3,2,Externals,MathildeLemee,2011-10-29T21:36:36Z,93,1,2,1,"Looks for @nameOfTheBot or nameOfTheBot in the twitter timelines and respond with @myUser  .
 "
@@ -2193,7 +2193,7 @@ Added topic support for Xmpp.
 
 I don't have much experience with the other adapters, but I've implemented topic for the Xmpp adapter.
 "
-75,7,7,0,Externals,tombell,2011-10-27T13:11:51Z,0,0,0,0,"Same old clean up
+75,7,7,0,Externals,tombell,2011-10-27T13:11:51Z,66,53,11,0,"Same old clean up
 - `is`, `isnt`, `or` and `and`
 - `for x in y` instead of `forEach`
 - Whitespace
@@ -2217,22 +2217,22 @@ robot.leave (msg) ->
 "
 57,1,0,0,Externals,markstory,2011-10-26T21:30:11Z,6,3,1,0,"Adds the ability to directly message hubot on XMPP and get a reply in private.  Previously the XMPP bot would reply in the channel when directly messaged.
 "
-56,4,1,4,Externals,assaf,2011-10-26T22:00:00Z,0,0,0,0,
+56,4,1,4,Externals,assaf,2011-10-26T22:00:00Z,13,10,2,0,
 55,1,0,0,Externals,codec,2011-10-26T21:30:47Z,1,1,1,0,
-54,3,2,0,Externals,markpasc,2011-10-26T19:39:35Z,0,0,0,0,"Hi! This change adds support for authenticating to an IRC server, so that hubot can be used with private internet servers. It uses two new optional environment variables:
+54,3,2,0,Externals,markpasc,2011-10-26T19:39:35Z,8,0,1,0,"Hi! This change adds support for authenticating to an IRC server, so that hubot can be used with private internet servers. It uses two new optional environment variables:
 - `HUBOT_IRC_PASSWORD`
 - `HUBOT_IRC_NICKSERV_PASSWORD`
 
 I'm not so familiar with CoffeeScript so let me know if this is broken somehow. Thanks!
 "
-50,10,2,2,Externals,tombell,2011-10-26T22:41:51Z,0,0,0,0,"Pull request for some minor clean ups/refactors.
+50,10,2,2,Externals,tombell,2011-10-26T22:41:51Z,42,57,10,0,"Pull request for some minor clean ups/refactors.
 - Use `is` instead of `==`
 - Use postfixed `if` for small conditions
 - Remove `console.log` calls which appear to be for debugging
 - Fixes whitespace in `README.md`'s
 - Fixes some formatting in code
 "
-49,1,0,0,Externals,dmathieu,2011-10-26T11:46:01Z,0,0,0,0,"This adds the command `--version`
+49,1,0,0,Externals,dmathieu,2011-10-26T11:46:01Z,19,1,1,0,"This adds the command `--version`
 
 ```
 hubot -v
@@ -2249,19 +2249,19 @@ HUBOT_HIPCHAT_ROOMS=room1@conf.hipchat.com,room2@conf.hipchat.com
 
 The room names are the XMPP/Jabber names found in your hipchat XMPP information. 
 "
-45,2,1,0,Externals,dmathieu,2011-10-26T10:44:08Z,0,0,0,0,"This provides more explicit campfire errors for the following cases :
+45,2,1,0,Externals,dmathieu,2011-10-26T10:44:08Z,12,6,1,0,"This provides more explicit campfire errors for the following cases :
 - If the token, rooms or account environment vars aren't defined
 - If campfire returns a 401 error (the token is invalid)
 "
-41,1,1,0,Externals,assaf,2011-10-26T12:14:22Z,0,0,0,0,"This change passes a new user object to each request to Robot.Message, so user can supply the name and reply to channel, the later depends on which room the request is coming from.
+41,1,1,0,Externals,assaf,2011-10-26T12:14:22Z,7,6,1,0,"This change passes a new user object to each request to Robot.Message, so user can supply the name and reply to channel, the later depends on which room the request is coming from.
 
 Also, for public messages (rooms) it no longer depends on user list, so people added since Hubot was started can talk to Hubot. For private messages (one-on-one) it still depends on userForId, this can be addressed later on.
 "
-40,1,3,0,Internals,jnewland,2011-10-26T21:33:24Z,0,0,0,0,"Those responsible for submitting a pull request that supposedly fixed this before have been sacked.
+40,1,3,0,Internals,jnewland,2011-10-26T21:33:24Z,1,1,1,0,"Those responsible for submitting a pull request that supposedly fixed this before have been sacked.
 "
-39,1,0,2,Externals,assaf,2011-10-26T06:53:35Z,0,0,0,0," Very exciting discovery: the from value is different between public and private messages.
+39,1,0,2,Externals,assaf,2011-10-26T06:53:35Z,2,1,1,0," Very exciting discovery: the from value is different between public and private messages.
 "
-37,1,0,0,Externals,assaf,2011-10-26T05:39:41Z,0,0,0,0,"Grab user list on startup from HipChat API.
+37,1,0,0,Externals,assaf,2011-10-26T05:39:41Z,16,6,1,0,"Grab user list on startup from HipChat API.
 
 Properly map users based on HipChat user_id and JID.
 "
@@ -2274,11 +2274,11 @@ I imagine it'd be nice to share XMPP code with the Hipchat folks at some point, 
 
 Tested with Openfire 3.7.0, uses some ideas from markstory@5d47a8c8a7f87759e78b13239b5b82c373d65582 - cheers!
 "
-35,3,1,0,Internals,jnewland,2011-10-26T05:05:10Z,0,0,0,0,"Fixes the Twilio adapter to not require a undocumented port env var.
+35,3,1,0,Internals,jnewland,2011-10-26T05:05:10Z,6,1,2,0,"Fixes the Twilio adapter to not require a undocumented port env var.
 
 Also documents the required connection between the Twilio number's ""SMS Request URL"" and the Hubot http endpoint.
 "
-34,3,6,0,Externals,assaf,2011-10-26T05:06:25Z,0,0,0,0,"Setup instructions:
+34,3,6,0,Externals,assaf,2011-10-26T05:06:25Z,107,1,4,0,"Setup instructions:
 
 You'll need to create a new account and set the following environment variables:
 
@@ -2302,7 +2302,7 @@ HipChat insists on first name, last name.  We call ours ""Hubot, I"", but within
 32,1,0,0,Externals,aitor,2011-10-26T05:26:07Z,4,3,1,0,
 30,4,3,0,Internals,technoweenie,2011-10-26T23:05:08Z,24,14,2,0,"So, I was getting the sparse hubot tests to run, when I thought ""Why do I need redis for local dev?""  This extracts the Redis-specific crap from Robot.Brain to Robot.RedisBrain.
 "
-29,2,1,0,Externals,tombell,2011-10-25T22:54:34Z,0,0,0,0,"Ok, this is the quickly hacked together Twilio adapter for Hubot. The environment variables are outlined in the templates `README`.
+29,2,1,0,Externals,tombell,2011-10-25T22:54:34Z,106,0,3,0,"Ok, this is the quickly hacked together Twilio adapter for Hubot. The environment variables are outlined in the templates `README`.
 
 It's buggy in the sense that Twilio can't seem to send messages > 160 chars, I'm planning on working around this. Also it cannot seem to send SMS internationally (outside US/Canada?).
 
@@ -2310,7 +2310,7 @@ Any feedback/improvements are welcome. :)
 
 I don't actually have an iPhone 4S, so any Siri testers would awesome.
 "
-26,1,0,0,Externals,dannytatom,2011-10-25T21:28:50Z,0,0,0,0,
+26,1,0,0,Externals,dannytatom,2011-10-25T21:28:50Z,9,0,1,0,
 25,2,5,0,Externals,titanous,2011-10-26T05:27:05Z,7,1,2,0,"Heroku doesn't automatically restart non-web processes that crash, so I've modified the script to restart it automatically.
 
 (follow-up to #19)
@@ -2322,7 +2322,7 @@ I don't actually have an iPhone 4S, so any Siri testers would awesome.
 13,5,1,2,Externals,atmos,2011-10-08T02:50:20Z,132,9,5,0,"This gives use the start of the traditional hubot roles.  Persist to redis if available.
 "
 12,4,3,0,Externals,tmm1,2011-10-28T07:11:29Z,123,0,2,21,
-6,4,2,0,Externals,benburkert,2011-10-28T07:15:07Z,0,0,0,42,"Started working on an email adapter for hubot.
+6,4,2,0,Externals,benburkert,2011-10-28T07:15:07Z,157,2,3,42,"Started working on an email adapter for hubot.
 "
-5,3,0,0,Externals,kneath,2011-09-15T05:43:39Z,0,0,0,0,"These are the bits that bit me while trying to get him up and running.
+5,3,0,0,Externals,kneath,2011-09-15T05:43:39Z,5,2,3,0,"These are the bits that bit me while trying to get him up and running.
 "
