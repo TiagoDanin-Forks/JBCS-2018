@@ -78,9 +78,6 @@ legend("topright", legend=c("Internals", "Externals"), fill=c("#aae0c0", "#b8d1e
 dev.copy2eps(file="Images/linguist/linguist_pulls_amount.eps", width = 6.5, height = 3.6)
 dev.off()
 
-externals <- externals[which(externals$number_of_additions == 0 | externals$number_of_deletions == 0 | externals$number_of_files_changed == 0),]
-internals <- internals[which(internals$number_of_additions != 0 | internals$number_of_deletions != 0 | internals$number_of_files_changed != 0),]
-
 mar.default <- c(5,4,4,2) + 0.1
 par(mar = mar.default + c(0, 5, 0, 0)) 
 boxplot(externals$number_of_additions, internals$number_of_additions, externals$number_of_deletions, internals$number_of_deletions, externals$number_of_files_changed, internals$number_of_files_changed, xlab="# Occurrences", las = 1, outline = FALSE, cex.lab=1.5, cex.axis = 1.5, horizontal = TRUE, margin = list(l = 10, r = 10, b = 0, t = 0), at = c(1,2,4,5,7,8), col=(c("#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0","#b8d1ed", "#aae0c0")))
