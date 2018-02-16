@@ -87,3 +87,4 @@ mtext("Files Changed", side=2, at=7.5, las=1, outer=FALSE, adj=1.1, cex=1.5)
 legend("top", xpd = TRUE, inset = c(-0.15,-0.15), bty = "n", legend=c("Internals", "Externals"), fill=c("#727272", "#E6E6E6"), cex=1, ncol=2)
 dev.copy2eps(file="Images/linguist/linguist_changes_amount.eps", width = 8.5, height = 4.6)
 dev.off()
+
