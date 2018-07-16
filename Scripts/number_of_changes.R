@@ -58,3 +58,4 @@ mtext("Files Changed", side=2, at=7.5, las=1, outer=FALSE, adj=1.1, cex=1.3)
 
 dev.copy2eps(file="Images/number_of_changes.eps", width = 10, height = 8.5)
 dev.off()
+
