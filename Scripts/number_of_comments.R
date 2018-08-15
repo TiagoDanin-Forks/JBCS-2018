@@ -7,7 +7,7 @@ par(xpd=TRUE)
 
 # Image: 880 x 500
 
-setwd("/home/fronchetti/Documentos/jbcs") # Working directory
+setwd("/home/fronchetti/Research/JBCS-2018") # Working directory (University)
 
 pulls_summary <- read.csv("Dataset/atom/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA, NA, NA))
 internals <- subset(pulls_summary, user_type == "Internals")
