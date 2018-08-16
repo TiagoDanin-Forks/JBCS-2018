@@ -3,60 +3,86 @@ library(distdiff)
 
 setwd("/media/fronchetti/DATA/JBCS-2018") # Working directory (Home)
 
-pulls_per_month <- read.csv("Dataset/git-lfs/pull_requests_per_month.csv", colClasses=c("Date",NA, NA, NA))
+pulls_per_month <- read.csv("Dataset/linguist/pull_requests_per_month.csv", colClasses=c("Date",NA, NA, NA))
 
 # Opened Pulls (Per Month)
 data <- subset(pulls_per_month, pull_type == "opened")
 internals <- data.frame(subset(data, user_type == "Internals"))
 externals <- data.frame(subset(data, user_type == "Externals"))
+
 total <- merge(internals,externals,by="month", all=TRUE)
 total$pull_amount.y[is.na(total$pull_amount.y)] <- 0
 total$pull_amount.x[is.na(total$pull_amount.x)] <- 0
 total$pull_internal <- as.numeric(total$pull_amount.x)
 total$pull_external <- as.numeric(total$pull_amount.y)
-wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+
+wil <- wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+wil
+
+rFromWilcox<-function(wilcoxModel,N) {
+  z<-qnorm(wilcoxModel$p.value/2)
+  r<-z/sqrt(N)
+  cat(wilcoxModel$data.name,"Effect Size, r=",r)
+}
+
+rFromWilcox(wil, nrow(total))
+
 pdf("Figures/git_lfs/git_lfs_open_pr_dist.pdf",width=6,height=4) 
 comp.dist.plot(total$pull_internal, total$pull_external, paired = TRUE, legend1 = "Internals", legend2 ="Externals", xlab="Pull-requests (Open)")
-dev.off()
-pdf("Figures/git_lfs/git_lfs_open_pr_effect.pdf",width=6,height=4,paper='special') 
-effsize.range.plot(total$pull_internal, total$pull_external)
 dev.off()
 
 # Closed Pulls (Per Month)
 data <- subset(pulls_per_month, pull_type == "closed")
 internals <- data.frame(subset(data, user_type == "Internals"))
 externals <- data.frame(subset(data, user_type == "Externals"))
+
 total <- merge(internals,externals,by="month", all=TRUE)
 total$pull_amount.y[is.na(total$pull_amount.y)] <- 0
 total$pull_amount.x[is.na(total$pull_amount.x)] <- 0
 total$pull_internal <- as.numeric(total$pull_amount.x)
 total$pull_external <- as.numeric(total$pull_amount.y)
-wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+
+wil <- wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+wil
+
+rFromWilcox<-function(wilcoxModel,N) {
+  z<-qnorm(wilcoxModel$p.value/2)
+  r<-z/sqrt(N)
+  cat(wilcoxModel$data.name,"Effect Size, r=",r)
+}
+rFromWilcox(wil, nrow(total))
+
 pdf("Figures/git_lfs/git_lfs_closed_pr_dist.pdf",width=6,height=4) 
 comp.dist.plot(total$pull_internal, total$pull_external, paired = TRUE, legend1 = "Internals", legend2 ="Externals", xlab="Pull-requests (Closed)")
-dev.off()
-pdf("Figures/git_lfs/git_lfs_closed_pr_effect.pdf",width=6,height=4,paper='special') 
-effsize.range.plot(total$pull_internal, total$pull_external)
 dev.off()
 
 # Merged Pulls (Per Month)
 data <- subset(pulls_per_month, pull_type == "merged")
 internals <- data.frame(subset(data, user_type == "Internals"))
 externals <- data.frame(subset(data, user_type == "Externals"))
+
 total <- merge(internals,externals,by="month", all=TRUE)
 total$pull_amount.y[is.na(total$pull_amount.y)] <- 0
 total$pull_amount.x[is.na(total$pull_amount.x)] <- 0
 total$pull_internal <- as.numeric(total$pull_amount.x)
 total$pull_external <- as.numeric(total$pull_amount.y)
-wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+
+wil <- wilcox.test(total$pull_internal, total$pull_external, paired=TRUE)
+wil 
+
+rFromWilcox<-function(wilcoxModel,N) {
+  z<-qnorm(wilcoxModel$p.value/2)
+  r<-z/sqrt(N)
+  cat(wilcoxModel$data.name,"Effect Size, r=",r)
+}
+rFromWilcox(wil, nrow(total))
+
 pdf("Figures/git_lfs/git_lfs_merged_pr_dist.pdf",width=6,height=4) 
 comp.dist.plot(total$pull_internal, total$pull_external, paired = TRUE, legend1 = "Internals", legend2 ="Externals", xlab="Pull-requests (Merged)")
 dev.off()
-pdf("Figures/git_lfs/git_lfs_merged_pr_effect.pdf",width=6,height=4,paper='special') 
-effsize.range.plot(total$pull_internal, total$pull_external)
-dev.off()
 
-pulls_summary <- read.csv("Dataset/git-lfs/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA, NA, NA))
+
+pulls_summary <- read.csv("Dataset/linguist/merged_pull_requests_summary.csv", colClasses=c(NA, NA, NA, NA, NA, NA, "Date", NA, NA, NA, NA, NA))
 internals <- subset(pulls_summary, user_type == "Internals")
 externals <- subset(pulls_summary, user_type == "Externals")
 externals <- externals[which(externals$number_of_additions != 0 | externals$number_of_deletions != 0 | externals$number_of_files_changed != 0),]
