@@ -24,8 +24,8 @@ class Repository():
 
     def get_about(self):
 		'''
-			Returns general information about the repository.
-			Output: Dataset/{project-name}/about.json
+		Returns general information about the repository.
+		Output: Dataset/{project-name}/about.json
 		'''
 		if not os.path.isfile(self.folder + '/about.json'):
 			about = self.collector.get()
@@ -35,8 +35,8 @@ class Repository():
 
     def get_pull_requests(self):
 		'''
-			Returns all the pull requests created in the repository.
-			Output: Dataset/{project-name}/pull_requests.json
+		Returns all the pull requests created in the repository.
+		Output: Dataset/{project-name}/pull_requests.json
 		'''
 		if not os.path.isfile(self.folder + '/pull_requests.json'):
 			pull_requests = self.collector.pull_requests(state='all')
@@ -46,8 +46,8 @@ class Repository():
 
     def get_contributors(self):
 		'''
-			Returns all the contributors of the repository.
-			Output: Dataset/{project-name}/contributors.json
+		Returns all the contributors of the repository.
+		Output: Dataset/{project-name}/contributors.json
 		'''
 		if not os.path.isfile(self.folder + '/contributors.json'):
 			contributors = self.collector.contributors(anonymous='true')
@@ -74,8 +74,8 @@ class Repository():
 
     def summarize_merged_pull_requests(self):
 		'''
-			Summarize the necessary information about merged pull-requests in the repository.
-			Output: Dataset/{project-name}/merged_pull_requests_summary.csv
+		Summarize the necessary information about merged pull-requests in the repository.
+		Output: Dataset/{project-name}/merged_pull_requests_summary.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/merged_pull_requests_summary.csv'):
 			with open(self.folder + '/pull_requests.json', 'r') as pull_requests:
@@ -121,8 +121,8 @@ class Repository():
 
     def summarize_closed_pull_requests(self):
 		'''
-			Summarize the necessary information about closed pull-requests in the repository.
-			Output: Dataset/{project-name}/closed_pull_requests_summary.csv
+		Summarize the necessary information about closed pull-requests in the repository.
+		Output: Dataset/{project-name}/closed_pull_requests_summary.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/closed_pull_requests_summary.csv'):
 			with open(self.folder + '/pull_requests.json', 'r') as pull_requests:
@@ -168,8 +168,8 @@ class Repository():
 
     def get_merged_pull_requests_reviews(self):
 		'''
-			Returns information about reviews made in merged pull-requests of the repository.
-			Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
+		Returns information about reviews made in merged pull-requests of the repository.
+		Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/merged_pull_requests_reviews.csv'):
 			fieldnames = ['pull_request', 'creator', 'creator_type', 'reviewer', 'reviewer_type', 'is_equal']
@@ -236,8 +236,8 @@ class Repository():
 	
     def get_casual_contributors(self):
 		'''
-			Returns information about the casual contributors of the repository.
-			Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
+		Returns information about the casual contributors of the repository.
+		Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/casual_contributors.csv'):
 			internals = {}
@@ -274,8 +274,8 @@ class Repository():
 
     def get_external_contributors(self):
 		'''
-			Returns information about the external contributors (volunteers) of the repository.
-			Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
+		Returns information about the external contributors (volunteers) of the repository.
+		Output: Dataset/{project-name}/merged_pull_requests_reviews.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/external_contributors.csv'):
 			externals = {}
@@ -302,7 +302,7 @@ class Repository():
 
     def sort_pull_requests_by_month(self, pull_requests):
 		'''
-			Auxiliar method for get_pull_requests_per_month
+		Auxiliar method for get_pull_requests_per_month
 		'''
 		monthly_frequency = OrderedDict()
 		for pull_request in pull_requests:
@@ -315,8 +315,8 @@ class Repository():
 
     def get_pull_requests_per_month(self):
 		'''
-			Returns information about the number of pull requests per month in the repository, divided by internals (employees) and externals (volunteers).
-			Output: Dataset/{project-name}/pull_requests_per_month.csv
+		Returns information about the number of pull requests per month in the repository, divided by internals (employees) and externals (volunteers).
+		Output: Dataset/{project-name}/pull_requests_per_month.csv
 		'''
 		if os.path.isfile(self.folder + '/pull_requests.json') and not os.path.isfile(self.folder + '/pull_requests_per_month.csv'):
 			
