@@ -11,3 +11,5 @@ If you want to create your own version of the dataset execute the file "<i>get_d
 ⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* external_contributors.csv (General information about external contributors in the project<br>
 ⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* closed_pull_requests_summary.csv (Summary with general information about closed pull requests)<br>
 ⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_summary.csv (Summary with general information about merged pull requests)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_reviews.csv (Summary with information about reviews in merged pull requests)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* pull_requests_per_month.csv (Monthly distribution of pull-request open, closed and merged)<br>
