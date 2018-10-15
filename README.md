@@ -15,7 +15,7 @@ If you want to create your own version of the dataset execute the file "<i>get_d
 ⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* pull_requests_per_month.csv (Monthly distribution of pull-request open, closed and merged)<br>
 
 ### Reproducing images and statistical analysis:
-All the analysis made in this paper, including the images, can be reproduced by executing the files available in the Scripts folder [[3]](https://github.com/fronchetti/JBCS-2018/tree/master/Scripts). Use the R language to execute it. During the execution, a set of images will be saved in a "Figures" folder, and you may need to allow it in your system [[3]](https://github.com/fronchetti/JBCS-2018/tree/master/Figures).
+All the analysis made in this paper, including the images, can be reproduced by executing the files available in the Scripts folder [[3]](https://github.com/fronchetti/JBCS-2018/tree/master/Scripts). Use the R language to execute it. During the execution, a set of images will be saved in a "Figures" folder, and you may need to allow it in your system [[4]](https://github.com/fronchetti/JBCS-2018/tree/master/Figures).
 
 ### Author Notes:
 The "Crawler" folder contains the back-end scripts used to extract data from the GitHub API. Feel free to use the scripts inside this folder in your research.
