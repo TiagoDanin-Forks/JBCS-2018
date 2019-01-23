@@ -8,17 +8,17 @@ If you want to create your own version of the dataset execute the file "<i>get_d
 ⋅⋅* Dataset: <br>
 ⋅⋅*⋅⋅*⋅⋅* Project: <br>
 ⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* casual_contributors.csv (General information about casual contributors in the project)<br>
-⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* external_contributors.csv (General information about external contributors in the project<br>
-⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* closed_pull_requests_summary.csv (Summary with general information about closed pull requests)<br>
-⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_summary.csv (Summary with general information about merged pull requests)<br>
-⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_reviews.csv (Summary with information about reviews in merged pull requests)<br>
-⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* pull_requests_per_month.csv (Monthly distribution of pull-request open, closed and merged)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* external_contributors.csv (General information about external contributors in the project)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* closed_pull_requests_summary.csv (General information about closed pull requests)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_summary.csv (General information about merged pull requests)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* merged_pull_requests_reviews.csv (General information about reviews in merged pull requests)<br>
+⋅⋅*⋅⋅*⋅⋅*⋅⋅*⋅⋅* pull_requests_per_month.csv (Monthly distribution of pull-requests open, closed and merged)<br>
 
 ### Reproducing images and statistical analysis:
 All the analysis made in this paper, including the images, can be reproduced by executing the files available in the Scripts folder [[3]](https://github.com/fronchetti/JBCS-2018/tree/master/Scripts). Use the R language to execute it. During the execution, a set of images will be saved in a "Figures" folder, and you may need to allow it in your system [[4]](https://github.com/fronchetti/JBCS-2018/tree/master/Figures).
 
 ### Author Notes:
-The "Crawler" folder contains the back-end scripts used to extract data from the GitHub API. Feel free to use the scripts inside this folder in your research.
+The "Crawler" folder contains the back-end scripts used to extract data from the GitHub API. Feel free to use the scripts of this folder in your methodology.
 
 If you need any support:
 Send us an e-mail: fronchetti at usp . br
